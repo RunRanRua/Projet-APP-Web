@@ -50,16 +50,21 @@ This web project is part of our coursework at ISEP (Institut Supérieur d'Élect
 
 ## Contributing
 
-We welcome contributions from fellow students and developers! If you'd like to contribute to this project, please follow these steps:
+Thank you for considering contributing to our project! As part of our project guidelines, only team members and our professors are allowed to modify the contents of this repository. However, we highly value your feedback and suggestions.
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add some feature'`).
-5. Push to the branch (`git push origin feature/your-feature`).
-6. Create a new Pull Request.
+If you have any suggestions, feedback, or bug reports, please feel free to open an issue in the repository. We'll review it promptly.
+
+For team members and professors:
+- Fork the repository.
+- Create a new branch (`git checkout -b feature/your-feature`).
+- Make your changes.
+- Commit your changes (`git commit -am 'Add some feature'`).
+- Push to the branch (`git push origin feature/your-feature`).
+- Create a new Pull Request.
 
 Please ensure that your contributions adhere to the project's coding standards and guidelines.
+
+Thank you for your cooperation!
 
 ## License
 
