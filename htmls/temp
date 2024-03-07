@@ -1,0 +1,81 @@
+<!-- navigation -->
+        <div class="nav">
+            <ul>
+                <li><a href="#" class = "active"><b>ACCUEIL</b></a></li>
+                <li><a href="#"><b>EVENEMENT</b></a></li>
+                <li><a href="#"><b>FAQ</b></a></li>
+                <li><a href="#"><b>FORUM</b></a></li>
+                <li><a href="#"><b>A PROPOS</b></a></li>
+            </ul>
+        </div>
+    
+        <!-- search barre -->
+        <div class="search">
+            <a href="#"></a>
+            <input type="text" placeholder="RECHERCHE">
+        </div>
+
+        <!-- user -->
+        <div class="user">
+
+        </div>
+
+
+
+        /* navigation zone*/
+        .nav {
+            margin-left: 31px;
+        }
+        
+        .nav ul{
+            display: flex;
+            margin-top: 48px;
+        }
+        .nav li {
+            margin-right: 23px;
+        }
+        
+        .nav li a {
+            display: block;
+            line-height: 30px;
+            font-size: 30px;
+            color:#fff;
+        }
+                /* Active */
+        .nav li .active,
+        .nav li a:hover {
+            border-bottom: 3px solid #fff;
+        }
+        
+            /* search zone */
+        .search {
+            display: flex;
+            margin-left: 11px;
+            margin-top: 39px;
+            padding-left: 12px;
+            padding-right: 12px;
+            width: 245px;
+            height: 47px;
+            background-color: #777777;
+            border-radius: 20px;
+        
+        }
+        .search a {
+            align-self: center;
+            margin-right: 6px;
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/loop.png);
+        }
+        .search input{
+            padding-top: 5px;
+            flex: 1;
+            border: 0;
+            background-color: transparent;
+            outline: none;
+        }
+        .search input::placeholder {
+            font-size: 21px;
+            color: #fff;
+        }
+        
