@@ -21,31 +21,6 @@
         </div>
 
 
-
-        /* navigation zone*/
-        .nav {
-            margin-left: 31px;
-        }
-        
-        .nav ul{
-            display: flex;
-            margin-top: 48px;
-        }
-        .nav li {
-            margin-right: 23px;
-        }
-        
-        .nav li a {
-            display: block;
-            line-height: 30px;
-            font-size: 30px;
-            color:#fff;
-        }
-                /* Active */
-        .nav li .active,
-        .nav li a:hover {
-            border-bottom: 3px solid #fff;
-        }
         
             /* search zone */
         .search {
