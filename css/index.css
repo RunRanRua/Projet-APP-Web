@@ -43,7 +43,7 @@ body {
     margin-top: 48px;
 }
 .nav li {
-    margin-right: 23px;
+    margin-right: 40px;
 }
 
 .nav li a {
@@ -57,7 +57,7 @@ body {
     /* search zone */
 .search {
     display: flex;
-    margin-left: 11px;
+    margin-left: 20px;
     margin-top: 39px;
     padding-left: 12px;
     padding-right: 12px;
@@ -92,7 +92,7 @@ body {
 
     /* user zone */
 .user{
-    margin-left: 32px;
+    margin-left: 50px;
     margin-top: 32px;
 }
 
