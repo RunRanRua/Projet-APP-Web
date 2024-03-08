@@ -1,0 +1,150 @@
+/* css for home page */
+
+
+body {
+    background-color: #fff;
+    color: #fff;
+}
+
+
+/* === Footer Part === */
+
+.footer {
+    background-color: #000000;
+    height: 532px;
+    width: 1440px;
+    overflow: hidden;
+
+}
+
+    /* logo zone */
+
+.logo2 {
+
+    height: 110px;
+}
+
+.logo2 a {
+
+    display: block;
+    margin-top: 8px;
+    margin-left: 680px;
+    width: 180px;
+    height: 110px;
+    background-image: url(../images/logo.png);
+    
+
+
+    /*hide text*/
+    font-size: 0;
+}
+
+.annotation a {
+
+    margin-left: 594px;
+    font-family: "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+
+    color: #fff;
+}
+
+.nav2 {
+
+    margin-left: 150px;
+    margin-top: 40px;
+    display: flex;
+
+}
+
+
+.nav2 li a {
+    display: block;
+    margin-top: 25px;
+    line-height: 38px;
+    font-size: 30px;
+    color:#fff;
+}
+
+.nav2 li a:hover {
+    border-bottom: 3px solid #fff;
+}
+
+
+.nav2 ul2 {
+
+    margin-left: 60px;
+    max-width: 300px; /* Définissez la largeur maximale pour chaque élément de liste */
+    overflow-wrap: break-word; /* Permet de couper le texte si nécessaire pour le faire tenir dans la largeur maximale */
+
+}
+
+.nav2 ul3 {
+
+    margin-left: 60px;
+    max-width: 310px; /* Définissez la largeur maximale pour chaque élément de liste */
+    overflow-wrap: break-word; /* Permet de couper le texte si nécessaire pour le faire tenir dans la largeur maximale */
+}
+
+.nav2 ul3 .supp {
+
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #959393;
+}
+
+.nav2 ul3 li:nth-child(3){
+    width: 240px;
+}
+
+.nav2 .li2 a:hover {
+    border-bottom: 0px;
+}
+
+.nav2 ul4 {
+
+    margin-left: 60px;
+    width : 380px;
+    }
+
+.search {
+    display: flex;
+    margin-top: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 245px;
+    height: 47px;
+    background-color: #777777;
+    border-radius: 20px;
+
+}
+.search a {
+    align-self: center;
+    margin-right: 6px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/loop.png);
+}
+.search input{
+    padding-top: 5px;
+    flex: 1;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+}
+.search input::placeholder {
+    font-size: 21px;
+    color: #fff;
+}
+
+.nav2 .sociaux {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-image: url(../images/reseausociauxv2.png);
+    background-repeat: no-repeat;
+}
+
+.nav2 .sociaux h1 a {
+    color: transparent;
+}
