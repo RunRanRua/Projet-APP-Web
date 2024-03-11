@@ -14,7 +14,6 @@ body {
     height: 400px;
     width: 100%;
     overflow: hidden;
-
 }
 
     /* logo zone */
@@ -22,19 +21,16 @@ body {
 .logo2 a {
 
     display: block;
-    margin-top: 2%;
     margin: 0 auto;
     
     width: 180px;
     height: 110px;
     
     background-image: url(../images/logo.png);
-    
-
-
-    /*hide text*/
     font-size: 0;
 }
+
+    /* Annotation */
 
 .annotation {
 
@@ -47,6 +43,7 @@ body {
     color: #fff;
 }
 
+    /* Navigation */
 
 .nav2 {
     margin-top: 2%;
@@ -69,31 +66,22 @@ body {
     border-bottom: 3px solid #fff;
 }
 
-.nav2 ul1 {
-
-    
+.nav2 ul1 {    
     max-width: 20%; 
     overflow-wrap: break-word;
 
 }
 
-.nav2 ul2 {
-
-    
-    max-width: 20%; 
-    
-
+.nav2 ul2 {   
+    max-width: 20%;    
 }
 
-.nav2 ul3 {
-
-    
+.nav2 ul3 {   
     max-width: 20%; 
     overflow-wrap: break-word;
 }
 
 .nav2 ul3 .supp {
-
     font-family: "Arial", sans-serif;
     font-size: 12px;
     color: #959393;
@@ -139,14 +127,15 @@ body {
     color: #fff;
 }
 
-.nav2 .sociaux {
+.nav2 .sociaux  img{
     margin-top: 30px;
     margin-bottom: 30px;
-    max-width: 100%; 
-    background-image: url(../images/reseausociauxv2.png);
+    
+    
+    width: 20px;
+    height: 20px;
+
     background-repeat: no-repeat;
 }
 
-.nav2 .sociaux h1 a {
-    color: transparent;
-}
+

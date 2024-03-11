@@ -28,20 +28,23 @@ body {
 
     /* navigation zone*/
 .nav {
-    margin-left: 31px;
+    margin: auto 1%;
+    width: 55%;
 }
 
 .nav ul{
     display: flex;
-    margin-top: 48px;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
+
 .nav li {
-    margin-right: 23px;
+    margin-left: 3%;
+
 }
 
 .nav li a {
     display: block;
-    line-height: 30px;
     font-size: 30px;
     color:#fff;
 }
