@@ -34,17 +34,17 @@ body {
 }
 
     /* navigation zone*/
-.nav {
+nav {
     margin-left: 31px;
 }
-.nav ul{
+nav ul{
     display: flex;
     margin-top: 48px;
 }
-.nav li {
+nav li {
     margin-right: 40px;
 }
-.nav li a {
+nav li a {
     display: block;
     font-weight: bold;
     line-height: 30px;
@@ -91,24 +91,61 @@ body {
     margin-left: 50px;
     margin-top: 32px;
 }
-
 .user img {
     /* inline block  vertical align*/
     vertical-align: middle;
 }
 
 
-
-/* ===Event Part===*/
+/* === Event Part ===*/
 .event {
     height: 700px;
     background-color: #252B33;
+
+}
+.event .wrapper{
+    height: 700px;
     background: url(../images/banner1.png) no-repeat center;
 }
+
 .event .bgEffet{
     height: 700px;
     background: linear-gradient(180deg, #252B33 0%, rgba(255, 255, 255, 0) 100%);
+    
+}
+.event .box1{
+    height: 450px;
+    display: flex;
+}
+.event .box1 img{
+    margin: 0 1% 0 10%;
+    align-self: flex-end;
+}
+.event .box1 .txt{
+    width: 418px;
+    line-height: 38px;
+    font-size: 40px;
+    font-weight: bold;
+    
+    align-self: flex-end;
+}
+.event .box2{
+    height: 250px;
+    display: flex;
+}
+.event .title{
+    margin: 0 10%;
+    height: 250px;
+    font-size: 250px;
+    line-height: 250px;
+    text-transform: uppercase;
 
+    align-self: flex-end;
 }
 
+/* === Concert Part ===*/
+.concert{
+    height: 1020px;
+    background: linear-gradient(179.94deg, #000000 0.06%, #252B33 46.26%);
 
+}
