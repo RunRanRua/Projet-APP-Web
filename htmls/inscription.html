@@ -8,36 +8,33 @@
 </head>
 
 <body>
-    <!-- logo -->
-    <!-- navigation -->
-
-
     <!-- inscription box -->
-    <section>
-        <div class="contentBox">
-        <div class="formBox">
-            <h2>Inscrivez vous</h2>
-            <form action="#">
-                <div class="inputBx">
-                    <span>Email</span>
-                    <input type="text">
-                </div>
-                <div class="inputBx">
-                    <span>Password</span>
-                    <input type="password">
-                </div>
-                <div class="souvenir">
-                    <label><input type="checkbox">Se souvenir de moi</label>
-                </div>   
-                <div class="inputBx">
-                    <input type="submit" value="Se connecter">
-                </div>
-                <div class="inputBx">
-                    <p>Vous n'avez pas de compte ?</p><a href="#">Se créer un compte</a>
-                </div>                 
+    <div class="container">
+        <form class="form">
+            <h2 class="title2">Inscription</h2>
+            <div class="form-group">
+                <input type="text" placeholder="Prénom" required>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Nom" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Numéro de téléphone" required>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Mot de passe" required>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Confirmation de mot de passe" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">S'inscrire</button>
             </form>
         </div>
-    </section>
+    </div>    
 </body>
 
 
