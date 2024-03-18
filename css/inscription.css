@@ -11,6 +11,7 @@ body {
     background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     background-position: center; 
+    height: 85vh;
 }
 
 
@@ -18,7 +19,7 @@ body {
 
 .container {
     max-width: 30% ;
-    margin: 15vh auto;
+    margin: 12vh auto;
     padding: 50px;
     background-color: #fff;
     border-radius: 20px;
