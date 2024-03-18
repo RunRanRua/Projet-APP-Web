@@ -10,20 +10,16 @@ body {
     background-image: url('../images/flou.png');
     background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; 
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    height: 100%; /* Définit la hauteur du corps et de la page à 100% */
-}
+
 
 
 .container {
     max-width: 30% ;
-    margin: auto;
-    padding: 17px;
+    margin: 15vh auto;
+    padding: 50px;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -74,7 +70,7 @@ button:hover {
     background-color: #149ead;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
     .container {
         max-width: 70%;
     }
