@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Heebo', sans-serif;
+}
+
+.concert-container {
+    background-color: #252b33;
+    color: #fff;
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.ticket {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.qr-code {
+    width: 100px;
+    height: 100px;
+    background: #555; /* Placeholder for QR Code */
+    margin-right: 20px;
+}
+
+.ticket-info p {
+    margin: 0;
+    padding: 0;
+}
+
+.sound-level-chart {
+    height: 200px;
+    background: #222; /* Placeholder for Sound Level Chart */
+    margin: 20px;
+}
+
+.sound-info {
+    padding: 20px;
+}
+
+.sound-info h2, .sound-info p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.average, .other-data {
+    border-top: 1px solid #444;
+}
+
+.other-data {
+    border-bottom: 1px solid #444;
+}

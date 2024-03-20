@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'acceuil</title>
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/index.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concert Dashboard</title>
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- === Header Part === -->
-    <div class="header">
-        <!-- logo -->
-        <div class="logo">
-            <h1>
-                <a href="#">logo</a>
-            </h1>
-        </div>
-
-        <!-- navigation -->
-        <div class="nav">
-            <ul>
-                <li><a href="#" class = "active"><b>ACCUEIL</b></a></li>
-                <li><a href="#"><b>EVENEMENT</b></a></li>
-                <li><a href="#"><b>FAQ</b></a></li>
-                <li><a href="#"><b>FORUM</b></a></li>
-                <li><a href="#"><b>A PROPOS</b></a></li>
-            </ul>
-        </div>
-    
-        <!-- search barre -->
-        <div class="search">
-            <a href="#"></a>
-            <input type="text" placeholder="RECERCHE">
-        </div>
-
-        <!-- user -->
-        <div class="user">
-
+<div class="concert-container">
+    <header>
+        <h1>CONCERT EN COURS</h1>
+    </header>
+    <div class="ticket">
+        <div class="qr-code"></div>
+        <div class="ticket-info">
+            <p>NOM PRENOM</p>
+            <p>Date and Event Details</p>
         </div>
     </div>
-
-    <!-- === Event Part === -->
-    
- 
-
+    <div class="sound-level-chart">
+        <!-- This would be replaced by an actual chart graphic or library -->
+    </div>
+    <div class="sound-info">
+        <div class="average">
+            <h2>NIVEAU SONORE MOYEN :</h2>
+            <p>70 DB</p>
+        </div>
+        <div class="other-data">
+            <h2>AUTRES DONNÉES</h2>
+            <p>NIVEAU SONORE MINIMAL: 30 DB</p>
+            <p>NIVEAU SONORE MAXIMAL: 110 DB</p>
+            <p>NIVEAU SONORE :</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
