@@ -18,7 +18,7 @@ body {
 
     /* logo zone */
 
-.logo2 a {
+.footer .logo a {
 
     display: block;
     margin: 0 auto;
@@ -32,12 +32,12 @@ body {
 
     /* Annotation */
 
-.annotation {
+.footer .annotation {
 
     text-align: center;
 }
 
-.annotation a {    
+.footer .annotation a {    
     font-family: "Arial", sans-serif;
     font-size: 10px;
     color: #fff;
@@ -45,7 +45,7 @@ body {
 
     /* Navigation */
 
-.nav2 {
+.footer .nav {
     margin-top: 2%;
     display: flex;
     flex-direction: row;
@@ -54,7 +54,7 @@ body {
     position: relative;
 }
 
-.nav2 li a {
+.footer .nav li a {
     display: block;
     margin-top: 10px;
     
@@ -62,42 +62,42 @@ body {
     color:#fff;
 }
 
-.nav2 li a:hover {
+.footer .nav li a:hover {
     border-bottom: 3px solid #fff;
 }
 
-.nav2 ul1 {    
+.footer .nav ul1 {    
     max-width: 20%; 
     overflow-wrap: break-word;
 
 }
 
-.nav2 ul2 {   
+.footer .nav ul2 {   
     max-width: 20%;    
 }
 
-.nav2 ul3 {   
+.footer .nav ul3 {   
     max-width: 20%; 
     overflow-wrap: break-word;
 }
 
-.nav2 ul3 .supp {
+.footer .nav ul3 .supp {
     font-family: "Arial", sans-serif;
     font-size: 12px;
     color: #959393;
 }
 
 
-.nav2 .li2 a:hover {
+.footer .nav .li2 a:hover {
     border-bottom: 0px;
 }
 
-.nav2 ul4 {
+.footer .nav ul4 {
 
     max-width : 20%;
-    }
+}
 
-.search {
+.footer .search {
     display: flex;
     
     margin-top: 5%;
@@ -109,19 +109,19 @@ body {
     border-radius: 20px;
 
 }
-.search a {
+.footer .search a {
     align-self: center;
     width: 30px;
     height: 30px;
     
 }
 
-.search a img {
+.footer .search a img {
     width: 100%;
     height: 100%;
 }
 
-.search input{
+.footer .search input{
     margin-left: 5%;
     width : 80%;
     border: 0;
@@ -129,12 +129,12 @@ body {
     outline: none;
     color: #fff
 }
-.search input::placeholder {
+.footer .search input::placeholder {
     font-size: 15px;
     color: #fff;
 }
 
-.nav2 .sociaux  img{
+.footer .nav .sociaux  img{
     margin-top: 10%;
     margin-bottom: 1%;
     margin-left: 5%;
@@ -145,11 +145,11 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-    .nav2 li a {
+    .footer .nav li a {
         font-size: 10px;
     }
 
-    .search input::placeholder {
+    .footer .search input::placeholder {
         font-size: 10px;
     }
 
