@@ -1,13 +1,44 @@
-
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Heebo', sans-serif;
-    background-color: #252b33;
-    color: #fff;
-    font-size: 16px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Heebo', sans-serif;
+  background-color: #252b33;
+  background-size: cover; /* Cover the entire page */
+  background-position: center;
+  color: #fff;
+  font-size: 16px;
 }
+
+/* Other styles remain unchanged */
+
+/* Add styles for search bar */
+.search-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-container input[type=text] {
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 80%; /* You can adjust the width as per your layout */
+}
+
+.search-container button {
+  padding: 10px;
+  margin-top: 8px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
 
 
 header {
@@ -15,22 +46,14 @@ header {
     padding: 20px;
 }
 
-.ticket {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
 
-.qr-code {
-    width: 100px;
-    height: 100px;
-    background: #555; /* Placeholder for QR Code */
-    margin-right: 20px;
-}
 
-.ticket-info p {
-    margin: 0;
-    padding: 0;
+.back{
+  height : auto;
+  width: auto;
+    position: relative;
+  
+
 }
 
 .sound-level-chart {
@@ -56,6 +79,9 @@ header {
     border-bottom: 1px solid #444;
 }
 
+
+
+/* Ajouts carte*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
 
 * {
