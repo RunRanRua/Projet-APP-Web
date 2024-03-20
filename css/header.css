@@ -144,7 +144,6 @@ body {
 
 @media (max-width: 450px) { 
     .search a {
-        width: 20%;
-        
+        width: 20%; 
     }
 }
