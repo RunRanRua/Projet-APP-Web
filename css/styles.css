@@ -1,44 +1,52 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   font-family: 'Heebo', sans-serif;
   background-color: #252b33;
-  background-size: cover; /* Cover the entire page */
-  background-position: center;
   color: #fff;
   font-size: 16px;
 }
 
-/* Other styles remain unchanged */
-
-/* Add styles for search bar */
-.search-container {
+/* Styles pour le container de l'image de fond et la barre de recherche */
+.back {
+  background-image: url('../images/back.png'); /* Remplacez par le chemin de votre image */
+  background-size: cover; /* Ajustez pour couvrir la div .back */
+  background-position: center; /* Centrez l'image dans la div */
   text-align: center;
+  width: 100%; /* Ajustez selon la largeur désirée, 100% pour prendre toute la largeur du conteneur */
+  margin: auto; /* Centrez horizontalement si besoin */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrez verticalement le contenu */
+  padding: 10px 0; /* Ajustez la hauteur de l'espace pour la barre de recherche */
+}
+
+/* Styles pour la barre de recherche, ajustez selon vos préférences */
+.search-container {
   margin: 20px 0;
 }
 
-.search-container input[type=text] {
+.search-container input[type=text], .search-container button {
   padding: 10px;
-  margin-top: 8px;
-  font-size: 17px;
+  margin: 8px 0;
   border: none;
-  width: 80%; /* You can adjust the width as per your layout */
+  border-radius: 5px;
+}
+
+.search-container input[type=text] {
+  font-size: 17px;
+  width: 80%; /* Ajustez selon le design de votre site */
 }
 
 .search-container button {
-  padding: 10px;
-  margin-top: 8px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
   cursor: pointer;
+  background-color: #333; /* Couleur du bouton */
+  color: white;
+  font-size: 17px;
 }
 
-.search-container button:hover {
-  background: #ccc;
-}
-
+/* Le reste de votre CSS... */
 
 
 header {
@@ -161,3 +169,71 @@ header {
   opacity: 1;
   transform: translateY(0);
 }
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Crée des colonnes de 400px de largeur minimum */
+  gap: 20px; /* Espacement entre les cartes */
+  padding: 20px; /* Ajoute un peu d'espace autour de la grille */
+}
+
+/* Assurez-vous que le reste de votre CSS est bien configuré pour les cartes */
+
+
+
+
+input:focus {
+  outline-offset: -2px;
+}
+
+.container {
+  color: black;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+width:100%;
+ 
+  margin-top: -1em; /*set to a negative number 1/2 of your height*/
+  margin-left: -15em; /*set to a negative number 1/2 of your width*/
+
+ 
+}
+
+
+
+
+#submitsearch{
+border: 1px solid rgb(138, 134, 134);
+margin-left: -82px;
+padding: 5px;
+border-radius: 19px;
+cursor: pointer;
+padding-left: 10px;
+padding-right: 8px; 
+padding-top: 4px;
+
+display: none;
+box-shadow: 0 0 1px black;     
+margin-right:110px;
+}
+
+#searchInput {
+    width: 18%;
+
+    border: 1px solid #000;
+    border-radius: 30px;
+    font-size: 16px;
+    background-color: white;
+    background-image:url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-24.png');
+
+    background-position: 10px 7px;
+    background-repeat: no-repeat;
+    padding: 8px 20px 8px 40px;
+    -webkit-transition: width 0.8s ease-in-out;
+    transition: width 0.8s ease-in-out;
+    outline: none;
+    opacity: 0.9;
+
+  }
+
+
+
