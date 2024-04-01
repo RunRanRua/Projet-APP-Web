@@ -16,6 +16,11 @@ header {
 
 
 
+.nos-concerts {
+  width: 100%; /* Prend toute la largeur */
+  text-align: center; /* Centrer le texte de l'en-tête */
+  padding: 20px 0; /* Ajouter de l'espace autour de l'en-tête */
+}
 
 
 
@@ -28,6 +33,14 @@ header {
   padding: 0;
   box-sizing: border-box;
 }
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px; /* Assurez-vous qu'il y a de l'espace entre la barre de recherche et les cartes */
+}
+
 
 .card {
   width: 400px;
@@ -106,6 +119,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Crée des colonnes de 400px de largeur minimum */
   gap: 20px; /* Espacement entre les cartes */
   padding: 20px; /* Ajoute un peu d'espace autour de la grille */
+  margin-bottom: 50px; /* Ajouter une marge en bas pour éviter l'empiètement */
 }
 
 /* Assurez-vous que le reste de votre CSS est bien configuré pour les cartes */
@@ -115,18 +129,6 @@ header {
 
 input:focus {
   outline-offset: -2px;
-}
-
-.container {
-  position: relative; /* Changé de 'absolute' pour permettre un positionnement plus flexible */
-  margin-top: 9px; /* Marge du haut pour pousser le conteneur vers le bas depuis son point d'origine */
-  margin-left: auto; /* Centrage horizontal */
-  margin-right: auto;
-  width: 80%; /* Vous pouvez ajuster la largeur selon le besoin */
-  max-width: 960px; /* Maximum width can help with very wide screens */
-  color: black; /* Couleur du texte à l'intérieur du conteneur */
-  bottom: 950px; /* Déplacé 10px vers le bas par rapport à sa position normale */
-  left: 270px; /* Déplacé 10px vers la gauche par rapport à sa position normale */
 }
 
 
@@ -166,4 +168,129 @@ margin-right:110px;
   }
 
 
-
+.container {
+    margin-top: 20px; /* Ajustez cette valeur selon l'espace souhaité après "NOS CONCERTS" */
+    margin-bottom: 20px; /* Espace avant le début des grilles des cartes */
+    text-align: center; /* Centrer les éléments à l'intérieur du container */
+    width: 50%; /* Réduction de la largeur du container */
+    max-width: 600px; /* Maximum width to ensure it doesn't get too wide on large screens */
+}
+  
+  form {
+    transition: all 0.5s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .finder {
+    border: 1px solid #fff;
+    background-color: #f6f5f0;
+    border-radius: 15px;
+    padding: 8px;
+    box-shadow: 9px 9px 16px rgba(189, 189, 189, 0.6),
+      -9px -9px 16px rgba(255, 255, 255, 0.5);
+  }
+  
+  .finder__outer {
+    display: flex;
+    width: 600px;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: inset 10px 10px 15px -10px #c3c3c3,
+      inset -10px -10px 15px -10px #ffffff;
+  }
+  
+  .finder__inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 1;
+  }
+  
+  .finder__form {
+    flex: 1;
+    height: calc(100% + 3rem);
+  }
+  
+  .finder__input {
+    height: calc(100% + 3rem);
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.75px;
+  }
+  
+  .finder__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    transition: all 0.2s;
+    box-shadow: inset 0 0 0 20px #292929;
+    border-radius: 50%;
+    position: relative;
+  
+    &:after,
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  
+    &:after {
+      width: 10px;
+      height: 10px;
+      background-color: #292929;
+      border: 3px solid #f6f5f0;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%);
+      left: 0px;
+      right: 0;
+      margin: auto;
+      border-radius: 50%;
+  
+      @at-root .active & {
+        border-width: 10px;
+        background-color: #f6f5f0;
+      }
+    }
+  
+    &:before {
+      width: 4px;
+      height: 13px;
+      background-color: #f6f5f0;
+      top: 50%;
+      left: 20px;
+      transform: rotateZ(45deg) translate(-50%, 0);
+      transform-origin: 0 0;
+      border-radius: 4px;
+  
+      @at-root .active & {
+        background-color: #292929;
+        width: 6px;
+        transform: rotateZ(45deg) translate(-50%, 25px);
+      }
+    }
+  
+    @at-root .processing & {
+      transform-origin: 50%;
+      animation: spinner 0.3s linear infinite;
+      animation-delay: 0.5s;
+    }
+  
+    @at-root .active & {
+      transform: translateY(-5px);
+    }
+  }
+  
+  @keyframes spinner {
+    0% {
+      transform: rotateZ(45deg);
+    }
+    100% {
+      transform: rotateZ(405deg);
+    }
+  }
+  

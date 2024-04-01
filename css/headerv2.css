@@ -9,6 +9,14 @@
 
     display: flex;
 }
+/* Ajuster le conteneur de la barre de recherche pour le centrer */
+.container {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    width: 100%; /* Utiliser toute la largeur disponible */
+    margin: 20px 0; /* Ajouter de l'espace au-dessus et en dessous */
+}
 
 
     /* logo zone */
