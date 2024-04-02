@@ -127,8 +127,8 @@ header {
 
   #sortButton {
     padding: 10px 15px;
-    background-color: #4CAF50; /* Couleur de fond */
-    color: white; /* Couleur du texte */
+    background-color: #ffffff; /* Couleur de fond */
+    color: black; /* Couleur du texte */
     border: none; /* Pas de bordure */
     border-radius: 5px; /* Bordures arrondies */
     cursor: pointer; /* Curseur en forme de pointeur */
@@ -137,4 +137,5 @@ header {
 
 #sortButton:hover {
     background-color: black; /* Couleur de fond au survol */
+    color: white;
 }
