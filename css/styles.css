@@ -1,11 +1,13 @@
 body, html {
   margin: 0;
   padding: 0;
-  min-height: 100%;
   font-family: 'Heebo', sans-serif;
   background-color: #252b33;
   color: #fff;
   font-size: 16px;
+}
+.content {
+  flex: 1;
 }
 
 
@@ -33,23 +35,18 @@ header {
   padding: 0;
   box-sizing: border-box;
 }
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  margin-top: 20px; /* Assurez-vous qu'il y a de l'espace entre la barre de recherche et les cartes */
-}
+
 
 
 .card {
-  width: 400px;
-  aspect-ratio: 1 / 0.7;
+  width: 250px; /* Correspond à la largeur de l'image */
+  height: 267px; /* Correspond à la hauteur de l'image */  aspect-ratio: 1 / 0.7;
   border-radius: 8px;
   position: relative;
   cursor: pointer;
   top: 50px;
 }
+
 .card .image-box {
   width: 100%;
   height: 100%;
@@ -59,7 +56,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 90%;
+  object-position: center;
   border-radius: inherit;
   transition: 0.5s ease-in-out;
 }
@@ -115,182 +112,29 @@ header {
   transform: translateY(0);
 }
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Crée des colonnes de 400px de largeur minimum */
-  gap: 20px; /* Espacement entre les cartes */
-  padding: 20px; /* Ajoute un peu d'espace autour de la grille */
-  margin-bottom: 50px; /* Ajouter une marge en bas pour éviter l'empiètement */
-}
-
-/* Assurez-vous que le reste de votre CSS est bien configuré pour les cartes */
-
-
-
-
-input:focus {
-  outline-offset: -2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  place-content: center;
+  margin-bottom: 100px; /* Ajouter une marge en bas pour éviter l'empiètement */
+  gap: 50px;
 }
 
 
+/* Fin de l'ajout des cartee */
 
-#submitsearch{
-border: 1px solid rgb(138, 134, 134);
-margin-left: -82px;
-padding: 5px;
-border-radius: 19px;
-cursor: pointer;
-padding-left: 10px;
-padding-right: 8px; 
-padding-top: 4px;
 
-display: none;
-box-shadow: 0 0 1px black;     
-margin-right:110px;
+  #sortButton {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur en forme de pointeur */
+    transition: background-color 0.3s; /* Transition douce pour le survol */
 }
 
-#searchInput {
-    width: 18%;
-
-    border: 1px solid #000;
-    border-radius: 30px;
-    font-size: 16px;
-    background-color: white;
-    background-image:url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-24.png');
-
-    background-position: 10px 7px;
-    background-repeat: no-repeat;
-    padding: 8px 20px 8px 40px;
-    -webkit-transition: width 0.8s ease-in-out;
-    transition: width 0.8s ease-in-out;
-    outline: none;
-    opacity: 0.9;
-
-  }
-
-
-.container {
-    margin-top: 20px; /* Ajustez cette valeur selon l'espace souhaité après "NOS CONCERTS" */
-    margin-bottom: 20px; /* Espace avant le début des grilles des cartes */
-    text-align: center; /* Centrer les éléments à l'intérieur du container */
-    width: 50%; /* Réduction de la largeur du container */
-    max-width: 600px; /* Maximum width to ensure it doesn't get too wide on large screens */
+#sortButton:hover {
+    background-color: black; /* Couleur de fond au survol */
 }
-  
-  form {
-    transition: all 0.5s;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .finder {
-    border: 1px solid #fff;
-    background-color: #f6f5f0;
-    border-radius: 15px;
-    padding: 8px;
-    box-shadow: 9px 9px 16px rgba(189, 189, 189, 0.6),
-      -9px -9px 16px rgba(255, 255, 255, 0.5);
-  }
-  
-  .finder__outer {
-    display: flex;
-    width: 600px;
-    padding: 1.5rem 2rem;
-    border-radius: 10px;
-    box-shadow: inset 10px 10px 15px -10px #c3c3c3,
-      inset -10px -10px 15px -10px #ffffff;
-  }
-  
-  .finder__inner {
-    display: flex;
-    align-items: center;
-    position: relative;
-    flex: 1;
-  }
-  
-  .finder__form {
-    flex: 1;
-    height: calc(100% + 3rem);
-  }
-  
-  .finder__input {
-    height: calc(100% + 3rem);
-    border: none;
-    background-color: transparent;
-    outline: none;
-    font-size: 1.5rem;
-    letter-spacing: 0.75px;
-  }
-  
-  .finder__icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 1rem;
-    transition: all 0.2s;
-    box-shadow: inset 0 0 0 20px #292929;
-    border-radius: 50%;
-    position: relative;
-  
-    &:after,
-    &:before {
-      display: block;
-      content: "";
-      position: absolute;
-      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-  
-    &:after {
-      width: 10px;
-      height: 10px;
-      background-color: #292929;
-      border: 3px solid #f6f5f0;
-      top: 50%;
-      position: absolute;
-      transform: translateY(-50%);
-      left: 0px;
-      right: 0;
-      margin: auto;
-      border-radius: 50%;
-  
-      @at-root .active & {
-        border-width: 10px;
-        background-color: #f6f5f0;
-      }
-    }
-  
-    &:before {
-      width: 4px;
-      height: 13px;
-      background-color: #f6f5f0;
-      top: 50%;
-      left: 20px;
-      transform: rotateZ(45deg) translate(-50%, 0);
-      transform-origin: 0 0;
-      border-radius: 4px;
-  
-      @at-root .active & {
-        background-color: #292929;
-        width: 6px;
-        transform: rotateZ(45deg) translate(-50%, 25px);
-      }
-    }
-  
-    @at-root .processing & {
-      transform-origin: 50%;
-      animation: spinner 0.3s linear infinite;
-      animation-delay: 0.5s;
-    }
-  
-    @at-root .active & {
-      transform: translateY(-5px);
-    }
-  }
-  
-  @keyframes spinner {
-    0% {
-      transform: rotateZ(45deg);
-    }
-    100% {
-      transform: rotateZ(405deg);
-    }
-  }
-  
