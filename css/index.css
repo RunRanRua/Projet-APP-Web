@@ -63,8 +63,29 @@ body {
 }
 .concert .upBox{
     height: 50%;
+    display: flex;
+
+}
+.concert .upBox .txt{
+    height: 30vw;
+    width: 20vw;
+    margin: 0 20vw 0;
+}
+.concert .upBox img{
+    height: 40vw;
+    margin-top: 5vw;
 
 }
 .concert .downBox{
     height: 50%;
+    display: flex;
+}
+.concert .downBox .txt{
+    height: 30vw;
+    width: 20vw;
+}
+.concert .downBox img{
+    height: 40vw;
+    margin: 0 20vw 5vw 10vw;
+
 }
