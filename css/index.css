@@ -66,26 +66,151 @@ body {
     display: flex;
 
 }
-.concert .upBox .txt{
-    height: 30vw;
-    width: 20vw;
-    margin: 0 20vw 0;
+.concert .upBox .innerbox{
+    height: 100%;
+    width: 50vw;
+    margin: 0 10vw 0;
+    background: url(../images/paris.png) no-repeat center left;
+    background-position-y: 9vw;
+    background-size: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+.concert .upBox .innerbox .txt{
+    width: 60vw;
+    line-height: 4vw;
+    font-size: 3.5vw;
+    margin: 11vw 0 0 6vw;
+    font-weight: bold;
+}
+.concert .upBox .innerbox .location{
+    width: 60vw;
+    line-height: 4vw;
+    font-size: 1.5vw;
+    margin: 0 0 0 6.5vw;
+    color: #C4C4C4;
+}
+.concert .upBox .innerbox img{
+    height: 7vw;
+    margin: 3vw 0px 3vw 10vw;
 }
 .concert .upBox img{
-    height: 40vw;
-    margin-top: 5vw;
-
+    height: 30vw;
+    margin-top: 10vw;
 }
 .concert .downBox{
     height: 50%;
     display: flex;
 }
-.concert .downBox .txt{
-    height: 30vw;
-    width: 20vw;
+.concert .downBox .innerbox{
+    height: 100%;
+    width: 50vw;
+    background: url(../images/paris.png) no-repeat center left;
+    background-position-y: 9vw;
+    background-size: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+.concert .downBox .innerbox .txt{
+    width: 60vw;
+    line-height: 4vw;
+    font-size: 3.5vw;
+    margin: 11vw 0 0 6vw;
+    font-weight: bold;
+}
+.concert .downBox .innerbox .location{
+    width: 60vw;
+    line-height: 4vw;
+    font-size: 1.5vw;
+    margin: 0 0 0 6.5vw;
+    color: #C4C4C4;
+}
+.concert .downBox .innerbox img{
+    height: 7vw;
+    margin: 3vw 0px 3vw 10vw;
 }
 .concert .downBox img{
-    height: 40vw;
-    margin: 0 20vw 5vw 10vw;
-
+    height: 30vw;
+    margin: 3vw 9vw 0vw 9vw;
 }
+/* === Avis Part ===*/
+.avis{
+    height: 50vw;
+    background:#000000;
+    display: flex;
+    flex-direction: column;
+}
+.avis img{
+    width: 30vw;
+    height: 10vw;
+    margin: 5vw auto;
+}
+.avis .contents{
+    height: 100%;
+    display: flex;
+}
+.avis .content{
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 5vw 0;
+}
+.avis .content .icon{
+    width: 10vw;
+    margin: 0 auto;
+}
+.avis .content .stars{
+    width: 15vw;
+    height: 3vw;
+    margin: 2% auto 0;
+}
+.avis .content .topic{
+    font-size: 2vw;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.avis .content .txt{
+    font-size: 1.5vw;
+    line-height: 2vw;
+    text-align: center;
+    margin: 2% auto 0
+}
+.avis .content .author{
+    margin: 5% auto;
+}
+/* === Background part === */
+.background{
+    background: url(../images/bgr1.png) center no-repeat;
+    background-size: cover;
+    height: 50vw;
+}
+
+/* === Equipe part === */
+.equipe{
+    background-color: #252B33;
+    height: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+.equipe img{
+    width: 70vw;
+    height: 10vw;
+    margin: 3vw auto;
+}
+.equipe .members{
+    height: 60%;
+    display: flex;
+}
+.equipe .members .member{
+    width: 23vw;
+    margin: 0 auto;
+    border-top-left-radius: 3vw;
+    border-top-right-radius: 3vw;
+
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
