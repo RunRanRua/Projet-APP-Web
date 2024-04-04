@@ -1,0 +1,26 @@
+body {
+    background-color: #252B33;
+    color: #fff;
+}
+
+.concerts .titre {
+    margin-top: 5vh;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.concerts .section {
+    margin-top: 5vh;
+    margin-left: 3vw;
+    font-size: 1vw;
+}
+
+.concerts .section h2 {
+    margin-top: 5vh;
+}
+
+.concerts .section a {
+    margin : 0 10%;
+    width: 80%;
+    height: auto;
+}
