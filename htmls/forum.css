@@ -1,0 +1,53 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F0F0F0;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #353535; /* Couleur de fond ajustée pour correspondre à l'image */
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+.main {
+    background-color: #FFFFFF;
+    margin: 20px auto;
+    width: 90%; /* Ajustement de la largeur pour une meilleure simulation de l'image */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.post {
+    background-color: #FAFAFA; /* Couleur de fond des posts pour une séparation visuelle */
+    border: 1px solid #DDDDDD; /* Bordure pour chaque post */
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px; /* Coins arrondis comme dans l'image */
+}
+
+.topic {
+    font-size: 18px;
+    color: #333333;
+    font-weight: bold; /* Titre du sujet en gras */
+    border-bottom: 2px solid #353535; /* Ligne de séparation sombre sous le titre du sujet */
+    margin-bottom: 10px; /* Espace après le titre du sujet */
+    padding-bottom: 5px; /* Espace entre le titre du sujet et la ligne de séparation */
+}
+
+.content {
+    color: #666666; /* Couleur du texte plus claire pour le contenu */
+}
+
+.footer {
+    background-color: #353535;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
