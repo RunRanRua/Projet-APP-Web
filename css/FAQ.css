@@ -1,0 +1,113 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #252B33; /* 背景颜色，根据需要进行调整 */
+}
+h1 {
+    color: #FFFFFF;
+
+}
+
+.faq-section {
+    text-align: center; /* 水平居中对齐 */
+    padding: 40px 20px; /* 加点padding，视觉上更舒适 */
+}
+
+.faq-section h1 {
+    font-size: 3em; /* 将h1标题字体放大两倍 */
+}
+
+.search-container {
+    margin: 30px 0; /* 给搜索框上下添加一些空间 */
+}
+
+.search-container {
+    position: relative; /* 用于定位内部的搜索图标 */
+    max-width: 600px; /* 或根据您的设计需求调整 */
+    margin: 0 auto; /* 这将使搜索容器居中 */
+}
+
+#search-input {
+    width: 100%; /* 使输入框扩展到容器的全部宽度 */
+    padding: 10px 40px 10px 20px; /* 右边较大的padding是为了留出图标的空间 */
+    border-radius: 50px; /* 圆角效果 */
+    border: 2px solid #ccc; /* 边框颜色，可以调整 */
+    font-size: 1em; /* 根据需要调整大小 */
+}
+
+#search-icon-link {
+    position: absolute; /* 绝对定位，相对于父元素 */
+    right: 15px; /* 距离右边5像素，根据实际图标大小调整 */
+    top: 50%; /* 顶部50%将使其垂直居中 */
+    transform: translateY(-50%); /* 这会垂直居中图标 */
+    border: none; /* 无边框 */
+}
+
+#search-icon {
+    background: transparent; /* 透明背景 */
+    cursor: pointer; /* 鼠标悬停时显示指针样式 */
+    width: 24px; /* 图标大小，根据实际图标尺寸调整 */
+    height: auto; /* 保持图标的宽高比 */
+}
+
+
+#search-icon-link {
+    background-color: #252B33; /* 您想要的颜色 */
+    mask: url('../images/loop.png') no-repeat center / contain;
+}
+
+
+/* 为了美观，还可以添加一些悬停效果和焦点效果 */
+#search-input:hover,
+#search-input:focus {
+    border-color: #777; /* 悬停或焦点时的边框颜色 */
+}
+
+#search-input:focus {
+    outline: none; /* 移除焦点时的默认轮廓 */
+}
+
+/* 如果图标有默认的内边距或边框，可能需要重置 */
+#search-icon-link img {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+
+
+.questions-container {
+    margin: 0 auto; /* 上下保持原样，左右自动（使其水平居中） */
+    max-width: 600px; /* 可以调整为理想的最大宽度 */
+}
+
+.questions-list {
+    list-style: none; /* 去除列表项目前的默认标记 */
+    padding: 0; /* 重置内边距 */
+}
+
+.questions-list li {
+    background-color: #777777; /* 背景颜色，根据需要进行调整 */
+    color: #fff; /* 文字颜色，根据需要进行调整 */
+    margin-bottom: 10px; /* 每个问题之间的间距 */
+    font-size: 1.2em; /* 字体大小放大两倍 */
+    border-radius: 8px; /* 圆角边框 */
+}
+
+.questions-list li button {
+    width: 100%; /* 按钮宽度占满整个列表项 */
+    text-align: left; /* 文字居左 */
+    padding: 20px; /* 按钮内边距 */
+    border: none; /* 去除边框 */
+    background: none; /* 去除背景色 */
+    color: inherit; /* 颜色继承自父元素 */
+}
+
+.faq-answer {
+    display: none; /* 默认不显示答案 */
+    padding: 15px; /* 答案内边距 */
+    text-align: left; /* 文字居左 */
+    border-top: 1px solid #444; /* 顶部边框，根据需要进行调整 */
+}
