@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #252B33; /* 背景颜色，根据需要进行调整 */
+    background-color: #252B33;
 }
 h1 {
     color: #FFFFFF;
@@ -11,65 +11,63 @@ h1 {
 }
 
 .faq-section {
-    text-align: center; /* 水平居中对齐 */
-    padding: 40px 20px; /* 加点padding，视觉上更舒适 */
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .faq-section h1 {
-    font-size: 3em; /* 将h1标题字体放大两倍 */
+    font-size: 3em;
 }
 
 .search-container {
-    margin: 30px 0; /* 给搜索框上下添加一些空间 */
+    margin: 30px 0;
 }
 
 .search-container {
-    position: relative; /* 用于定位内部的搜索图标 */
-    max-width: 600px; /* 或根据您的设计需求调整 */
-    margin: 0 auto; /* 这将使搜索容器居中 */
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 #search-input {
-    width: 100%; /* 使输入框扩展到容器的全部宽度 */
-    padding: 10px 40px 10px 20px; /* 右边较大的padding是为了留出图标的空间 */
-    border-radius: 50px; /* 圆角效果 */
-    border: 2px solid #ccc; /* 边框颜色，可以调整 */
-    font-size: 1em; /* 根据需要调整大小 */
+    width: 100%;
+    padding: 10px 40px 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #ccc;
+    font-size: 1em;
 }
 
 #search-icon-link {
-    position: absolute; /* 绝对定位，相对于父元素 */
-    right: 15px; /* 距离右边5像素，根据实际图标大小调整 */
-    top: 50%; /* 顶部50%将使其垂直居中 */
-    transform: translateY(-50%); /* 这会垂直居中图标 */
-    border: none; /* 无边框 */
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
 }
 
 #search-icon {
-    background: transparent; /* 透明背景 */
-    cursor: pointer; /* 鼠标悬停时显示指针样式 */
-    width: 24px; /* 图标大小，根据实际图标尺寸调整 */
-    height: auto; /* 保持图标的宽高比 */
+    background: transparent;
+    cursor: pointer;
+    width: 24px;
+    height: auto;
 }
 
 
 #search-icon-link {
-    background-color: #252B33; /* 您想要的颜色 */
+    background-color: #252B33;
     mask: url('../images/loop.png') no-repeat center / contain;
 }
 
 
-/* 为了美观，还可以添加一些悬停效果和焦点效果 */
 #search-input:hover,
 #search-input:focus {
-    border-color: #777; /* 悬停或焦点时的边框颜色 */
+    border-color: #777;
 }
 
 #search-input:focus {
-    outline: none; /* 移除焦点时的默认轮廓 */
+    outline: none;
 }
 
-/* 如果图标有默认的内边距或边框，可能需要重置 */
 #search-icon-link img {
     padding: 0;
     margin: 0;
@@ -79,71 +77,70 @@ h1 {
 
 
 .faq-answer {
-    display: none; /* 默认不显示答案 */
-    padding: 15px; /* 答案内边距 */
-    text-align: left; /* 文字居左 */
-    border-top: 1px solid #444; /* 顶部边框，根据需要进行调整 */
+    display: none;
+    padding: 15px;
+    text-align: left;
+    border-top: 1px solid #444;
 }
 
 .faq-container {
-    background-color: #444444; /* 为大框设置深色背景 */
+    background-color: #444444;
     color: white;
-    border-radius: 8px; /* 大框圆角 */
-    margin: 2em auto; /* 与页面其他元素保持垂直距离 */
-    padding: 1em; /* 大框内边距 */
-    width: 80%; /* 大框宽度 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 简单的阴影效果 */
+    border-radius: 8px;
+    margin: 2em auto;
+    padding: 1em;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .faq-title {
-    margin-bottom: 1em; /* 标题与问题列表的距离 */
+    margin-bottom: 1em;
 }
 
 .faq-list {
-    border-top: 1px solid #777777; /* 与标题分隔线 */
+    border-top: 1px solid #777777;
 }
 
 .faq-item {
-    background-color: #ffffff; /* 问题小框深色背景 */
-    border-radius: 4px; /* 小框圆角 */
-    margin: 0.5em 0; /* 问题间距 */
-    overflow: hidden; /* 确保子元素的圆角效果不超出父元素 */
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin: 0.5em 0;
+    overflow: hidden;
 }
 
 .faq-question {
     display: block;
-    width: 100%; /* 按钮宽度扩展至整个小框宽度 */
-    text-align: left; /* 文本左对齐 */
-    padding: 0.5em; /* 问题按钮内边距 */
-    font-size: 1em; /* 字体大小 */
-    color: black; /* 文本颜色 */
+    width: 100%;
+    text-align: left;
+    padding: 0.5em;
+    font-size: 1em;
+    color: black;
     border: none;
     background: none;
-    cursor: pointer; /* 鼠标手型 */
-    position: relative; /* 用于定位内部的箭头 */
-    padding-right: 30px; /* 在右侧留出空间放置箭头 */
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
 }
 
 
 .faq-answer {
-    display: none; /* 默认不显示答案内容 */
-    padding: 0.5em; /* 答案内容内边距 */
-    background-color: #777777; /* 答案内容背景颜色 */
-    border-top: 1px solid #414141; /* 分隔线 */
+    display: none;
+    padding: 0.5em;
+    background-color: #777777;
+    border-top: 1px solid #414141;
 }
 
 
 
 .faq-question .arrow {
-    position: absolute; /* 绝对定位，相对于问题按钮 */
-    right: 10px; /* 距离按钮右边框10px */
-    top: 50%; /* 在按钮的垂直中间 */
-    transform: translateY(-50%); /* 垂直居中箭头 */
-    transition: transform 0.3s ease; /* Smooth transition for rotation */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
 }
 
-/* 当问题展开时箭头翻转 */
 .faq-question.active .arrow {
-    transform: translateY(-50%) rotate(180deg); /* 旋转箭头 */
+    transform: translateY(-50%) rotate(180deg);
 }
 
