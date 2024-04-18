@@ -19,23 +19,30 @@
 
 
 
-    <div class="questions-container">
-        <ul class="questions-list">
-            <li>
-                <button class="faq-question" onclick="toggleFAQ('faq1')">Question I</button>
-                <div id="faq1" class="faq-answer">Réponse à la question I.</div>
-            </li>
-            <li>
-                <button class="faq-question" onclick="toggleFAQ('faq2')">Question II</button>
-                <div id="faq2" class="faq-answer">Réponse à la question II.</div>
-            </li>
-            <li>
-                <button class="faq-question" onclick="toggleFAQ('faq3')">Question III</button>
-                <div id="faq3" class="faq-answer">Réponse à la question III.</div>
-            </li>
-            <!-- More questions as needed -->
-        </ul>
+    <div class="faq-container">
+        <h2 class="faq-title">Question recurrentes</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleAnswer('answer1')">Question I <span class="arrow">&#9660;</span></button>
+                <div id="answer1" class="faq-answer">Réponse à la question I.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleAnswer('answer2')">Question II <span class="arrow">&#9660;</span></button>
+                <div id="answer2" class="faq-answer">Réponse à la question II.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleAnswer('answer3')">Question III <span class="arrow">&#9660;</span></button>
+                <div id="answer3" class="faq-answer">Réponse à la question III.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleAnswer('answer4')">Question IV <span class="arrow">&#9660;</span></button>
+                <div id="answer4" class="faq-answer">Réponse à la question IV.</div>
+            </div>
+            <!-- Repeat this block for other questions -->
+        </div>
     </div>
+
+
 </section>
 
 <script src="../JS/script.js"></script>
