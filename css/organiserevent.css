@@ -148,7 +148,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #404040;
+    background-color: #252b33;
 
 }
 .window {
@@ -160,9 +160,11 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
+    border-radius: 15px
 }
 .content {
     color: white; /* Texte en blanc */
+
 }
 h1 {
     color: white; /* Texte en blanc */ 
@@ -171,6 +173,10 @@ h1 {
 form {
     max-width: 400px;
     margin: 0 auto;
+    background-color: black; /* Ajout de la couleur de fond blanche */
+    padding: 20px; /* Ajout de la marge intérieure pour un meilleur espacement */
+    border-radius: 10px; /* Ajout des angles arrondis à la case */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour mettre en évidence la case */
 }
 label {
     display: block;
