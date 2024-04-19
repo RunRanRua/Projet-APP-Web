@@ -1,0 +1,141 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #252B33;
+}
+h1 {
+    color: #FFFFFF;
+
+}
+
+.faq-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.faq-section h1 {
+    font-size: 3em;
+}
+
+.search-container {
+    margin: 30px 0;
+}
+
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 40px 10px 20px;
+    border-radius: 50px;
+    border: 2px solid #ccc;
+    font-size: 1em;
+}
+
+#search-icon-link {
+    position: absolute;
+    right: 3%;
+    top: 57%;
+    transform: translateY(-50%);
+    border: none;
+}
+
+#search-icon {
+    background: transparent;
+    cursor: pointer;
+    width: 24px;
+    height: auto;
+}
+
+
+
+#search-input:hover,
+#search-input:focus {
+    border-color: #777;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+#search-icon-link img {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    text-align: left;
+    border-top: 1px solid #444;
+}
+
+.faq-container {
+    background-color: #444444;
+    color: white;
+    border-radius: 8px;
+    margin: 2em auto;
+    padding: 1em;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+    margin-bottom: 1em;
+}
+
+.faq-list {
+    border-top: 1px solid #777777;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin: 0.5em 0;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5em;
+    font-size: 1em;
+    color: black;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+}
+
+
+.faq-answer {
+    display: none;
+    padding: 0.5em;
+    background-color: #777777;
+    border-top: 1px solid #414141;
+}
+
+
+
+.faq-question .arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
