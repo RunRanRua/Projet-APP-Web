@@ -114,14 +114,14 @@ body {
     flex-direction: column;
 }
 .concert .downBox .innerbox .txt{
-    width: 60vw;
+    width: 47vw;
     line-height: 4vw;
     font-size: 3.5vw;
     margin: 11vw 0 0 6vw;
     font-weight: bold;
 }
 .concert .downBox .innerbox .location{
-    width: 60vw;
+    width: 47vw;
     line-height: 4vw;
     font-size: 1.5vw;
     margin: 0 0 0 6.5vw;
