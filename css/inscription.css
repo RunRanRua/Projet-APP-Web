@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+
+body {
+    background-image: url('../images/flou.png');
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; 
+    height: 85vh;
+}
+
+
+
+
+.container {
+    max-width: 30% ;
+    margin: 12vh auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #252B33 ;
+}
+
+.title2 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex; /* Utilisation de flexbox pour aligner les éléments enfants */
+    justify-content: center; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 35%;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #28BED0;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    display: flex; 
+    justify-content: center; 
+}
+
+button:hover {
+    background-color: #149ead;
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        max-width: 70%;
+    }
+}
