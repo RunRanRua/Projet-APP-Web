@@ -5,85 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'acceuil</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/organiserevent.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
-    <!-- === Header Part === -->
-    <div class="header">
-        <!-- logo -->
-        <div class="logo">
-            <a href="#"><img src="..\images\logo100px.png"></a>
-        </div>
-
-        <!-- navigation -->
-        <div class="nav">
-            <ul>
-                <li><a href="#" class = "active"><b>ACCUEIL</b></a></li>
-                <li><a href="#"><b>EVENEMENT</b></a></li>
-                <li><a href="#"><b>FAQ</b></a></li>
-                <li><a href="#"><b>FORUM</b></a></li>
-                <li><a href="#"><b>A PROPOS</b></a></li>
-            </ul>
-        </div>
     
-        <!-- search barre -->
-        <div class="search">
-            <a href="#"><img src="..\images\loop.png"></a>
-            <input type="text" placeholder="RECHERCHE">
-        </div>
-
-        <!-- user -->
-        <div class="user">
-            <a href="#"><img src="..\images\signup.png"></a>
-            <a href="#"><img src="..\images\login2.png"></a>
-        </div>
-    </div>
-    
-    <!-- === mid Part === -->
-    </div>
-
-        <h1>ORGANISER UN ÉVÉNEMENT</h1>
-        <div class="window">
-            <div class="content">
-                Comment procéder ?
-            </div>
-        </div>
-
-    <form action="/submit-form" method="post">
-        <label for="titre">Titre</label><br>
-        <input type="text" id="titre" name="titre"><br><br>
-
-        <label for="artiste">Artiste</label><br>
-        <input type="text" id="artiste" name="artiste"><br><br>
-
-        <label for="categorie">Catégorie</label><br>
-        <input type="text" id="categorie" name ="categorie"><br><br>
-
-        <label for="type">type</label><br>
-        <input type="text" id="type" name ="type"><br><br>
-
-        <label for="tags">tags</label><br>
-        <input type="text" id="tags" name ="tags"><br><br>
-
-        <label for="date">date</label><br>
-        <input type="text" id="date" name ="date"><br><br>
-
-        <label for="icon">icon</label><br>
-        <input type="text" id="icon" name ="icon"><br><br>
-
-
-        <input type="submit" value="Envoie la demande">
-    </form>
-  
-
-
-
-
-
-
-
-
     <!-- === Footer Part === -->
     <div class="footer">
 
@@ -99,7 +25,7 @@
         </div>
 
         <!-- navigation -->
-        <div class="nav">
+       xa <div class="nav">
        
             <ul1>
                 <li><a href="#"><b>FAQ</b></a></li>
