@@ -1,14 +1,4 @@
-.bg{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0px;
-    left:0px;
-    background: rgba(0, 0, 0, .5);
-    z-index: 999;
-    display: none;
-}
-.inscription {
+.connexion {
     width: 30% ;
     top:50%;
     left:50%;
@@ -25,7 +15,7 @@
 
 }
 
-.inscription .title2 {
+.connexion .title2 {
     margin: 5% auto 2%;
     font-weight: bold;
     font-size: 150%;
@@ -35,39 +25,18 @@
     position: relative;
 }
 
-.inscription .content .condition{
-    margin:3% 0 6% 12%;
-}
-.inscription .content .input {
+.connexion .content .input {
     text-align: center;
     margin: 2% auto 0%;
 }
-.inscription .content .verifMail {
-    margin-left: 10%;
-    margin-right: 10%
-}
-.inscription .content .btnMail {
-    width: 35%;
-    padding: 8px;
-    background-color: #28BED0;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    margin-right: 10%
-}
-.inscription .content .inputVerif {
-    display: flex;
-    margin-top: 4%;
-}
 
-.inscription .content .title {
+.connexion .content .title {
     margin-left: 12%;
     margin-top: 4%;
 }
 
-.inscription .content input[type="text"],
+.connexion .content input[type="text"],
 input[type="email"],
-input[type="tel"],
 input[type="password"] {
     width: 80%;
     padding: 10px;
@@ -76,7 +45,7 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-.inscription .content div{
+.connexion .content div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +53,7 @@ input[type="password"] {
     margin-bottom: 6%;
 }
 
-.inscription .content Button {
+.connexion .content Button {
     width: 35%;
     padding: 8px;
     background-color: #28BED0;
@@ -94,7 +63,7 @@ input[type="password"] {
     cursor: pointer;
 }
 
-.inscription .content Button:hover {
+.connexion .content Button:hover {
     background-color: #149ead;
 }
 
