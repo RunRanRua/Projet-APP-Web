@@ -37,6 +37,16 @@ h1 {
     font-size: 1em;
 }
 
+#admin-button {
+    display: none;
+    margin-top: 20px;
+    padding: 5px 7px;  
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+
+
 #search-icon-link {
     position: absolute;
     right: 3%;
