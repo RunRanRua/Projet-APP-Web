@@ -3,39 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D</title>
+    <title>Inscription</title>
     <link rel="stylesheet" href="../css/inscription.css">
 </head>
-
 <body>
-    <!-- inscription box -->
     <div class="container">
-        <form class="form">
+        <form class="form" action="../htmls/inscription.php" method="post">
             <h2 class="title2">Inscription</h2>
             <div class="form-group">
-                <input type="text" placeholder="Prénom" required>
+                <input type="text" name="prenom" placeholder="Prénom" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" name="nom" placeholder="Nom" required>
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="Email" required>
             </div>
             <div class="form-group">
-                <input type="email" placeholder="Email" required>
+                <input type="tel" name="numero" placeholder="Numéro de téléphone" required>
             </div>
             <div class="form-group">
-                <input type="tel" placeholder="Numéro de téléphone" required>
+                <input type="password" name="mdp" placeholder="Mot de passe" required>
             </div>
             <div class="form-group">
-                <input type="password" placeholder="Mot de passe" required>
-            </div>
-            <div class="form-group">
-                <input type="password" placeholder="Confirmation de mot de passe" required>
+                <input type="password" name="confirm_mdp" placeholder="Confirmation de mot de passe" required>
             </div>
             <div class="form-group">
                 <button type="submit">S'inscrire</button>
-            </form>
-        </div>
-    </div>    
+            </div>
+        </form>
+    </div>
 </body>
-
-
 </html>

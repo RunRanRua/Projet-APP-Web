@@ -1,3 +1,6 @@
+<?php
+session_start(); // Doit être la première ligne avant les balises HTML
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,11 +37,21 @@
             <input type="text" placeholder="RECHERCHE">
         </div>
 
-        <!-- user -->
-        <div class="user">
-            <a href="inscription.html"><img src="..\images\signup.png"></a>
-            <a href="#"><img src="..\images\login2.png"></a>
-        </div>
+      <!-- Ajoutez cela en haut de votre fichier HTML pour démarrer la session PHP -->
+      <div class="user">
+    <?php if (isset($_SESSION['user_id'])): ?>  <!-- Vérifie si l'utilisateur est connecté -->
+        <a href="profil.php"><img src="..\images\user.png" alt="Profil"></a>
+        <a href="logout.php"><img src="..\images\X_icon.png" alt="Déconnexion"></a>
+        <?php if (!empty($_SESSION['is_admin']) && $_SESSION['is_admin']): ?>  <!-- Vérifie si l'utilisateur est administrateur -->
+            <a href="gestion_utilisateurs.php"><img src="..\images\admin_icon.png" alt="Gestion Utilisateurs"></a>
+        <?php endif; ?>
+    <?php else: ?>  <!-- Si non connecté, montre les options d'inscription et de connexion -->
+        <a href="inscription.html"><img src="..\images\signup.png" alt="S'inscrire"></a>
+        <a href="login.html"><img src="..\images\login2.png" alt="Se connecter"></a>
+    <?php endif; ?>
+</div>
+
+        
     </div>
 
     <!-- === Event Part === -->
