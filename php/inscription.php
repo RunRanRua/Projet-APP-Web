@@ -64,7 +64,7 @@ if ($mdp !== $confirm_mdp) {
 }
 
 // Verify if mail already existed ------------------------------------------------------------------------------
-$verify_sql = "SELECT * FROM utilisateur WHERE Mail = ?";
+$verify_sql = "SELECT * FROM Utilisateur WHERE Mail = ?";
 $verify_stmt = $conn->prepare($verify_sql);
 $verify_stmt->bind_param("s",$email);
 $verify_stmt->execute();
