@@ -44,7 +44,7 @@
 
             <?php if (isset($_SESSION['user_id'])){ ?>
                 <?php if ( $_SESSION["is_admin"] ) { ?>
-                   <a href="#" > <img src="..\images\admin_icon.png" alt="Profil"> </a>
+                   <a href="gestion_utilisateurs.php" > <img src="..\images\admin_icon.png" alt="Profil"> </a>
                 <?php } else{ ?>
                     <a href="profil.php" > <img src="..\images\user.png" alt="Profil"> </a>
                 <?php } ?>
