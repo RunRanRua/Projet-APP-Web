@@ -117,6 +117,13 @@
     }
     echo "Connexion réussie";
     ?>
+    <form method="GET" action="gestion_utilisateurs.php">
+    Nom: <input type="text" name="search_nom">
+    Prénom: <input type="text" name="search_prenom">
+    Email: <input type="email" name="search_email">
+    <input type="submit" value="Rechercher">
+</form>
+
 
     <h2>Ajouter un Utilisateur</h2>
     <form method="post" action="ajouter_utilisateurs.php">
@@ -128,22 +135,49 @@
     </form>
 
     <h2>Liste des Utilisateurs</h2>
-    <?php
-    $sql = "SELECT idUtilisateur, Nom, Prenom, Mail FROM Utilisateur";
-    $result = $conn->query($sql);
+<?php
+$sql = "SELECT idUtilisateur, Nom, Prenom, Mail FROM Utilisateur WHERE 1=1";
 
-    if ($result->num_rows > 0) {
-        echo "<table><tr><th>ID</th><th>Nom</th><th>Prénom</th><th>Email</th><th>Actions</th></tr>";
-        // Afficher les données de chaque ligne
-        while($row = $result->fetch_assoc()) {
-            echo "<tr><td>".$row["idUtilisateur"]."</td><td>".$row["Nom"]."</td><td>".$row["Prenom"]."</td><td>".$row["Mail"]."</td>";
-            echo "<td><a href='supprimer_utilisateur.php?id=".$row["idUtilisateur"]."'>Supprimer</a></td></tr>";
-        }
-        echo "</table>";
+// Vérifie si des paramètres de recherche existent et ne sont pas vides
+$anySearch = false; // Cette variable détermine si une recherche a été effectuée
+
+if (!empty($_GET['search_nom'])) {
+    $searchNom = $conn->real_escape_string($_GET['search_nom']);
+    $sql .= " AND Nom LIKE '%$searchNom%'";
+    $anySearch = true;
+}
+
+if (!empty($_GET['search_prenom'])) {
+    $searchPrenom = $conn->real_escape_string($_GET['search_prenom']);
+    $sql .= " AND Prenom LIKE '%$searchPrenom%'";
+    $anySearch = true;
+}
+
+if (!empty($_GET['search_email'])) {
+    $searchEmail = $conn->real_escape_string($_GET['search_email']);
+    $sql .= " AND Mail LIKE '%$searchEmail%'";
+    $anySearch = true;
+}
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table><tr><th>ID</th><th>Nom</th><th>Prénom</th><th>Email</th></tr>";
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>".$row["idUtilisateur"]."</td><td>".$row["Nom"]."</td><td>".$row["Prenom"]."</td><td>".$row["Mail"]."</td></tr>";
+    }
+    echo "</table>";
+} else {
+    // Si une recherche a été effectuée mais aucun résultat n'est trouvé
+    if ($anySearch) {
+        echo "Aucun résultat trouvé pour votre recherche.";
     } else {
+        // Si aucune recherche n'a été effectuée et la table est vide
         echo "0 résultats";
     }
-    $conn->close();
-    ?>
+}
+$conn->close();
+?>
+
 </body>
 </html>
