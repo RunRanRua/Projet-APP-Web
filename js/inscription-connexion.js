@@ -31,7 +31,13 @@ function connexionClick(event){
 
 
 window.onclick = function(event){
-    if (event.target !== signBTN && event.target !== loginBTN && event.target !== inscription && !inscription.contains(event.target)){
+    if (event.target !== signBTN && 
+        event.target !== loginBTN && 
+        event.target !== inscription &&
+        event.target !== connexion && 
+        !inscription.contains(event.target) &&
+        !connexion.contains(event.target)
+    ){
         bg.style.display='none';
         inscription.style.display="none";
         connexion.style.display="none";

@@ -1,4 +1,4 @@
-.connexion {
+.modifyMDP {
     width: 30% ;
     top:50%;
     left:50%;
@@ -15,7 +15,7 @@
 
 }
 
-.connexion .title2 {
+.modifyMDP .title2 {
     margin: 5% auto 2%;
     font-weight: bold;
     font-size: 150%;
@@ -25,18 +25,17 @@
     position: relative;
 }
 
-.connexion .content .input {
+.modifyMDP .content .input {
     text-align: center;
     margin: 2% auto 0%;
 }
 
-.connexion .content .title {
+.modifyMDP .content .title {
     margin-left: 12%;
     margin-top: 4%;
 }
 
-.connexion .content input[type="text"],
-input[type="email"],
+.modifyMDP .content 
 input[type="password"] {
     width: 80%;
     padding: 10px;
@@ -45,7 +44,7 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-.connexion .content div{
+.modifyMDP .content div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +52,7 @@ input[type="password"] {
     margin-bottom: 6%;
 }
 
-.connexion .content Button {
+.modifyMDP .content Button {
     margin-top: 20px;
     width: 35%;
     padding: 8px;
@@ -64,7 +63,7 @@ input[type="password"] {
     cursor: pointer;
 }
 
-.connexion .content Button:hover {
+.modifyMDP .content Button:hover {
     background-color: #149ead;
 }
 

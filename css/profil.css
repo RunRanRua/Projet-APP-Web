@@ -1,0 +1,79 @@
+.profil{
+    height: 44vw;
+    width: 100%;
+    background-color: #252b34;
+    opacity: 0.9;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+.profil .title{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 4vw;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+}
+.profil .user{
+    height: 100%;
+    
+    display: flex;
+}
+.profil .user .left{
+    width: 100%;
+
+    display:flex;
+    flex-direction: column;
+}
+.profil .user .left img{
+    margin: 5% auto 5%;
+    width: 30%;
+    height: 30%;
+}
+.profil .user .left p{
+    margin: 1% auto;
+    font-size: 1.2vw;
+}
+.profil .user .left button{
+    margin: 10% auto 0;
+    width: 35%;
+    height: 10%;
+
+    background-color: #FF0000;
+    color: #fff;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+
+    font-size: 200%;
+    font-weight: bold;
+}
+
+
+.profil .user .right{
+    width: 100%;
+    padding-top: 2%;
+
+    display:flex;
+    flex-direction: column;
+}
+.profil .user .right li{
+    margin: 3.2% 2%;
+    font-size: 2vw;
+}
+.profil .user .right li button{
+    width: 10%;
+    height: 90%;
+
+    margin-right: 20%;
+    background-color: #28BED0;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    font-weight: bold;
+    float: right;
+}
+
