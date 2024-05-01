@@ -162,9 +162,11 @@ if (!empty($_GET['search_email'])) {
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table><tr><th>ID</th><th>Nom</th><th>Prénom</th><th>Email</th></tr>";
+    echo "<table><tr><th>ID</th><th>Nom</th><th>Prénom</th><th>Email</th><th>Actions</th></tr>";
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td>".$row["idUtilisateur"]."</td><td>".$row["Nom"]."</td><td>".$row["Prenom"]."</td><td>".$row["Mail"]."</td></tr>";
+        echo "<tr><td>".$row["idUtilisateur"]."</td><td>".$row["Nom"]."</td><td>".$row["Prenom"]."</td><td>".$row["Mail"]."</td>";
+        // Ajoutez ici le lien de suppression
+        echo "<td><a href='supprimer_utilisateur.php?id=".$row["idUtilisateur"]."'>Supprimer</a></td></tr>";
     }
     echo "</table>";
 } else {

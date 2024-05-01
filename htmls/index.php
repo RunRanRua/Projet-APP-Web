@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="#" class = "active"><b>ACCUEIL</b></a></li>
                 <li><a href="#"><b>EVENEMENT</b></a></li>
-                <li><a href="FAQ.html"><b>FAQ</b></a></li>
+                <li><a href="FAQ.php"><b>FAQ</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
                 <li><a href="#"><b>A PROPOS</b></a></li>
             </ul>
@@ -240,7 +240,7 @@
         <div class="nav">
        
             <ul1>
-                <li><a href="FAQ.html"><b>FAQ</b></a></li>
+                <li><a href="FAQ.php"><b>FAQ</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
                 <li><a href="#"><b>CONTACT</b></a></li>
             </ul1>
