@@ -69,11 +69,11 @@
             </div>
 
             <div class="right">
-                <li><b>Nom :</b>  <i><?php echo $_SESSION["nom"] ?></i></li>
-                <li><b>Prénom :</b>  <i><?php echo $_SESSION["prenom"] ?></i></li>
-                <li><b>Mail :</b>  <i><?php echo $_SESSION["email"] ?></i></li>
+                <li><b>Nom :</b>  <?php echo $_SESSION["nom"] ?></li>
+                <li><b>Prénom :</b>  <?php echo $_SESSION["prenom"] ?></li>
+                <li><b>Mail :</b>  <?php echo $_SESSION["email"] ?></li>
                 <li>
-                    <b>N° de Tel :</b>  <i><?php echo $_SESSION["numero"] ?> </i>
+                    <b>N° de Tel :</b>  <?php echo $_SESSION["numero"] ?>
                     <button> Modifier </button>
                 </li>
                 <li>
@@ -82,10 +82,7 @@
                 </li>
             </div>    
         </div>
-
-
-
-
+    </div>
 
 
 
