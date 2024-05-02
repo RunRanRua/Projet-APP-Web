@@ -1,0 +1,85 @@
+.modifyTEL {
+    width: 30% ;
+    top:50%;
+    left:50%;
+
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #252B33 ;
+    transform:translate(-50%,-50%);
+
+
+    position: fixed;
+    z-index: 1000;
+    display: none;
+
+}
+
+.modifyTEL .title2 {
+    margin: 5% auto 2%;
+    font-weight: bold;
+    font-size: 150%;
+    text-decoration: underline;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.modifyTEL .content .input {
+    text-align: center;
+    margin: 2% auto 0%;
+}
+
+.modifyTEL .content .title {
+    margin-left: 12%;
+    margin-top: 4%;
+}
+
+.modifyTEL .content 
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.modifyTEL .content div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 6%;
+}
+
+.modifyTEL .content Button {
+    margin-top: 20px;
+    width: 35%;
+    padding: 8px;
+    background-color: #28BED0;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.modifyTEL .content Button:hover {
+    background-color: #149ead;
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        max-width: 70%;
+    }
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left:0px;
+    background: rgba(0, 0, 0, .5);
+    z-index: 999;
+    display: none;
+}

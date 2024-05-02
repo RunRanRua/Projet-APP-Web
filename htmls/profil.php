@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/profil.css">
     <link rel="stylesheet" href="../css/modifyMDP.css">
+    <link rel="stylesheet" href="../css/modifyTEL.css">
+    <link rel="stylesheet" href="../css/profil_deleteUser.css">
 </head>
 <body>
-     <!-- === Header Part === -->
+    <!-- === Header Part === -->
     <div class="header">
         <!-- logo -->
         <div class="logo">
@@ -65,7 +67,7 @@
                 <p>
                     <b>Date d'inscription: <?php echo $_SESSION["date"] ?></b>
                 </p>
-                <button>Supprimer le compte</button>
+                <button id="deleteUser" onclick="deleteOnClick(event)">Supprimer le compte</button>
             </div>
 
             <div class="right">
@@ -74,7 +76,7 @@
                 <li><b>Mail :</b>  <?php echo $_SESSION["email"] ?></li>
                 <li>
                     <b>N° de Tel :</b>  <?php echo $_SESSION["numero"] ?>
-                    <button> Modifier </button>
+                    <button id="modifyTEL" onclick="TELonClick(event)"> Modifier </button>
                 </li>
                 <li>
                     <b>Mot de passe :</b>  <i>***********</i>
@@ -88,7 +90,7 @@
     <div class="bg"></div>
     <!-- modify MDP box -->
     <div class="modifyMDP">
-        <form action="#" method="post">
+        <form action="..\php\modifyMDP.php" method="post">
             <div class="title2">Changer le mot de passe</div>
             <div class="content" >
                 <p class="title">Ancien Mot de passe</p>
@@ -100,10 +102,32 @@
                 <p class="title">Confirmerle mot de passe</p>
                 <p class="input"><input type="password" name="confirm_mdp" value=""/></p>
 
-                <div><Button>Changer</Button></div>
+                <div><Button >Modifier</Button></div>
             </div>
         </form>
     </div>
+
+    <!-- modify phone number box -->
+    <div class="modifyTEL">
+        <form action="..\php\modifyTEL.php" method="post">
+            <div class="title2">Changer le numéro de téléphone</div>
+            <div class="content" >
+                <p class="title">Nouveau numéro de téléphone</p>
+                <p class="input"><input type="text" name="numero" value=""/></p>
+                <div><Button >Modifier</Button></div>
+            </div>
+        </form>
+    </div>
+
+    <div class="deleteUser">
+        <form action="..\php\profil_deleteUser.php" method="post">
+            <div class="title2">Vous êtes sûr de supprimer votre compte ?</div>
+            <div class="content" >
+                <div><Button >Supprimer</Button></div>
+            </div>
+        </form>
+    </div>
+    
 
     <script src="../js/profil.js"></script>
 

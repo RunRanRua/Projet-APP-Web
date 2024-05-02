@@ -53,8 +53,9 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo "Saisissez un vrai mail";
     exit;
 }
+    # password
 if (!preg_match('/^[a-zA-Z0-9]{6,22}$/', $mdp)) {
-    echo "Vérifiez la taille de ton mot de passe :(6-22)";
+    echo "Vérifiez la taille de votre mot de passe :(6-22)";
     exit;
 }
 // Check if passwords match
