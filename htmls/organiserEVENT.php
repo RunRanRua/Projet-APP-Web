@@ -6,12 +6,14 @@
     <title>Page d'acceuil</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/headerv2.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/organiserevent.css">
     <link rel="stylesheet" href="../css/inscription.css">
+    <link rel="stylesheet" href="../css/connexion.css">
 </head>
 
-
 <body>
-     <!-- === Header Part === -->
+    <!-- === Header Part === -->
     <div class="header">
         <!-- logo -->
         <div class="logo">
@@ -21,8 +23,8 @@
         <!-- navigation -->
         <div class="nav">
             <ul>
-                <li><a href="index.php" class = "active"><b>ACCUEIL</b></a></li>
-                <li><a href="organiserEVENT.php"><b>EVENEMENT</b></a></li>
+                <li><a href="index.php"><b>ACCUEIL</b></a></li>
+                <li><a href="#" class = "active"><b>EVENEMENT</b></a></li>
                 <li><a href="FAQ.php"><b>FAQ</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
                 <li><a href="#"><b>A PROPOS</b></a></li>
@@ -41,9 +43,9 @@
 
             <?php if (isset($_SESSION['user_id'])){ ?>
                 <?php if ( $_SESSION["is_admin"] ) { ?>
-                   <a href="#" > <img src="..\images\admin_icon.png" alt="Profil"> </a>
+                   <a href="gestion_utilisateurs.php" > <img src="..\images\admin_icon.png" alt="Profil"> </a>
                 <?php } else{ ?>
-                    <a href="profil.html" > <img src="..\images\user.png" alt="Profil"> </a>
+                    <a href="profil.php" > <img src="..\images\user.png" alt="Profil"> </a>
                 <?php } ?>
         
                 <a href="..\php\logout.php"> <img src="..\images\LogOut.png" alt="Déconnexion"> </a>
@@ -99,5 +101,98 @@
             
         </div>
     </div>
+    
+    <!-- === mid Part === -->
+    <div class="mid">
+        <h1>ORGANISER UN ÉVÉNEMENT</h1>
+        <div class="window">
+            <div class="content">
+                Comment procéder ?
+            </div>
+        </div>
+
+        <form action="/submit-form" method="post">
+            <label for="titre">Titre</label><br>
+            <input type="text" id="titre" name="titre"><br><br>
+
+            <label for="artiste">Artiste</label><br>
+            <input type="text" id="artiste" name="artiste"><br><br>
+
+            <label for="categorie">Catégorie</label><br>
+            <input type="text" id="categorie" name ="categorie"><br><br>
+
+            <label for="type">type</label><br>
+            <input type="text" id="type" name ="type"><br><br>
+
+            <label for="tags">tags</label><br>
+            <input type="text" id="tags" name ="tags"><br><br>
+
+            <label for="date">date</label><br>
+            <input type="text" id="date" name ="date"><br><br>
+
+            <label for="icon">icon</label><br>
+            <input type="text" id="icon" name ="icon"><br><br>
+            
+            <label for="description">description</label><br>
+            <textarea name="description" id="description cols="30" rows="10"></textarea> <br><br>
+
+            <input type="submit" value="Envoie la demande">
+        </form>
+    </div>
+
+    <!-- === Footer Part === -->
+    <div class="footer">
+
+        <!-- logo -->
+        <div class="logo">
+            <h1>
+                <a href="#">logo</a>
+            </h1>
+        </div>
+
+        <div class="annotation">
+            <li><a href="#"><b>©️ 2024 Events-IT. Tous droits réservés.</b></a></li>
+        </div>
+
+        <!-- navigation -->
+        <div class="nav">
+       
+            <ul1>
+                <li><a href="#"><b>FAQ</b></a></li>
+                <li><a href="#"><b>FORUM</b></a></li>
+                <li><a href="#"><b>CONTACT</b></a></li>
+            </ul1>
+
+            <ul2>
+                <li><a href="#"><b>CGU - CGV</b></a></li>
+                <li><a href="#"><b>MENTIONS LÉGALES</b></a></li>
+                <li><a href="#"><b>POLITIQUE DE CONFIDENTIALITÉ</b></a></li>
+            </ul2>
+
+            <ul3>
+                <li><a href="#" class="title"><b>ADRESSE</b></a></li>
+                <li class="li2"><a href="#" class="supp">28 Rue Notre Dame des Champs, 75006 Paris, France</a></li>
+                <li class="li2"><a href="#" class="supp">events-it@events-it.com </a></li>
+                <li class="li2"><a href="#" class="supp">01 23 45 67 89 </a></li>
+            </ul3>
+
+            <ul4>
+                <li><a href="#" class="title"><b>NEWSLETTER</b></a></li>
+                <div class="search">
+                    <a href="#"><img src="..\images\sendv6.png" ></a>
+                    <input type="text" placeholder="EMAIL">
+                </div>
+                <div class="sociaux">
+                    <a href="#"><img src="..\images\reseausociauxv2Insta22x22.png" ></a>
+                    <a href="#"><img src="..\images\reseausociauxv2FB22x22.png" ></a>
+                    <a href="#"><img src="..\images\reseausociauxv2Tik22x22.png" ></a>
+                    <a href="#"><img src="..\images\reseausociauxv2Twitt22x22.png" ></a>
+                    <a href="#"><img src="..\images/reseausociauxvYT22x22.png" ></a>
+                </div>
+            </ul4>
+ 
+        </div>
+    </div>
+
 </body>
 </html>
