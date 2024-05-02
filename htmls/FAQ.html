@@ -50,20 +50,89 @@
             <img src="..\images\loop_gray.png" alt="Rechercher" id="search-icon">
         </a>
     </div>
-    <div>
-        <button type="button" id="admin-button">Ajouter une section</button>
-    </div>
 
 
-    <button id="monBouton">Ouvrir la pop-up</button>
-    <div id="maPop-up" class="cacher">
-        <div class="contenu-pop-up">
-            <h2>Titre de la pop-up</h2>
-            <p>Contenu de la pop-up</p>
-            <button id="fermerPop-up">Fermer</button>
-        </div>
+
+
+    <div class="open-btn">
+    <button class="open-button" onclick="openForm()"><strong>Ajouter une question</strong></button>
     </div>
-    <script src="script.js"></script>
+    <div class="login-popup">
+    <div class="form-popup" id="popupForm">
+        <form class="form-container">
+        <h2>Ajoutez votre question</h2>
+        <label for="Question">
+            <strong>Question</strong>
+        </label>
+        <input type="text" id="Question" placeholder="Votre question" />
+        <label for="réponse">
+            <strong>Réponse</strong>
+        </label>
+        <input type="text" id="Réponse" placeholder="Votre réponse" />
+        <button type="submit" class="btn" onclick="addFAQSection(document.getElementById('Question').value, document.getElementById('réponse').value)">Ajouter</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Annuler</button>
+        </form>
+    </div>
+    </div>
+    <script>
+    function openForm() {
+        document.getElementById("popupForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("popupForm").style.display = "none";
+    }
+
+
+    function addFAQSection(questionText, answerText) {
+        // Get the FAQ list element
+        const faqList = document.querySelector('.faq-list');
+
+        // Create the new FAQ item element
+        const faqItem = document.createElement('div');
+        faqItem.classList.add('faq-item');
+
+        // Create the question button
+        const questionButton = document.createElement('button');
+        questionButton.classList.add('faq-question');
+        questionButton.textContent = questionText + ' ';
+
+        // Add the toggle functionality (assuming you have a toggleAnswer function)
+        questionButton.setAttribute('onclick', `toggleAnswer('answer${faqList.children.length + 1}')`);
+
+        // Add the arrow icon
+        const arrowSpan = document.createElement('span');
+        arrowSpan.classList.add('arrow');
+        arrowSpan.textContent = '&#9660;'; // Replace with your preferred arrow code
+
+        // Append the arrow to the button
+        questionButton.appendChild(arrowSpan);
+
+        // Create the answer element
+        const answerElement = document.createElement('div');
+        answerElement.classList.add('faq-answer');
+        answerElement.setAttribute('id', `answer${faqList.children.length + 1}`);
+        answerElement.textContent = answerText;
+
+        // Append the question button and answer to the FAQ item
+        faqItem.appendChild(questionButton);
+        faqItem.appendChild(answerElement);
+
+        // Append the new FAQ item to the list
+        faqList.appendChild(faqItem);
+    }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -136,7 +205,7 @@
             <li><a href="#" class="title"><b>NEWSLETTER</b></a></li>
             <div class="search">
                 <a href="#"><img src="..\images\sendv6.png" ></a>
-                <input type="text" placeholder="EMAIL">
+                <input type="text" placeholder="Question">
             </div>
             <div class="sociaux">
                 <a href="#"><img src="..\images\reseausociauxv2Insta22x22.png" ></a>
