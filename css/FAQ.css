@@ -122,8 +122,6 @@ h1 {
 }
 
 
-
-#search-input:hover,
 #search-input:focus {
     border-color: #777;
 }
