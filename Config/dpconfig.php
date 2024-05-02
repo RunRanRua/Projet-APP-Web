@@ -2,7 +2,7 @@
 $host = 'localhost';
 $dbname = 'forum_cinema';
 $user = 'root';
-$pass = 'password';
+$pass = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
