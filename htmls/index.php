@@ -108,7 +108,7 @@
         <div class="bgEffet">
             <div class="box1">
                 <img src="../images/fleche.PNG" alt="picture">
-                <div class="txt">Nouvel évènement mars 7 - 13</div>
+                <div class="txt">Nouvel évènement 7 - 13 mars</div>
             </div>
 
             <div class="box2">
