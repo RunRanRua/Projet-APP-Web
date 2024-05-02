@@ -44,7 +44,7 @@
             <?php if ( $_SESSION["is_admin"] ) { ?>
                 <a href="#" > <img src="..\images\admin_icon.png" alt="Profil"> </a>
             <?php } else{ ?>
-                <a href="profil.html" > <img src="..\images\user.png" alt="Profil"> </a>
+                <a href="profil.php" > <img src="..\images\user.png" alt="Profil"> </a>
             <?php } ?>
 
             <a href="..\php\logout.php"> <img src="..\images\LogOut.png" alt="Déconnexion"> </a>
@@ -152,7 +152,7 @@
         <div class="nav">
        
             <ul1>
-                <li><a href="FAQ.html"><b>FAQ</b></a></li>
+                <li><a href="FAQ.php"><b>FAQ</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
                 <li><a href="#"><b>CONTACT</b></a></li>
             </ul1>
