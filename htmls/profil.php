@@ -129,7 +129,7 @@
     </div>
     
 
-    <script src="../js/profil.js"></script>
+    <script src="../JS/profil.js"></script>
 
 
 
