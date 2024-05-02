@@ -60,7 +60,7 @@ if ($new_mdp !== $confirm_mdp) {
 // Update password in our base ---------------------------------------------------------------------------
 $hashed_password = password_hash($new_mdp, PASSWORD_DEFAULT);
 
-$update_sql = "UPDATE utilisateur SET Mdp=? WHERE idUtilisateur=?";
+$update_sql = "UPDATE Utilisateur SET Mdp=? WHERE idUtilisateur=?";
 $update_stmt = $conn->prepare($update_sql);
 $update_stmt->bind_param("ss", $hashed_password, $_SESSION['user_id']);
 

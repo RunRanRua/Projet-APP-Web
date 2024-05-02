@@ -37,7 +37,7 @@ if (!preg_match('/^(06|07)\d{8}$/', $numero)) {
 
 // Update password in our base ---------------------------------------------------------------------------
 
-$update_sql = "UPDATE utilisateur SET Numero=? WHERE idUtilisateur=?";
+$update_sql = "UPDATE Utilisateur SET Numero=? WHERE idUtilisateur=?";
 $update_stmt = $conn->prepare($update_sql);
 $update_stmt->bind_param("ss", $numero, $_SESSION['user_id']);
 
