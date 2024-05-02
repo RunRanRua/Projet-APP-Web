@@ -38,13 +38,72 @@ h1 {
 }
 
 #admin-button {
-    display: none;
+    /*display: none;*/
     margin-top: 20px;
     padding: 5px 7px;  
     border-radius: 10px;
     cursor: pointer;
   }
   
+
+
+  
+  #maPop-up {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Masquer la pop-up par défaut */
+    z-index: 1; /* Placer la pop-up au premier plan */
+}
+
+.contenu-pop-up {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cacher {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+  
+.close:hover {
+    color: #000;
+}
 
 
 #search-icon-link {
