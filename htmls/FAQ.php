@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'acceuil</title>
+    <title>FAQ</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/headerv2.css">
@@ -51,7 +51,7 @@
                     <a href="profil.php" > <img src="..\images\user.png" alt="Profil"> </a>
                 <?php } ?>
         
-                <a href="..\php\logout.php"> <img src="..\images\LogOut.png" alt="Déconnexion"> </a>
+                <a href="..\php\logout.php"> <img src="..\images\Logout.png" alt="Déconnexion"> </a>
 
             <?php }else{ ?>
 

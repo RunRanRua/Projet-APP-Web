@@ -48,7 +48,7 @@
                     <a href="profil.php" > <img src="..\images\user.png" alt="Profil"> </a>
                 <?php } ?>
         
-                <a href="..\php\logout.php"> <img src="..\images\LogOut.png" alt="Déconnexion"> </a>
+                <a href="..\php\logout.php"> <img src="..\images\Logout.png" alt="Déconnexion"> </a>
 
             <?php }else{ ?>
 
