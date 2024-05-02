@@ -1,26 +1,27 @@
-<?php session_start(); ?>
+<?php
+session_start(); // Doit être la première ligne avant les balises HTML
+?>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'acceuil</title>
-    <link rel="stylesheet" href="../css/base.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Concert Planning</title>
+        <link rel="stylesheet" href="../css/styles.css">
+
+        <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/headerv2.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/inscription.css">
     <link rel="stylesheet" href="../css/connexion.css">
-    <link rel="stylesheet" href="../css/FAQ.css">
-
-</head>
-<body>
-    <!-- === Header Part === -->
+    </head>
+    <body>
     <div class="header">
         <!-- logo -->
         <div class="logo">
-            <a href="#"><img src="..\images\logo100px.png"></a>
+            <a href="index.php"><img src="..\images\logo100px.png"></a>
         </div>
 
         <!-- navigation -->
@@ -40,8 +41,8 @@
             <input type="text" placeholder="RECHERCHE">
         </div>
 
-        <!-- user -->
-        <div class="bg"></div>
+      <!-- user -->
+      <div class="bg"></div>
         <div class="user">
 
             <?php if (isset($_SESSION['user_id'])){ ?>
@@ -101,46 +102,100 @@
             <script src="../js/inscription-connexion.js"></script>
 
             <?php }; ?>
-            
+</div>
+
+    
+    </div>
+     <div class="container12">
+     <div class="nos-concerts">
+    <header>
+        <h1>NOS CONCERTS</h1>
+    </header>
+    <!-- Search Bar -->
+    <button id="sortButton">Trier par date</button>
+<div class="cards-grid">
+    <!-- Carte 1 -->
+    <div class="card">
+        <div class="image-box">
+            <img src="../images/concert1.jpg" alt="Concert 1">
+        </div>
+        <div class="contento">
+            <h2>Concert Rolling Stones</h2>
+            <p>- Le 15/07/2021 à 20h00</p>
         </div>
     </div>
-
-<section class="faq-section">
-    <h1>DES QUESTIONS ?</h1>
-    <div class="search-container">
-        <input type="search" id="search-input" placeholder="Rechercher un concert">
-        <a href="#" id="search-icon-link">
-            <img src="..\images\loop_gray.png" alt="Rechercher" id="search-icon">
-        </a>
-    </div>
-
-
-
-    <div class="faq-container">
-        <h2 class="faq-title">Question recurrentes</h2>
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleAnswer('answer1')">Question I <span class="arrow">&#9660;</span></button>
-                <div id="answer1" class="faq-answer">Réponse à la question I.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleAnswer('answer2')">Question II <span class="arrow">&#9660;</span></button>
-                <div id="answer2" class="faq-answer">Réponse à la question II.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleAnswer('answer3')">Question III <span class="arrow">&#9660;</span></button>
-                <div id="answer3" class="faq-answer">Réponse à la question III.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleAnswer('answer4')">Question IV <span class="arrow">&#9660;</span></button>
-                <div id="answer4" class="faq-answer">Réponse à la question IV.</div>
-            </div>
-            <!-- Repeat this block for other questions -->
+      
+    <div class="card">
+        <div class="image-box">
+            <img src="../images/concert2.jpg" alt="Concert 1">
+        </div>
+        <div class="contento">
+            <h2>Concert Rolling Stones</h2>
+            <p>- Le 15/07/2021 à 20h00</p>
         </div>
     </div>
+    <div class="card">
+        <div class="image-box">
+            <img src="../images/concert3.jpeg" alt="Concert 1">
+        </div>
+        <div class="contento">
+            <h2>Concert Rolling Stones</h2>
+            <p>- Le 15/07/2021 à 20h00</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-box">
+            <img src="../images/concert4.jpg" alt="Concert 1">
+        </div>
+        <div class="contento">
+            <h2>Concert Rolling Stones</h2>
+            <p>- Le 11/09/2023 à 20h00</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-box">
+            <img src="../images/concert5.jpg" alt="Concert 1">
+        </div>
+        <div class="contento">
+            <h2>Concert Rolling Stones</h2>
+            <p>- Le 25/07/2021 à 20h00</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-box">
+            <img src="../images/concert6.jpg" alt="Concert 1">
+        </div>
+        <div class="contento">
+            <h2>Concert Rolling Stones</h2>
+            <p>- Le 15/07/2021 à 20h00</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-box">
+            <img src="../images/concert7.jpg" alt="Concert 1">
+        </div>
+        <div class="contento">
+            <h2>Concert Rolling Stones</h2>
+            <p>- Le 18/07/2021 à 20h10</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image-box">
+            <img src="../uploads/concert_1.png" alt="Concert 1">
+        </div>
+        <div class="contento">
+            <h2>Concert Rolling Stones</h2>
+            <p>- Le 12/07/2021 à 20h00</p>
+        </div>
+    </div>
+</div>
+
+</div>
+     </div>
+
+    
 
 
-</section>
 
 <!-- === Footer Part === -->
 <div class="footer">
@@ -192,9 +247,10 @@
                 <a href="#"><img src="..\images\reseausociauxvYT22x22.png" ></a>
             </div>
         </ul4>
-
+        </div>
     </div>
-</div>
-</body>
-<script src="../JS/script.js"></script>
+
+    </body>
+    <script src="../JS/tri.js"></script>
+
 </html>

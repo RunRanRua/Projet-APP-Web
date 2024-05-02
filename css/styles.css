@@ -1,0 +1,138 @@
+
+.container12{
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo', sans-serif;
+  background-color: #252b33;
+  color: #ffffff;
+  font-size: 16px;
+}
+.content {
+  flex: 1;
+}
+
+
+
+
+.nos-concerts {
+  width: 100%; /* Prend toute la largeur */
+  text-align: center; /* Centrer le texte de l'en-tête */
+  padding: 20px 0; /* Ajouter de l'espace autour de l'en-tête */
+}
+
+
+
+
+/* Ajouts carte*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.card {
+  width: 250px; /* Correspond à la largeur de l'image */
+  height: 267px; /* Correspond à la hauteur de l'image */  aspect-ratio: 1 / 0.7;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  top: 50px;
+  z-index: 1;
+}
+
+.card .image-box {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+  transition: 0.5s ease-in-out;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.card:hover img {
+  filter: grayscale(1) brightness(0.4);
+}
+.card:hover::after {
+  opacity: 1;
+  inset: 20px;
+}
+
+.container12 .contento {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container12 .contento h2,
+.container12 .contento p {
+  opacity: 0;
+  transition: 0.4s 0.2s ease;
+}
+.container12 .contento h2 {
+  margin-bottom: 12px;
+  scale: 0.7;
+}
+.container12 .contento p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d1d1d1;
+  transform: translateY(50%);
+}
+.card:hover .contento h2 {
+  scale: 1;
+  opacity: 1;
+}
+.card:hover .contento P {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cards-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  place-content: center;
+  margin-bottom: 100px; /* Ajouter une marge en bas pour éviter l'empiètement */
+  gap: 50px;
+}
+
+
+/* Fin de l'ajout des cartee */
+
+
+  #sortButton {
+    padding: 10px 15px;
+    background-color: #ffffff; /* Couleur de fond */
+    color: black; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur en forme de pointeur */
+    transition: background-color 0.3s; /* Transition douce pour le survol */
+}
+
+#sortButton:hover {
+    background-color: black; /* Couleur de fond au survol */
+    color: white;
+}
