@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="../css/inscription.css">
     <link rel="stylesheet" href="../css/connexion.css">
     <link rel="stylesheet" href="../css/FAQ.css">
-
+    <link rel="stylesheet" href="../css/inscription.css">
+    <link rel="stylesheet" href="../css/connexion.css">
+</head>
 </head>
 <body>
-    <!-- === Header Part === -->
-    <div class="header">
+<!-- === Header Part === -->
+<div class="header">
         <!-- logo -->
         <div class="logo">
             <a href="#"><img src="..\images\logo100px.png"></a>
@@ -26,9 +28,9 @@
         <!-- navigation -->
         <div class="nav">
             <ul>
-                <li><a href="index.php" ><b>ACCUEIL</b></a></li>
-                <li><a href="event.php"><b>EVENEMENT</b></a></li>
-                <li><a href="FAQ.php"class = "active"><b>FAQ</b></a></li>
+                <li><a href="index.php" class = "active"><b>ACCUEIL</b></a></li>
+                <li><a href="organiserEVENT.php"><b>EVENEMENT</b></a></li>
+                <li><a href="FAQ.php"><b>FAQ</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
                 <li><a href="#"><b>A PROPOS</b></a></li>
             </ul>
@@ -51,13 +53,13 @@
                     <a href="profil.php" > <img src="..\images\user.png" alt="Profil"> </a>
                 <?php } ?>
         
-                <a href="..\php\logout.php"> <img src="..\images\Logout.png" alt="Déconnexion"> </a>
+                <a href="..\php\logout.php"> <img src="..\images\LogOut.png" alt="Déconnexion"> </a>
 
             <?php }else{ ?>
 
             <a href="#"><img src="..\images\signup.png" id="signBTN" onclick="inscriptionClick(event)"></a>
             <!-- inscription box -->
-            <div class="inscription">
+            <div class="inscription" id ="inscription">
                 <form action="../php/inscription.php" method="post">
                     <div class="title2">Inscription</div>
                     <div class="content" >
@@ -70,15 +72,14 @@
                         <p class="title">Email</p>
                         <p class="input"><input type="text" name="email"/></p>
                         <p class = title>Vérification</p>
-                        <p class="inputVerif"><input class="verifMail" type="text"/>  <button class="btnMail">Envoyer</button></p>
+                        <p class="inputVerif"><input class="verifMail" type="text" name="code"/>  <button class="btnMail" name="sendBTN">Envoyer</button></p>
                         <p class="title">Mot de passe</p>
                         <p class="input"><input type="password" name="mdp"/></p>
                         <p class="title">Confirmation de mot de passe</p>
                         <p class="input"><input type="password" name="confirm_mdp"/></p>
                         <p class="condition"><input type="checkbox" name="condition"> <u>J'ai lu et j'accepte toutes les conditions.</u></p>
-                        <div><Button>S'inscrire</Button></div>
+                        <div><Button name="submitBTN">S'inscrire</Button></div>
                     </div>
-    
                 </form>
             </div>
 

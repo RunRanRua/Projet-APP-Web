@@ -14,7 +14,6 @@ body {
 /* === Event Part ===*/
 .event {
     height: 47vw;
-    background-color: #252B33;
     background: url(../images/banner1.png) no-repeat center;
     background-size: cover;
 }
@@ -49,16 +48,15 @@ body {
 .event .title{
     margin: auto 8%;
     height: 80%;
-    font-size: 16vw;
+    font-size: 13vw;
     line-height: 16vw;
-    text-transform: uppercase;
     align-self: flex-end;
 }
 
 /* === Concert Part ===*/
 .concert{
     height: 70vw;
-    background: linear-gradient(179.94deg, #000000 0.06%, #252B33 46.26%);
+    background: linear-gradient(180deg, #000000 10%, #252B33 100%);
     background-size: cover;
 }
 .concert .upBox{
