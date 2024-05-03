@@ -11,7 +11,7 @@
 
 
 <body>
-     <!-- === Header Part === -->
+    <!-- === Header Part === -->
     <div class="header">
         <!-- logo -->
         <div class="logo">
@@ -41,9 +41,9 @@
 
             <?php if (isset($_SESSION['user_id'])){ ?>
                 <?php if ( $_SESSION["is_admin"] ) { ?>
-                   <a href="#" > <img src="..\images\admin_icon.png" alt="Profil"> </a>
+                   <a href="gestion_utilisateurs.php" > <img src="..\images\admin_icon.png" alt="Profil"> </a>
                 <?php } else{ ?>
-                    <a href="profil.html" > <img src="..\images\user.png" alt="Profil"> </a>
+                    <a href="profil.php" > <img src="..\images\user.png" alt="Profil"> </a>
                 <?php } ?>
         
                 <a href="..\php\logout.php"> <img src="..\images\LogOut.png" alt="Déconnexion"> </a>
@@ -52,7 +52,7 @@
 
             <a href="#"><img src="..\images\signup.png" id="signBTN" onclick="inscriptionClick(event)"></a>
             <!-- inscription box -->
-            <div class="inscription">
+            <div class="inscription" id ="inscription">
                 <form action="../php/inscription.php" method="post">
                     <div class="title2">Inscription</div>
                     <div class="content" >
@@ -65,15 +65,14 @@
                         <p class="title">Email</p>
                         <p class="input"><input type="text" name="email"/></p>
                         <p class = title>Vérification</p>
-                        <p class="inputVerif"><input class="verifMail" type="text"/>  <button class="btnMail">Envoyer</button></p>
+                        <p class="inputVerif"><input class="verifMail" type="text" name="code"/>  <button class="btnMail" name="sendBTN">Envoyer</button></p>
                         <p class="title">Mot de passe</p>
                         <p class="input"><input type="password" name="mdp"/></p>
                         <p class="title">Confirmation de mot de passe</p>
                         <p class="input"><input type="password" name="confirm_mdp"/></p>
                         <p class="condition"><input type="checkbox" name="condition"> <u>J'ai lu et j'accepte toutes les conditions.</u></p>
-                        <div><Button>S'inscrire</Button></div>
+                        <div><Button name="submitBTN">S'inscrire</Button></div>
                     </div>
-    
                 </form>
             </div>
 

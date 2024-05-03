@@ -55,7 +55,7 @@
 
             <a href="#"><img src="..\images\signup.png" id="signBTN" onclick="inscriptionClick(event)"></a>
             <!-- inscription box -->
-            <div class="inscription">
+            <div class="inscription" id ="inscription">
                 <form action="../php/inscription.php" method="post">
                     <div class="title2">Inscription</div>
                     <div class="content" >
@@ -68,15 +68,14 @@
                         <p class="title">Email</p>
                         <p class="input"><input type="text" name="email"/></p>
                         <p class = title>Vérification</p>
-                        <p class="inputVerif"><input class="verifMail" type="text"/>  <button class="btnMail">Envoyer</button></p>
+                        <p class="inputVerif"><input class="verifMail" type="text" name="code"/>  <button class="btnMail" name="sendBTN">Envoyer</button></p>
                         <p class="title">Mot de passe</p>
                         <p class="input"><input type="password" name="mdp"/></p>
                         <p class="title">Confirmation de mot de passe</p>
                         <p class="input"><input type="password" name="confirm_mdp"/></p>
                         <p class="condition"><input type="checkbox" name="condition"> <u>J'ai lu et j'accepte toutes les conditions.</u></p>
-                        <div><Button>S'inscrire</Button></div>
+                        <div><Button name="submitBTN">S'inscrire</Button></div>
                     </div>
-    
                 </form>
             </div>
 
@@ -112,7 +111,7 @@
             </div>
 
             <div class="box2">
-                <div class="title">EVENTS-IT</div>
+                <div class="title">Audio Insights</div>
             </div>
 
         </div>

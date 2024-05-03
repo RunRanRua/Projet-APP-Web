@@ -13,20 +13,16 @@ var connexion = document.querySelector('.connexion');
 // fond
 var bg = document.querySelector('.bg');
 
-var isOpen = false;
-
 
 function inscriptionClick(event){
     bg.style.display='block';
     inscription.style.display="block";
-    isOpen = true;
 }
 
 
 function connexionClick(event){
     bg.style.display='block';
     connexion.style.display="block";
-    isOpen = true;
 }
 
 
@@ -41,6 +37,5 @@ window.onclick = function(event){
         bg.style.display='none';
         inscription.style.display="none";
         connexion.style.display="none";
-        isOpen = false;
     }
 }
