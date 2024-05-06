@@ -173,54 +173,6 @@
     <!-- === Background part === -->
     <div class="background"></div>
 
-    <!-- === Equipe part === -->
-    <div class="equipe">
-        <img src="../images/equipe_title.png">
-        <div class="members">
-            <div class="member">
-                <img src="../uploads/team_member1.png">
-                <div class="name">Edwin Watson</div>
-                <div class="job">Creative Strategist</div>
-                <div class="links">
-                    <a href="#" class="facebook"></a>
-                    <a href="#" class="linkedIn"></a>
-                    <a href="#" class="X"></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="../uploads/team_member1.png">
-                <div class="name">Edwin Watson</div>
-                <div class="job">Creative Strategist</div>
-                <div class="links">
-                    <a href="#" class="facebook"></a>
-                    <a href="#" class="linkedIn"></a>
-                    <a href="#" class="X"></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="../uploads/team_member1.png">
-                <div class="name">Edwin Watson</div>
-                <div class="job">Creative Strategist</div>
-                <div class="links">
-                    <a href="#" class="facebook"></a>
-                    <a href="#" class="linkedIn"></a>
-                    <a href="#" class="X"></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="../uploads/team_member1.png">
-                <div class="name">Edwin Watson</div>
-                <div class="job">Creative Strategist</div>
-                <div class="links">
-                    <a href="#" class="facebook"></a>
-                    <a href="#" class="linkedIn"></a>
-                    <a href="#" class="X"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <!-- Footer Part-->
     <div class="footer">
 
