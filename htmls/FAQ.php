@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -136,7 +137,10 @@
                 <button class="faq-question" onclick="toggleAnswer('answer4')">Question IV <span class="arrow">&#9660;</span></button>
                 <div id="answer4" class="faq-answer">Réponse à la question IV.</div>
             </div>
-            <!-- Repeat this block for other questions -->
+            <div class="faq-item">
+                 <button class="faq-question" onclick="toggleAnswer('answer5')">Question V <span class="arrow">&#9660;</span></button>
+                 <div id="answer5" class="faq-answer">Réponse à la question V.</div>
+            </div>
         </div>
     </div>
 
