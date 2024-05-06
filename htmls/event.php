@@ -117,77 +117,36 @@ session_start(); // Doit être la première ligne avant les balises HTML
     <!-- Carte 1 -->
     <div class="card">
         <div class="image-box">
-            <img src="../images/concert1.jpg" alt="Concert 1">
-        </div>
-        <div class="contento">
-            <h2>Concert Rolling Stones</h2>
-            <p>- Le 15/07/2021 à 20h00</p>
-        </div>
-    </div>
-      
-    <div class="card">
-        <div class="image-box">
             <img src="../images/concert2.jpg" alt="Concert 1">
         </div>
         <div class="contento">
             <h2>Concert Rolling Stones</h2>
             <p>- Le 15/07/2021 à 20h00</p>
         </div>
-    </div>
+    </div>   
+        <!-- Carte 2 -->
+
     <div class="card">
         <div class="image-box">
-            <img src="../images/concert3.jpeg" alt="Concert 1">
+            <img src="../images/concert4.jpg" alt="Concert 2">
         </div>
         <div class="contento">
-            <h2>Concert Rolling Stones</h2>
-            <p>- Le 15/07/2021 à 20h00</p>
+            <h2>Concert Metallica</h2>
+            <p>- Le 18/07/2021 à 22h00</p>
         </div>
     </div>
+        <!-- Carte 3 -->
+
     <div class="card">
         <div class="image-box">
-            <img src="../images/concert4.jpg" alt="Concert 1">
+            <img src="../images/concert6.jpg" alt="Concert 3">
         </div>
         <div class="contento">
-            <h2>Concert Rolling Stones</h2>
-            <p>- Le 11/09/2023 à 20h00</p>
+            <h2>Concert Slipknot</h2>
+            <p>- Le 22/05/2024 à 00h00</p>
         </div>
     </div>
-    <div class="card">
-        <div class="image-box">
-            <img src="../images/concert5.jpg" alt="Concert 1">
-        </div>
-        <div class="contento">
-            <h2>Concert Rolling Stones</h2>
-            <p>- Le 25/07/2021 à 20h00</p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="image-box">
-            <img src="../images/concert6.jpg" alt="Concert 1">
-        </div>
-        <div class="contento">
-            <h2>Concert Rolling Stones</h2>
-            <p>- Le 15/07/2021 à 20h00</p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="image-box">
-            <img src="../images/concert7.jpg" alt="Concert 1">
-        </div>
-        <div class="contento">
-            <h2>Concert Rolling Stones</h2>
-            <p>- Le 18/07/2021 à 20h10</p>
-        </div>
-    </div>
-    <div class="card">
-        <div class="image-box">
-            <img src="../uploads/concert_1.png" alt="Concert 1">
-        </div>
-        <div class="contento">
-            <h2>Concert Rolling Stones</h2>
-            <p>- Le 12/07/2021 à 20h00</p>
-        </div>
-    </div>
+   
 </div>
 
 </div>
