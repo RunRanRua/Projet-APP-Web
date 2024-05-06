@@ -9,13 +9,12 @@ session_start(); // Doit être la première ligne avant les balises HTML
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Concert Planning</title>
         <link rel="stylesheet" href="../css/styles.css">
-
         <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/headerv2.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/inscription.css">
-    <link rel="stylesheet" href="../css/connexion.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/headerv2.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/inscription.css">
+        <link rel="stylesheet" href="../css/connexion.css">
     </head>
     <body>
     <div class="header">
