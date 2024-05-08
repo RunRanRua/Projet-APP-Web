@@ -145,19 +145,29 @@ try {
 <!-- Search Bar -->
 <button id="sortButton">Trier par date</button>
 <div class="cards-grid">
-    <?php foreach ($concerts as $concert): ?>
-        <div class="card">
-            <div class="image-box">
-                <!-- Correction du chemin pour pointer vers le dossier uploads -->
-                <img src="<?= htmlspecialchars($concert['ImagePath']) ?: 'avis.png' ?>" alt="Concert Image">
-            </div>
-            <div class="contento">
-                <h2><?= htmlspecialchars($concert['Titre']) ?></h2>
-                <p>- Le <?= date('d/m/Y H:i', strtotime($concert['Date_concert'])) ?> </p>
-                <p><?= htmlspecialchars($concert['Description']) ?></p>
-            </div>
+<?php foreach ($concerts as $concert): ?>
+    <div class="card">
+        <div class="image-box">
+            <img src="<?= htmlspecialchars($concert['ImagePath']) ?: 'default.jpg' ?>" alt="Concert Image">
         </div>
-    <?php endforeach; ?>
+        <div class="contento">
+            <h2><?= htmlspecialchars($concert['Titre']) ?></h2>
+            <p>- Le <?= date('d/m/Y H:i', strtotime($concert['Date_concert'])) ?></p>
+            <p><?= htmlspecialchars($concert['Description']) ?></p>
+        </div>
+        <!-- Positionnement du bouton de suppression en dessous du contenu -->
+        <?php if ($_SESSION['is_admin']): ?>
+            <div class="card-footer"> <!-- Un div pour la barre d'outils du bas de la carte -->
+                <form method="post" action="delete_concert.php" style="text-align: right;">
+                    <input type="hidden" name="id" value="<?= $concert['idConcert'] ?>">
+                    <button type="submit" class="delete-btn" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce concert ?');">Supprimer</button>
+                </form>
+            </div>
+        <?php endif; ?>
+    </div>
+<?php endforeach; ?>
+
+
 </div>
 
 
