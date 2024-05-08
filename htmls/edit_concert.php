@@ -24,10 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = $_POST['title'] ?? '';
     $date = $_POST['date'] ?? '';
     $description = $_POST['description'] ?? '';
+    $price = $_POST['price'] ?? '0.00';  // Ajout de cette ligne pour récupérer le prix du formulaire
 
-    $updateStmt = $pdo->prepare("UPDATE Concert SET Titre = ?, Date_concert = ?, Description = ? WHERE idConcert = ?");
-    $updateStmt->execute([$title, $date, $description, $id]);
-
+    // Mise à jour du concert dans la base de données
+    $updateStmt = $pdo->prepare("UPDATE Concert SET Titre = ?, Date_concert = ?, Description = ?, Prix = ? WHERE idConcert = ?");
+    $updateStmt->execute([$title, $date, $description, $price, $id]);
+    
     header('Location: event.php');
     exit;
 }
@@ -45,8 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label for="title">Titre du concert:</label>
         <input type="text" id="title" name="title" value="<?= htmlspecialchars($concert['Titre']) ?>" required>
 
+        <label for="price">Prix du concert:</label>
+        <input type="number" id="price" name="price" step="0.01" min="0" value="<?= htmlspecialchars($concert['Prix']) ?>" required>
+
         <label for="date">Date du concert:</label>
-        <input type="date" id="date" name="date" value="<?= htmlspecialchars($concert['Date_concert']) ?>" required>
+        <input type="date" id="date" name="date" value="<?= htmlspecialchars(date('Y-m-d', strtotime($concert['Date_concert']))) ?>" required>
 
         <label for="description">Description:</label>
         <textarea id="description" name="description" required><?= htmlspecialchars($concert['Description']) ?></textarea>

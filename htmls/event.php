@@ -127,6 +127,8 @@ try {
 
         <label for="title">Titre du concert:</label>
         <input type="text" id="title" name="title" required>
+        <label for="price">Prix du concert:</label>
+<input type="number" id="price" name="price" step="0.01" min="0" value="0.00" required>
 
         <label for="date">Date du concert:</label>
         <input type="date" id="date" name="date" required>
@@ -152,7 +154,8 @@ try {
         </div>
         <div class="contento">
             <h2><?= htmlspecialchars($concert['Titre']) ?></h2>
-            <p>- Le <?= date('d/m/Y H:i', strtotime($concert['Date_concert'])) ?></p>
+            <p>Prix: <?= htmlspecialchars(number_format($concert['Prix'], 2)) ?> €</p>
+            <p>- Le <?= date('d/m/Y ', strtotime($concert['Date_concert'])) ?></p>
             <p><?= htmlspecialchars($concert['Description']) ?></p>
         </div>
         <!-- Footer pour les actions -->
@@ -172,10 +175,7 @@ try {
 </div>
 
 
-</div>
-     </div>
 
-    
 
 
 

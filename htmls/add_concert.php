@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = $_POST['title'] ?? '';
     $date = $_POST['date'] ?? '';
     $description = $_POST['description'] ?? '';
+    $price = $_POST['price'] ?? '0.00';
 
     // Vérifier si un fichier image est téléchargé
     $imagePath = '';
@@ -35,8 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Insérer les données dans la base de données
     try {
         // Notez que nous avons enlevé idConcert_donnees de la requête
-        $query = $pdo->prepare("INSERT INTO Concert (Titre, Date_concert, Description, ImagePath) VALUES (?, ?, ?, ?)");
-        $result = $query->execute([$title, $date, $description, $imagePath]);
+$query = $pdo->prepare("INSERT INTO Concert (Titre, Date_concert, Description, ImagePath, Prix) VALUES (?, ?, ?, ?, ?)");
+$result = $query->execute([$title, $date, $description, $imagePath, $price]);
 
         if ($result) {
             echo "Concert ajouté avec succès!";
