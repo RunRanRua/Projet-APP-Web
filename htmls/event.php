@@ -1,5 +1,15 @@
 <?php
 session_start(); // Doit être la première ligne avant les balises HTML
+include 'db_connection.php'; // Assurez-vous que ce fichier contient la connexion à votre base de données
+
+// Récupérer tous les concerts de la base de données
+try {
+    $stmt = $pdo->prepare("SELECT * FROM Concert ORDER BY Date_concert DESC");
+    $stmt->execute();
+    $concerts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo "Erreur: " . $e->getMessage();
+}
 ?>
 
 <!DOCTYPE html>
@@ -110,43 +120,46 @@ session_start(); // Doit être la première ligne avant les balises HTML
     <header>
         <h1>NOS CONCERTS</h1>
     </header>
-    <!-- Search Bar -->
-    <button id="sortButton">Trier par date</button>
-<div class="cards-grid">
-    <!-- Carte 1 -->
-    <div class="card">
-        <div class="image-box">
-            <img src="../images/concert2.jpg" alt="Concert 1">
-        </div>
-        <div class="contento">
-            <h2>Concert Rolling Stones</h2>
-            <p>- Le 15/07/2021 à 20h00</p>
-        </div>
-    </div>   
-        <!-- Carte 2 -->
+    <?php if (isset($_SESSION['user_id']) && $_SESSION['is_admin']): ?>
+<div class="add-concert-form">
+    <h2>Ajouter un nouveau concert</h2>
+    <form action="add_concert.php" method="post" enctype="multipart/form-data">
 
-    <div class="card">
-        <div class="image-box">
-            <img src="../images/concert4.jpg" alt="Concert 2">
-        </div>
-        <div class="contento">
-            <h2>Concert Metallica</h2>
-            <p>- Le 18/07/2021 à 22h00</p>
-        </div>
-    </div>
-        <!-- Carte 3 -->
+        <label for="title">Titre du concert:</label>
+        <input type="text" id="title" name="title" required>
 
-    <div class="card">
-        <div class="image-box">
-            <img src="../images/concert6.jpg" alt="Concert 3">
-        </div>
-        <div class="contento">
-            <h2>Concert Slipknot</h2>
-            <p>- Le 22/05/2024 à 00h00</p>
-        </div>
-    </div>
-   
+        <label for="date">Date du concert:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="image">Image du concert:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+
+        <button type="submit">Ajouter Concert</button>
+    </form>
 </div>
+<?php endif; ?>
+
+<!-- Search Bar -->
+<button id="sortButton">Trier par date</button>
+<div class="cards-grid">
+    <?php foreach ($concerts as $concert): ?>
+        <div class="card">
+            <div class="image-box">
+                <!-- Correction du chemin pour pointer vers le dossier uploads -->
+                <img src="<?= htmlspecialchars($concert['ImagePath']) ?: 'avis.png' ?>" alt="Concert Image">
+            </div>
+            <div class="contento">
+                <h2><?= htmlspecialchars($concert['Titre']) ?></h2>
+                <p>- Le <?= date('d/m/Y H:i', strtotime($concert['Date_concert'])) ?> </p>
+                <p><?= htmlspecialchars($concert['Description']) ?></p>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
+
 
 </div>
      </div>
