@@ -155,13 +155,14 @@ try {
             <p>- Le <?= date('d/m/Y H:i', strtotime($concert['Date_concert'])) ?></p>
             <p><?= htmlspecialchars($concert['Description']) ?></p>
         </div>
-        <!-- Positionnement du bouton de suppression en dessous du contenu -->
+        <!-- Footer pour les actions -->
         <?php if ($_SESSION['is_admin']): ?>
-            <div class="card-footer"> <!-- Un div pour la barre d'outils du bas de la carte -->
+            <div class="card-footer">
                 <form method="post" action="delete_concert.php" style="text-align: right;">
                     <input type="hidden" name="id" value="<?= $concert['idConcert'] ?>">
                     <button type="submit" class="delete-btn" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce concert ?');">Supprimer</button>
                 </form>
+                <a href="edit_concert.php?id=<?= $concert['idConcert'] ?>" class="edit-btn">Modifier</a>
             </div>
         <?php endif; ?>
     </div>
