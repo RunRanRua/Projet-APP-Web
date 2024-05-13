@@ -171,8 +171,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<tr><td>".$row["idUtilisateur"]."</td><td>".$row["Nom"]."</td><td>".$row["Prenom"]."</td><td>".$row["Mail"]."</td>";
         // Ajoutez ici le lien de suppression
-        echo "<td><a href='supprimer_utilisateur.php?id=".$row["idUtilisateur"]."'>Supprimer</a></td></tr>";
-    }
+        echo "<td><button onclick='confirmDelete(".$row["idUtilisateur"].")'>Supprimer</button></td></tr>";    }
     echo "</table>";
 } else {
     // Si une recherche a été effectuée mais aucun résultat n'est trouvé
@@ -187,4 +186,12 @@ $conn->close();
 ?>
 
 </body>
+<script>
+function confirmDelete(userId) {
+    if (confirm("Êtes-vous sûr de vouloir supprimer cet utilisateur ? Cette action est irréversible.")) {
+        window.location.href = 'supprimer_utilisateur.php?id=' + userId;
+    }
+}
+</script>
+
 </html>

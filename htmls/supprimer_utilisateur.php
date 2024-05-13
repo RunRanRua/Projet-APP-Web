@@ -1,28 +1,28 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mydb";
+session_start();
+require 'db_connection.php'; // Assurez-vous que ce fichier initialise correctement `$pdo`
 
 $id = $_GET['id'];
 
-// Créer une connexion
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Vérifier la connexion
-if ($conn->connect_error) {
-    die("Connexion échouée: " . $conn->connect_error);
+// Vérifier que l'ID est bien un nombre
+if (!is_numeric($id)) {
+    die("ID invalide.");
 }
 
-$sql = "DELETE FROM Utilisateur WHERE idUtilisateur=$id";
+// Préparer la requête SQL en utilisant PDO
+try {
+    $stmt = $pdo->prepare("DELETE FROM Utilisateur WHERE idUtilisateur = ?");
+    $stmt->bindParam(1, $id, PDO::PARAM_INT);  // Utiliser bindParam pour lier $id à la requête
 
-if ($conn->query($sql) === TRUE) {
-    echo "Utilisateur supprimé avec succès";
-} else {
-    echo "Erreur lors de la suppression: " . $conn->error;
+    if ($stmt->execute()) {
+        echo "Utilisateur supprimé avec succès";
+    } else {
+        echo "Erreur lors de la suppression";
+    }
+    $stmt->closeCursor(); // Fermeture du curseur d'exécution
+    header("Location: gestion_utilisateurs.php");  // Rediriger vers la page principale
+    exit;
+} catch (PDOException $e) {
+    die("Erreur lors de la suppression: " . $e->getMessage());
 }
-
-$conn->close();
-header("Location: gestion_utilisateurs.php"); // Rediriger vers la page principale
-exit();
 ?>
