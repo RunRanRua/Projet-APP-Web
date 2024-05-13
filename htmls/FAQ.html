@@ -53,27 +53,28 @@
 
 
 
-
-    <div class="open-btn">
     <button class="open-button" onclick="openForm()"><strong>Ajouter une question</strong></button>
-    </div>
+    
     <div class="login-popup">
-    <div class="form-popup" id="popupForm">
-        <form class="form-container">
-        <h2>Ajoutez votre question</h2>
-        <label for="Question">
-            <strong>Question</strong>
-        </label>
-        <input type="text" id="Question" placeholder="Votre question" />
-        <label for="réponse">
-            <strong>Réponse</strong>
-        </label>
-        <input type="text" id="Réponse" placeholder="Votre réponse" />
-        <button type="submit" class="btn" onclick="addFAQSection(document.getElementById('Question').value, document.getElementById('réponse').value)">Ajouter</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Annuler</button>
-        </form>
+        <div class="form-popup" id="popupForm">
+            <form class="form-container" action="FAQ.php" method="post">
+                <h2>Ajoutez votre question</h2>
+                <label for="Question">
+                    <strong>Question</strong>
+                </label>
+                <input type="text" id="Question" name="Question" placeholder="Votre question" />
+                <label for="Reponse">
+                    <strong>Réponse</strong>
+                </label>
+                <input type="text" id="Reponse" name="Reponse" placeholder="Votre réponse" />
+
+                <button type="button" class="btn" onclick="addFAQSection(document.getElementById('Question').value, document.getElementById('Reponse').value);">Ajouter</button>  
+                <button type="button" class="btn cancel" onclick="closeForm()">Annuler</button>
+            </form>    
+        </div>
     </div>
-    </div>
+
+
     <script>
     function openForm() {
         document.getElementById("popupForm").style.display = "block";
@@ -103,8 +104,7 @@
         // Add the arrow icon
         const arrowSpan = document.createElement('span');
         arrowSpan.classList.add('arrow');
-        arrowSpan.textContent = '&#9660;'; // Replace with your preferred arrow code
-
+        arrowSpan.textContent = '&#9660;'; // Pb with the arrow
         // Append the arrow to the button
         questionButton.appendChild(arrowSpan);
 
