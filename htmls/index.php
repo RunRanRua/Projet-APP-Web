@@ -8,7 +8,7 @@
     <title>Page d'accueil</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/headerv2.css">
+    <link rel="stylesheet" href="../css/test.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/inscription.css">
     <link rel="stylesheet" href="../css/connexion.css">
@@ -22,22 +22,38 @@
         </div>
 
         <!-- navigation -->
-        <div class="nav">
-            <ul>
-                <li><a href="index.php" class = "active"><b>ACCUEIL</b></a></li>
-                <li><a href="event.php"><b>EVENEMENT</b></a></li>
-                <li><a href="FAQ.php"><b>FAQ</b></a></li>
-                <li><a href="#"><b>FORUM</b></a></li>
-                <li><a href="#"><b>A PROPOS</b></a></li>
-            </ul>
+        <div class = "nav">
+            <li><a href="#"><b>ACCUEIL</b></a></li>
+            <li><a href="#"><b>PLANNING</b></a></li>
+            <li class = "DropExp">
+                <a href="#"><b>EVENEMENT</b></a>
+                <ul class="DropExpContent">
+                    <li><a href="#">ANNONCE</a></li>
+                    <li><a href="#">ORGANISER UN EVENEMENT</a></li>
+                </ul>
+            </li>
+            <li class = "DropExp">
+                <a href="#"><b>ASSISTANCE</b></a>
+                <ul class="DropExpContent">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">FORUM</a></li>
+                    <li><a href="#">AVIS</a></li>
+                </ul>
+            </li>
+            <li class = "DropExp">
+                <a href="#"><b>A PROPOS</b></a>
+                <ul class="DropExpContent">
+                    <li><a href="#">NOTRE SALLE</a></li>
+                    <li><a href="#">NOUS CONTACTER</a></li>
+            </li>
         </div>
     
-        <!-- search barre -->
-        <div class="search">
-            <a href="#"><img src="..\images\loop.png"></a>
-            <input type="text" placeholder="RECHERCHE">
+        
+        <!-- langue -->
+        <div class = "langue">
+            <a href="#"><img src="..\images\royaume-uni.png"></a>
         </div>
-
+    
         <!-- user -->
         <div class="bg"></div>
         <div class="user">
@@ -53,7 +69,7 @@
 
             <?php }else{ ?>
 
-            <a href="#"><img src="..\images\signup.png" id="signBTN" onclick="inscriptionClick(event)"></a>
+            <button type = "button" id="signBTN" onclick="inscriptionClick(event)"><b>S'INSCRIRE</b></button>
             <!-- inscription box -->
             <div class="inscription" id ="inscription">
                 <form action="../php/inscription.php" method="post">
@@ -79,7 +95,7 @@
                 </form>
             </div>
 
-            <a href="#"><img id="loginBTN" onclick="connexionClick(event)" src="..\images\login2.png"></a>
+            <button type = "button" id="loginBTN" onclick="connexionClick(event)" ><b>SE CONNECTER</b></button>
             <!-- connexion box -->
             <div class="connexion">
                 <form action="../php/login.php" method="post">
