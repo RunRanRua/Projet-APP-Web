@@ -25,7 +25,7 @@
         <div class="nav">
             <ul>
                 <li><a href="index.php" class = "active"><b>ACCUEIL</b></a></li>
-                <li><a href="event.php"><b>EVENEMENT</b></a></li>
+                <li><a href="organiserEVENT.php"><b>EVENEMENT</b></a></li>
                 <li><a href="FAQ.php"><b>FAQ</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
                 <li><a href="#"><b>A PROPOS</b></a></li>
