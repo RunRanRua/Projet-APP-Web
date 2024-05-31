@@ -110,7 +110,8 @@
     width: 25%;
 }
 
-.header .user button {
+#signBTN,
+#loginBTN {
     margin : 10% 0;
     margin-right: 5%;
     border-radius: 8px;
