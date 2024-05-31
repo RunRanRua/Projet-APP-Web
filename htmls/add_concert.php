@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db_connection.php'; // Assurez-vous que ce fichier contient la connexion à votre base de données
+include 'db_connection.php';
 
 // Activer l'affichage des erreurs pour le débogage
 ini_set('display_errors', 1);
@@ -17,7 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Récupérer les valeurs du formulaire
     $title = $_POST['title'] ?? '';
     $date = $_POST['date'] ?? '';
+    $start_time = $_POST['start_time'] ?? '';
+    $duration = $_POST['duration'] ?? '';
+    $end_time = $_POST['end_time'] ?? '';
     $description = $_POST['description'] ?? '';
+    $category = $_POST['category'] ?? '';
+    $status = $_POST['status'] ?? '';
     $price = $_POST['price'] ?? '0.00';
 
     // Vérifier si un fichier image est téléchargé
@@ -35,9 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Insérer les données dans la base de données
     try {
-        // Notez que nous avons enlevé idConcert_donnees de la requête
-$query = $pdo->prepare("INSERT INTO Concert (Titre, Date_concert, Description, ImagePath, Prix) VALUES (?, ?, ?, ?, ?)");
-$result = $query->execute([$title, $date, $description, $imagePath, $price]);
+        $query = $pdo->prepare("INSERT INTO concert (Titre, Date_concert, Debut_heure, Duree, Fin_heure, Description, Categorie, Etat, ImagePath, Prix) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $result = $query->execute([$title, $date, $start_time, $duration, $end_time, $description, $category, $status, $imagePath, $price]);
 
         if ($result) {
             echo "Concert ajouté avec succès!";
