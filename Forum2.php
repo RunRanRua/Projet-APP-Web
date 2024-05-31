@@ -16,6 +16,8 @@
             <a href="#">Connexion</a>
         </nav>
     </header>
+
+
     <main>
         <section id="forum-stats" class="card forum-half">
             <h1>FORUM</h1>
@@ -26,6 +28,13 @@
             </div>
         </section>
     </main>
+
+
+    <form action="nouveauSujet.php" method="post">
+        Mail : <input type="text" name="mail">
+        <button type="submit"></button>
+    </form>
+
     <footer>
         <nav>
             <a href="#">FAQ</a>
