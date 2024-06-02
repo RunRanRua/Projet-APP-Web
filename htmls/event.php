@@ -24,6 +24,7 @@ try {
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/inscription.css">
     <link rel="stylesheet" href="../css/connexion.css">
+    
 </head>
 <body>
 <div class="header">
@@ -110,13 +111,11 @@ try {
             <h1>NOS CONCERTS</h1>
         </header>
         <?php if (isset($_SESSION['user_id']) && $_SESSION['is_admin']): ?>
-            <div class="add-concert-form">
+            <div class="TEst">
                 <h2>Ajouter un nouveau concert</h2>
                 <form action="add_concert.php" method="post" enctype="multipart/form-data">
                     <label for="title">Titre du concert:</label>
                     <input type="text" id="title" name="title" required>
-                    <label for="price">Prix du concert:</label>
-                    <input type="number" id="price" name="price" step="0.01" min="0" value="0.00" required>
                     <label for="date">Date du concert:</label>
                     <input type="date" id="date" name="date" required>
                     <label for="start_time">Heure de début:</label>
@@ -125,12 +124,14 @@ try {
                     <input type="text" id="duration" name="duration" required>
                     <label for="end_time">Heure de fin:</label>
                     <input type="time" id="end_time" name="end_time" required>
-                    <label for="description">Description:</label>
-                    <textarea id="description" name="description" required></textarea>
+                    <label for="price">Prix du concert:</label>
+                    <input type="number" id="price" name="price" step="0.01" min="0" value="0.00" required>
                     <label for="category">Catégorie:</label>
                     <input type="text" id="category" name="category" required>
                     <label for="status">État:</label>
                     <input type="text" id="status" name="status" required>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea>
                     <label for="image">Image du concert:</label>
                     <input type="file" id="image" name="image" accept="image/*">
                     <button type="submit">Ajouter Concert</button>

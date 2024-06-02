@@ -11,7 +11,7 @@ if (!is_numeric($id)) {
 
 // Préparer la requête SQL en utilisant PDO
 try {
-    $stmt = $pdo->prepare("DELETE FROM Utilisateur WHERE idUtilisateur = ?");
+    $stmt = $pdo->prepare("DELETE FROM utilisateur WHERE idUtilisateur = ?");
     $stmt->bindParam(1, $id, PDO::PARAM_INT);  // Utiliser bindParam pour lier $id à la requête
 
     if ($stmt->execute()) {

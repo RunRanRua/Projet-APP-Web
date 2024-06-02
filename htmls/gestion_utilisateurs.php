@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/headerv2.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/FAQ.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/gestion_utilisateurs.css"> <!-- Add this line -->
 
 </head>
 
@@ -60,19 +60,19 @@
                     <div class="title2">Inscription</div>
                     <div class="content" >
                         <p class="title">Nom</p>
-                        <p class="input"><input type="text" name="nom"/></p>
+                        <p class="input"><input type="text" name="nom" placeholder="Nom"/></p>
                         <p class="title">Prénom</p>
-                        <p class="input"><input type="text" name="prenom"/></p>
+                        <p class="input"><input type="text" name="prenom" placeholder="Prénom"/></p>
                         <p class="title">Numéro de téléphone</p>
-                        <p class="input"><input type="text" name="numero"/></p>
+                        <p class="input"><input type="text" name="numero" placeholder="Numéro de téléphone"/></p>
                         <p class="title">Email</p>
-                        <p class="input"><input type="text" name="email"/></p>
+                        <p class="input"><input type="text" name="email" placeholder="Email"/></p>
                         <p class = title>Vérification</p>
-                        <p class="inputVerif"><input class="verifMail" type="text" name="code"/>  <button class="btnMail" name="sendBTN">Envoyer</button></p>
+                        <p class="inputVerif"><input class="verifMail" type="text" name="code" placeholder="Code de vérification"/>  <button class="btnMail" name="sendBTN">Envoyer</button></p>
                         <p class="title">Mot de passe</p>
-                        <p class="input"><input type="password" name="mdp"/></p>
+                        <p class="input"><input type="password" name="mdp" placeholder="Mot de passe"/></p>
                         <p class="title">Confirmation de mot de passe</p>
-                        <p class="input"><input type="password" name="confirm_mdp"/></p>
+                        <p class="input"><input type="password" name="confirm_mdp" placeholder="Confirmation de mot de passe"/></p>
                         <p class="condition"><input type="checkbox" name="condition"> <u>J'ai lu et j'accepte toutes les conditions.</u></p>
                         <div><Button name="submitBTN">S'inscrire</Button></div>
                     </div>
@@ -86,9 +86,9 @@
                     <div class="title2">connexion</div>
                     <div class="content" >
                         <p class="title">Email</p>
-                        <p class="input"><input type="text" name="email" value=""/></p>
+                        <p class="input"><input type="text" name="email" placeholder="Email" value=""/></p>
                         <p class="title">Mot de passe</p>
-                        <p class="input"><input type="password" name="mdp" value=""/></p>
+                        <p class="input"><input type="password" name="mdp" placeholder="Mot de passe" value=""/></p>
                         <div><Button>Se connecter</Button></div>
                     </div>
                 </form>
@@ -101,10 +101,6 @@
             
         </div>
     </div>
-
-
-
-    
 
     <h1>Gestion des Utilisateurs</h1>
     <?php
@@ -123,25 +119,24 @@
     echo "Connexion réussie";
     ?>
     <form method="GET" action="gestion_utilisateurs.php">
-    Nom: <input type="text" name="search_nom">
-    Prénom: <input type="text" name="search_prenom">
-    Email: <input type="email" name="search_email">
-    <input type="submit" value="Rechercher">
-</form>
-
+        <label>Nom: <input type="text" name="search_nom" placeholder="Nom"></label>
+        <label>Prénom: <input type="text" name="search_prenom" placeholder="Prénom"></label>
+        <label>Email: <input type="email" name="search_email" placeholder="Email"></label>
+        <input type="submit" value="Rechercher">
+    </form>
 
     <h2>Ajouter un Utilisateur</h2>
     <form method="post" action="ajouter_utilisateurs.php">
-        Nom: <input type="text" name="nom" required><br>
-        Prénom: <input type="text" name="prenom" required><br>
-        Email: <input type="email" name="email" required><br>
-        Mot de passe: <input type="password" name="mdp" required><br>
+        <label>Nom: <input type="text" name="nom" placeholder="Nom" required></label><br>
+        <label>Prénom: <input type="text" name="prenom" placeholder="Prénom" required></label><br>
+        <label>Email: <input type="email" name="email" placeholder="Email" required></label><br>
+        <label>Mot de passe: <input type="password" name="mdp" placeholder="Mot de passe" required></label><br>
         <input type="submit" value="Ajouter Utilisateur">
     </form>
 
     <h2>Liste des Utilisateurs</h2>
 <?php
-$sql = "SELECT idUtilisateur, Nom, Prenom, Mail FROM Utilisateur WHERE 1=1";
+$sql = "SELECT idUtilisateur, Nom, Prenom, Mail FROM utilisateur WHERE 1=1";
 
 // Vérifie si des paramètres de recherche existent et ne sont pas vides
 $anySearch = false; // Cette variable détermine si une recherche a été effectuée
@@ -167,12 +162,13 @@ if (!empty($_GET['search_email'])) {
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "<table><tr><th>ID</th><th>Nom</th><th>Prénom</th><th>Email</th><th>Actions</th></tr>";
+    echo "<table><thead><tr><th>ID</th><th>Nom</th><th>Prénom</th><th>Email</th><th>Actions</th></tr></thead><tbody>";
     while($row = $result->fetch_assoc()) {
         echo "<tr><td>".$row["idUtilisateur"]."</td><td>".$row["Nom"]."</td><td>".$row["Prenom"]."</td><td>".$row["Mail"]."</td>";
         // Ajoutez ici le lien de suppression
-        echo "<td><button onclick='confirmDelete(".$row["idUtilisateur"].")'>Supprimer</button></td></tr>";    }
-    echo "</table>";
+        echo "<td><button onclick='confirmDelete(".$row["idUtilisateur"].")'>Supprimer</button></td></tr>";    
+    }
+    echo "</tbody></table>";
 } else {
     // Si une recherche a été effectuée mais aucun résultat n'est trouvé
     if ($anySearch) {
@@ -185,13 +181,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
-</body>
-<script>
-function confirmDelete(userId) {
-    if (confirm("Êtes-vous sûr de vouloir supprimer cet utilisateur ? Cette action est irréversible.")) {
-        window.location.href = 'supprimer_utilisateur.php?id=' + userId;
-    }
-}
-</script>
+<script src="../js/gestion_utilisateurs.js"></script> <!-- Add this line -->
 
+</body>
 </html>
