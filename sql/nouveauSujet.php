@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 
-// Retrieve form data ------------------------------------------------------------------------------------
+// Retrievf rm data ------------------------------------------------------------------------------------
 
 # Associer les variables avec ton form
 $userId = $_SESSION['user_id'];
