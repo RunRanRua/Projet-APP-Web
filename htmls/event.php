@@ -145,7 +145,7 @@ try {
             <?php foreach ($concerts as $concert): ?>
                 <div class="card">
                     <div class="image-box">
-                        <img src="<?= htmlspecialchars($concert['ImagePath']) ?: 'default.jpg' ?>" alt="Concert Image">
+                        <img src=" ../images/<?= htmlspecialchars($concert['ImagePath']) ?: 'default.jpg' ?>" alt="Concert Image">
                     </div>
                     <div class="contento">
                         <h2><?= htmlspecialchars($concert['Titre']) ?></h2>
@@ -159,7 +159,7 @@ try {
                         <p>Description: <?= htmlspecialchars($concert['Description']) ?></p>
                     </div>
                     <!-- Footer pour les actions -->
-                    <?php if ($_SESSION['is_admin']): ?>
+                    <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']): ?>
                         <div class="card-footer">
                             <form method="post" action="delete_concert.php" style="text-align: right;">
                                 <input type="hidden" name="id" value="<?= $concert['idConcert'] ?>">

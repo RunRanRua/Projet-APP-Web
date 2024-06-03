@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Vérifier si un fichier image est téléchargé
     $imagePath = '';
     if (!empty($_FILES['image']['name'])) {
-        $target_dir = "";
+        $target_dir = "../images/";
         if (!is_dir($target_dir)) {
             mkdir($target_dir, 0777, true);
         }
