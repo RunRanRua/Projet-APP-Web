@@ -20,7 +20,7 @@ try {
         echo "Erreur lors de la suppression";
     }
     $stmt->closeCursor(); // Fermeture du curseur d'exécution
-    header("Location: gestion_utilisateurs.php");  // Rediriger vers la page principale
+    header("Location: ../htmls/gestion_utilisateurs.php");  // Rediriger vers la page principale
     exit;
 } catch (PDOException $e) {
     die("Erreur lors de la suppression: " . $e->getMessage());

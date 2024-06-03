@@ -28,7 +28,7 @@
                 <li><a href="event.php"><b>EVENEMENT</b></a></li>
                 <li><a href="FAQ.php"><b>FAQ</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
-                <li><a href="#"><b>A PROPOS</b></a></li>
+                <li><a href="a_propos.php"><b>A PROPOS</b></a></li>
             </ul>
         </div>
     
@@ -69,7 +69,6 @@
                 </p>
                 <button id="deleteUser" onclick="deleteOnClick(event)">Supprimer le compte</button>
                 <button><a href='./myEventList.php'>Voir ma liste de concerts</a></button>
-                <button><a href='./eventDescription.php'>Réserver un concert</a></button>
             </div>
 
             <div class="right">

@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 
 // Vérifier si l'utilisateur est admin
 if (!isset($_SESSION['user_id']) || !$_SESSION['is_admin']) {
-    header('Location: index.php');
+    header('Location: ../php/index.php');
     exit;
 }
 

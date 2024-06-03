@@ -80,7 +80,6 @@ function generateEventInfo() {
         }
         // generate each ticket
         const info = data[0];
-        console.log(data);
 
         // left part
         const left = document.querySelector('.left');
@@ -104,7 +103,6 @@ function generateEventInfo() {
         // right part
         for(let i =0; i<data[1].length; i++){
             const place = data[1][i]["place"];
-            console.log(place);
             const placeID = (place.charCodeAt(0) - 65)*6 + parseInt(place[1]);
             
             let disabledPlace = document.getElementById(placeID);

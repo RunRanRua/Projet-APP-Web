@@ -3,7 +3,7 @@ session_start();
 include 'db_connection.php';
 
 if (!isset($_SESSION['user_id']) || !$_SESSION['is_admin']) {
-    header('Location: index.php');
+    header('Location: ../htmls/index.php');
     exit;
 }
 
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
         echo "Erreur: " . $e->getMessage();
     }
     // Rediriger vers la page des concerts après la suppression
-    header("Location: event.php");
+    header("Location: ../php/event.php");
     exit;
 } else {
     echo "Méthode non supportée.";

@@ -3,7 +3,7 @@ session_start();
 include 'db_connection.php';
 
 if (!isset($_SESSION['user_id']) || !$_SESSION['is_admin']) {
-    header('Location: index.php');
+    header('Location: ../htmls/index.php');
     exit;
 }
 
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $updateStmt = $pdo->prepare("UPDATE concert SET Titre = ?, Date_concert = ?, Debut_heure = ?, Duree = ?, Fin_heure = ?, Description = ?, Categorie = ?, Etat = ?, ImagePath = ?, Prix = ? WHERE idConcert = ?");
     $updateStmt->execute([$title, $date, $start_time, $duration, $end_time, $description, $category, $status, $imagePath, $price, $id]);
     
-    header('Location: event.php');
+    header('Location: ../htmls/event.php');
     exit;
 }
 ?>

@@ -33,6 +33,6 @@ if ($stmt->execute()) {
 
 $stmt->close();
 $conn->close();
-header("Location: gestion_utilisateurs.php"); // Rediriger vers la page principale
+header("Location: ../htmls/gestion_utilisateurs.php"); // Rediriger vers la page principale
 exit();
 ?>

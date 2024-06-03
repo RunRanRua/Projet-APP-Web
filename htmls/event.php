@@ -1,6 +1,6 @@
 <?php
 session_start(); // Doit être la première ligne avant les balises HTML
-include 'db_connection.php'; // Assurez-vous que ce fichier contient la connexion à votre base de données
+include '../php/db_connection.php'; // Assurez-vous que ce fichier contient la connexion à votre base de données
 
 // Récupérer tous les concerts de la base de données
 try {
@@ -40,7 +40,7 @@ try {
             <li><a href="event.php" class="active"><b>EVENEMENT</b></a></li>
             <li><a href="FAQ.php"><b>FAQ</b></a></li>
             <li><a href="#"><b>FORUM</b></a></li>
-            <li><a href="#"><b>A PROPOS</b></a></li>
+            <li><a href="a_propos.php"><b>A PROPOS</b></a></li>
         </ul>
     </div>
 
@@ -113,7 +113,7 @@ try {
         <?php if (isset($_SESSION['user_id']) && $_SESSION['is_admin']): ?>
             <div class="TEst">
                 <h2>Ajouter un nouveau concert</h2>
-                <form action="add_concert.php" method="post" enctype="multipart/form-data">
+                <form action="../php/add_concert.php" method="post" enctype="multipart/form-data">
                     <label for="title">Titre du concert:</label>
                     <input type="text" id="title" name="title" required>
                     <label for="date">Date du concert:</label>
@@ -143,7 +143,7 @@ try {
         <button id="sortButton">Trier par date</button>
         <div class="cards-grid">
             <?php foreach ($concerts as $concert): ?>
-                <div class="card">
+                <div class="card" id="<?= $concert['idConcert']?>">
                     <div class="image-box">
                         <img src=" ../images/<?= htmlspecialchars($concert['ImagePath']) ?: 'default.jpg' ?>" alt="Concert Image">
                     </div>
@@ -161,11 +161,11 @@ try {
                     <!-- Footer pour les actions -->
                     <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']): ?>
                         <div class="card-footer">
-                            <form method="post" action="delete_concert.php" style="text-align: right;">
+                            <form method="post" action="../php/delete_concert.php" style="text-align: right;">
                                 <input type="hidden" name="id" value="<?= $concert['idConcert'] ?>">
                                 <button type="submit" class="delete-btn" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce concert ?');">Supprimer</button>
                             </form>
-                            <a href="edit_concert.php?id=<?= $concert['idConcert'] ?>" class="edit-btn">Modifier</a>
+                            <a href="../php/edit_concert.php?id=<?= $concert['idConcert'] ?>" class="edit-btn">Modifier</a>
                         </div>
                     <?php endif; ?>
                 </div>

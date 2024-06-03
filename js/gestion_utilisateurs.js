@@ -27,6 +27,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function confirmDelete(userId) {
     if (confirm("Êtes-vous sûr de vouloir supprimer cet utilisateur ? Cette action est irréversible.")) {
-        window.location.href = 'supprimer_utilisateur.php?id=' + userId;
+        window.location.href = '../php/supprimer_utilisateur.php?id=' + userId;
     }
 }

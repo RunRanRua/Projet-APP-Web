@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION["concert_id"] = 1;
+
 ?>
 
 <!DOCTYPE html>
@@ -16,9 +16,9 @@ $_SESSION["concert_id"] = 1;
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/inscription.css">
   <link rel="stylesheet" href="../css/connexion.css">
-  <link rel="stylesheet" href="../css/eventDescription.css">
+  <link rel="stylesheet" href="../css/reserverPlace.css">
 
-  <script src="../js/eventDescription.js"></script>
+  <script src="../js/reserverPlace.js"></script>
 </head>
 
 
@@ -38,7 +38,7 @@ $_SESSION["concert_id"] = 1;
             <li><a href="organiserEVENT.php"><b>EVENEMENT</b></a></li>
             <li><a href="FAQ.php"><b>FAQ</b></a></li>
             <li><a href="#"><b>FORUM</b></a></li>
-            <li><a href="#"><b>A PROPOS</b></a></li>
+            <li><a href="a_propos.php"><b>A PROPOS</b></a></li>
         </ul>
     </div>
 

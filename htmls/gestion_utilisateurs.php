@@ -28,7 +28,7 @@
                 <li><a href="event.php"><b>EVENEMENT</b></a></li>
                 <li><a href="FAQ.php"><b>FAQ</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
-                <li><a href="#"><b>A PROPOS</b></a></li>
+                <li><a href="a_propos.php"><b>A PROPOS</b></a></li>
             </ul>
         </div>
     
@@ -126,7 +126,7 @@
     </form>
 
     <h2>Ajouter un Utilisateur</h2>
-    <form method="post" action="ajouter_utilisateurs.php">
+    <form method="post" action="../php/ajouter_utilisateurs.php">
         <label>Nom: <input type="text" name="nom" placeholder="Nom" required></label><br>
         <label>Prénom: <input type="text" name="prenom" placeholder="Prénom" required></label><br>
         <label>Email: <input type="email" name="email" placeholder="Email" required></label><br>
