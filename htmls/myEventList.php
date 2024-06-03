@@ -1,17 +1,18 @@
 <?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon profil</title>
+    <title>Ma liste de concerts</title>
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/headerv2.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/profil.css">
-    <link rel="stylesheet" href="../css/modifyMDP.css">
-    <link rel="stylesheet" href="../css/modifyTEL.css">
-    <link rel="stylesheet" href="../css/profil_deleteUser.css">
+    <link rel="stylesheet" href="../css/inscription.css">
+    <link rel="stylesheet" href="../css/connexion.css"> 
+    <link rel="stylesheet" href="../css/myEvenList.css">
 </head>
 <body>
     <!-- === Header Part === -->
@@ -51,92 +52,35 @@
             
         </div>
     </div>
-
-    <div class="profil">
-        <div class="title">Bienvenue, <?php echo $_SESSION["prenom"] ?></div>
-        <div class="user">
-            <div class="left">
-            <?php if ( $_SESSION["is_admin"] ) { ?>
-                <img src="../images/admin_icon.png" alt="Icon">
-            <?php } else{ ?>
-                <img src="../images/user.png" alt="Icon">
-            <?php } ?>
-                <p>
-                    <b>ID : <?php echo $_SESSION["user_id"] ?></b> 
-                </p>
-                <p>
-                    <b>Date d'inscription: <?php echo $_SESSION["date"] ?></b>
-                </p>
-                <button id="deleteUser" onclick="deleteOnClick(event)">Supprimer le compte</button>
-                <button><a href='./myEventList.php'>Voir ma liste de concerts</a></button>
-                <button><a href='./eventDescription.php'>Réserver un concert</a></button>
-            </div>
-
-            <div class="right">
-                <li><b>Nom :</b>  <?php echo $_SESSION["nom"] ?></li>
-                <li><b>Prénom :</b>  <?php echo $_SESSION["prenom"] ?></li>
-                <li><b>Mail :</b>  <?php echo $_SESSION["email"] ?></li>
-                <li>
-                    <b>N° de Tel :</b>  <?php echo $_SESSION["numero"] ?>
-                    <button id="modifyTEL" onclick="TELonClick(event)"> Modifier </button>
-                </li>
-                <li>
-                    <b>Mot de passe :</b>  <i>***********</i>
-                    <button id="modifyMDP" onclick="MDPonClick(event)"> Modifier </button>
-                </li>
-            </div>    
-        </div>
-    </div>
-
-
-    <div class="bg"></div>
-    <!-- modify MDP box -->
-    <div class="modifyMDP">
-        <form action="..\php\modifyMDP.php" method="post">
-            <div class="title2">Changer le mot de passe</div>
-            <div class="content" >
-                <p class="title">Ancien Mot de passe</p>
-                <p class="input"><input type="password" name="mdp" value=""/></p>
-
-                <p class="title">Nouveau Mot de passe</p>
-                <p class="input"><input type="password" name="new_mdp" value=""/></p>
-
-                <p class="title">Confirmerle mot de passe</p>
-                <p class="input"><input type="password" name="confirm_mdp" value=""/></p>
-
-                <div><Button >Modifier</Button></div>
-            </div>
-        </form>
-    </div>
-
-    <!-- modify phone number box -->
-    <div class="modifyTEL">
-        <form action="..\php\modifyTEL.php" method="post">
-            <div class="title2">Changer le numéro de téléphone</div>
-            <div class="content" >
-                <p class="title">Nouveau numéro de téléphone</p>
-                <p class="input"><input type="text" name="numero" value=""/></p>
-                <div><Button >Modifier</Button></div>
-            </div>
-        </form>
-    </div>
-
-    <div class="deleteUser">
-        <form action="..\php\profil_deleteUser.php" method="post">
-            <div class="title2">Vous êtes sûr de supprimer votre compte ?</div>
-            <div class="content" >
-                <div><Button >Supprimer</Button></div>
-            </div>
-        </form>
-    </div>
     
+    <!-- My List -->
+    <div class="myList">
+            <h1>MES CONCERTS</h1>
 
-    <script src="../JS/profil.js"></script>
+            <dl>
+                <!-- Ongoing concert -->
+                <dt class="ongoingDT" onclick="toggleList(this)">
+                    <b>CONCERTS EN COURS</b>
+                    <div class="arrow">&#9660;</div>
+                </dt>
 
 
+                <!-- upcoming concert -->
+                <dt class="upcomingDT" onclick="toggleList(this)">
+                    <b>CONCERT A VENIR</b>
+                    <div class="arrow">&#9660;</div>
+                </dt>
 
+                <!-- past concert-->
+                <dt class="pastDT" onclick="toggleList(this)">
+                    <b>CONCERTS PASSES</b>
+                    <div class="arrow">&#9660;</div>
+                </dt>
+            </dl>
+          <script src="../js/myEventList.js"></script> 
+    </div>
 
-    <!-- === Footer Part === -->
+    <!-- Footer Part-->
     <div class="footer">
 
         <!-- logo -->
@@ -189,6 +133,5 @@
  
         </div>
     </div>
-
 </body>
 </html>

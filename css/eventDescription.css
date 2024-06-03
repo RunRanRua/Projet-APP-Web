@@ -1,0 +1,95 @@
+.eventBlock{
+  height: 55vw;
+  background-color: gray;
+  display: flex;
+
+  padding: 1% 5%;
+}
+.eventBlock .left{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+
+  text-align: center;
+}
+.eventBlock .left img{
+   width: 19vw;
+   margin: 2% auto 5%;
+}
+.eventBlock .left .eventInfo{
+  text-align: left;
+  margin-left:18%;
+  margin-right: 18%;
+  font-size: 1.2vw;
+  word-wrap: break-word;
+}
+
+
+
+.eventBlock .right{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+.eventBlock .right .places{
+  height: 65%;
+  width: 100%;
+  padding: 6% 13% 2%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.eventBlock .right .places .numero{
+  width: 4vw;
+  height: 4vw;
+  margin-left: 3%;
+  margin-bottom: 1%;
+  font-size: 1.3vw;
+
+  display: grid;
+  place-items: center;
+}
+
+.eventBlock .right .place{
+  width: 4vw;
+  height: 4vw;
+  font-weight: bold;
+  background-color: white;
+  margin-left: 3%;
+  margin-bottom: 1%;
+  border-radius: 15px;
+  appearance: none;
+}
+.eventBlock .right .place:checked{
+  width: 4vw;
+  height: 4vw;
+  background-color: greenyellow;
+  margin-left: 3%;
+  margin-bottom: 1%;
+  border-radius: 15px;
+  appearance: none;
+}
+.eventBlock .right .price{
+  justify-content: center;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: bold;
+  margin:5% 0;
+}
+.eventBlock .right button{
+  margin: 2% 0 2% 23%;
+  width: 55%;
+  height: 5%;
+  background-color: #28BED0;
+  font-size: 1.3vw;
+  color: white;
+  border:none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.eventBlock .right button:active{
+  background-color: #10555c;
+  color: gray;
+}

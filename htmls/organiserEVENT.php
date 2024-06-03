@@ -106,39 +106,100 @@
     <!-- === mid Part === -->
     <div class="mid">
         <h1>ORGANISER UN ÉVÉNEMENT</h1>
-        <div class="window">
-            <div class="content">
-                Comment procéder ?
-            </div>
-        </div>
+        <dl>
+            <dt>Comment procéder?</dt>
+            <dd>Veuillez remplir toutes les informations dans le formulaire suivant.
+                <br>
+                Nous vous repondrons dans un délai d'une semaine ouvrable au plus tard, que vous pouvez vérifier dans votre boîte de réception</dd>
+        </dl>
+        <form method="post" action="../php/organiserEVENT_formulaire.php">
+            <label class="titre">Intitulé</label>
+            <input type="text" name = "titre">
+            <br/><br/>
 
-        <form action="/submit-form" method="post">
-            <label for="titre">Titre</label><br>
-            <input type="text" id="titre" name="titre"><br><br>
+            <label class="artiste">Artiste / Groupe</label>
+            <input type="text" name = "artiste">
+            <br/><br/>
 
-            <label for="artiste">Artiste</label><br>
-            <input type="text" id="artiste" name="artiste"><br><br>
+            <label class="categorie">Catégorie</label>
+            <input type="text" name = "categorie">
+            <br/><br/>
 
-            <label for="categorie">Catégorie</label><br>
-            <input type="text" id="categorie" name ="categorie"><br><br>
+            <label>Date et Heure de l'évènement</label>
+            <br/><br/>
 
-            <label for="type">type</label><br>
-            <input type="text" id="type" name ="type"><br><br>
+            <b>Début: </b>
+            <input type="date" name="date" id="concertDate" min="" max="" onclick="initialiseDate()">
+            <select name="start_h" id="hour-select" disabled onclick="updateDisabledH()">
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option selected disabled hidden>--</option>
+            </select>
+            <select name="start_m" id="minute-select" disabled onclick="updateDisabledM()">
+                <option>00</option>
+                <option>30</option>
+                <option selected disabled hidden>--</option>
+            </select>
 
-            <label for="tags">tags</label><br>
-            <input type="text" id="tags" name ="tags"><br><br>
+            <b>Fin:</b>
+            <select name="end_h" id="hour-select-end" disabled onclick="updateDisabledH_end()">
+                <option disabled>05</option>
+                <option disabled>06</option>
+                <option disabled>07</option>
+                <option disabled>08</option>
+                <option disabled>09</option>
+                <option disabled>10</option>
+                <option disabled>11</option>
+                <option disabled>12</option>
+                <option disabled>13</option>
+                <option disabled>14</option>
+                <option disabled>15</option>
+                <option disabled>16</option>
+                <option disabled>17</option>
+                <option disabled>18</option>
+                <option disabled>19</option>
+                <option disabled>20</option>
+                <option disabled>21</option>
+                <option disabled>22</option>
+                <option disabled>23</option>
+                <option selected disabled hidden>--</option>
+            </select>
+            <select name="end_m" id="minute-select-end" disabled onclick="updateDisabledM_end()">
+                <option disabled>00</option>
+                <option disabled>30</option>
+                <option selected disabled hidden>--</option>
+            </select>
+            <br/><br/>
 
-            <label for="date">date</label><br>
-            <input type="text" id="date" name ="date"><br><br>
+            <label>Visuel</label>
+            <input type="file" name="icon" />
+            <br/><br/>
 
-            <label for="icon">icon</label><br>
-            <input type="text" id="icon" name ="icon"><br><br>
-            
-            <label for="description">description</label><br>
-            <textarea name="description" id="description cols="30" rows="10"></textarea> <br><br>
+            <label class="description">Description</label>
+            <br/><br/>
+            <textarea name="description"></textarea>
+            <br/><br/>
 
-            <input type="submit" value="Envoie la demande">
+            <button type="submit">Envoyer</button>
+            <button type="reset">Effacer </button>
+            <script src="../js/organiserEVENT.js"></script>
         </form>
+
     </div>
 
     <!-- === Footer Part === -->

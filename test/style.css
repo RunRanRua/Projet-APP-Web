@@ -1,0 +1,22 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  td.available {
+    background-color: white;
+  }
+  td.unavailable {
+    background-color: #ffcccc;
+  }
+  td.selected {
+    background-color: #99ff99;
+  }

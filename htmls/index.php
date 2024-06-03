@@ -25,7 +25,7 @@
         <div class="nav">
             <ul>
                 <li><a href="index.php" class = "active"><b>ACCUEIL</b></a></li>
-                <li><a href="event.php"><b>EVENEMENT</b></a></li>
+                <li><a href="organiserEVENT.php"><b>EVENEMENT</b></a></li>
                 <li><a href="FAQ.php"><b>FAQ</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
                 <li><a href="#"><b>A PROPOS</b></a></li>
@@ -172,54 +172,6 @@
 
     <!-- === Background part === -->
     <div class="background"></div>
-
-    <!-- === Equipe part === -->
-    <div class="equipe">
-        <img src="../images/equipe_title.png">
-        <div class="members">
-            <div class="member">
-                <img src="../uploads/team_member1.png">
-                <div class="name">Edwin Watson</div>
-                <div class="job">Creative Strategist</div>
-                <div class="links">
-                    <a href="#" class="facebook"></a>
-                    <a href="#" class="linkedIn"></a>
-                    <a href="#" class="X"></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="../uploads/team_member1.png">
-                <div class="name">Edwin Watson</div>
-                <div class="job">Creative Strategist</div>
-                <div class="links">
-                    <a href="#" class="facebook"></a>
-                    <a href="#" class="linkedIn"></a>
-                    <a href="#" class="X"></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="../uploads/team_member1.png">
-                <div class="name">Edwin Watson</div>
-                <div class="job">Creative Strategist</div>
-                <div class="links">
-                    <a href="#" class="facebook"></a>
-                    <a href="#" class="linkedIn"></a>
-                    <a href="#" class="X"></a>
-                </div>
-            </div>
-            <div class="member">
-                <img src="../uploads/team_member1.png">
-                <div class="name">Edwin Watson</div>
-                <div class="job">Creative Strategist</div>
-                <div class="links">
-                    <a href="#" class="facebook"></a>
-                    <a href="#" class="linkedIn"></a>
-                    <a href="#" class="X"></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Footer Part-->
     <div class="footer">
