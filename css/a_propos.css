@@ -1,0 +1,80 @@
+/* 基本页面和背景样式 */
+body {
+    background-color: #414141; /* 深灰背景 */
+    color: #fff; /* 白色文本 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+}
+
+/* 通用容器样式 */
+.container {
+    display: flex;
+    justify-content: space-between; /* 保持元素在两端 */
+    align-items: center; /* 垂直居中 */
+    padding: 20px;
+}
+
+.left, .right {
+    flex: 1; /* 两侧分配平等空间 */
+    margin: 10px;
+}
+
+/* 图片样式 */
+.hall-image, .logo {
+    width: 100%; /* 图片自适应容器宽度 */
+    height: auto;
+    max-width: 500px; /* 限制最大宽度，避免图片过大 */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* 给图片添加阴影 */
+    border-radius: 8px; /* 轻微的圆角 */
+}
+
+/* 标题和文本的样式增强 */
+h1, p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 添加文字阴影提高可读性 */
+}
+
+h1 {
+    font-size: 24px; /* 标题字号 */
+    margin-bottom: 10px; /* 标题下方的边距 */
+}
+
+p {
+    font-size: 16px; /* 段落文本字号 */
+    line-height: 1.6; /* 行高 */
+}
+
+/* 地址样式 */
+.address {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px; /* 增大字体大小 */
+    margin-top: 30px; /* 在上方增加一些间隔 */
+    font-weight: bold; /* 增加字重 */
+}
+
+/* 响应式布局调整 */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px; /* 在稍微小一点的屏幕上减少填充 */
+    }
+    h1 {
+        font-size: 22px; /* 减小标题字号 */
+    }
+    p {
+        font-size: 15px; /* 减小段落字号 */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse; /* 图片在上，文字在下 */
+        text-align: center; /* 文字居中 */
+        padding: 10px; /* 在更小的屏幕上进一步减少填充 */
+    }
+    .left, .right {
+        width: 100%;
+        padding: 10px 0; /* 增加顶部和底部的填充 */
+    }
+    .hall-image, .logo {
+        max-width: 100%; /* 小屏幕上允许图片占满整个宽度 */
+    }
+}
