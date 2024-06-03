@@ -1,16 +1,3 @@
-
-<?php
-$host = 'localhost';
-$dbname = 'mydb';
-$user = 'root';
-$pass = '';
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
-}
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -32,7 +19,7 @@ try {
 
 
     <main>
-        <section id="forum-stats" class="card forum-half">
+        <section id="forum-stats" class="card forum-half">  
             <h1>FORUM</h1>
             <div class="stats">
                 <button>Nouveau sujet</button>
