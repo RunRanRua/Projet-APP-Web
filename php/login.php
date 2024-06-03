@@ -26,7 +26,7 @@ $mdp = $conn->real_escape_string($_POST['mdp']);
 
 
 // Check user in our base ---------------------------------------------------------------------------------
-$sql = "SELECT * FROM Utilisateur WHERE Mail = ?";
+$sql = "SELECT * FROM utilisateur WHERE Mail = ?";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $email);

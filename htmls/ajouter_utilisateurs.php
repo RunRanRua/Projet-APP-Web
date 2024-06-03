@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 }
 
 // Préparer et lier
-$stmt = $conn->prepare("INSERT INTO Utilisateur (Nom, Prenom, Mail, Mdp) VALUES (?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO utilisateur (Nom, Prenom, Mail, Mdp) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("ssss", $nom, $prenom, $email, $mdp);
 
 if ($stmt->execute()) {
