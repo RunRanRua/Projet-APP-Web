@@ -110,6 +110,8 @@
     width: 25%;
 }
 
+
+
 #signBTN,
 #loginBTN {
     margin : 10% 0;
@@ -122,6 +124,12 @@
     cursor: pointer;
     border: 2px solid #d2d2d2;
 }
+
+#logoprofil,
+#logologout {
+    margin : 10% 0;
+}
+
 .header .user button:hover {
     border-color: #292828;
     background-color: #d2d2d2;
