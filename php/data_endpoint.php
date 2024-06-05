@@ -2,11 +2,16 @@
 // Connexion à la base de données
 $mysqli = new mysqli("localhost", "root", "", "mydb");
 
+// Vérification de la connexion
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+
 // Récupération de la date de la requête
 $date = $_GET['date'] ?? date('Y-m-d');
 
 // Préparation de la requête SQL
-$stmt = $mysqli->prepare("SELECT Heure, niveauSonore FROM Donnees WHERE date = ?");
+$stmt = $mysqli->prepare("SELECT Heure, niveauSonore FROM donnees WHERE date = ?");
 $stmt->bind_param("s", $date);
 $stmt->execute();
 $result = $stmt->get_result();

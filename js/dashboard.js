@@ -50,9 +50,16 @@ function updateCalendar() {
 }
 
 function loadData(year, month, day) {
+    console.log(`Fetching data for ${year}-${month + 1}-${day}`);
     fetch(`../php/data_endpoint.php?date=${year}-${month + 1}-${day}`)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
+            console.log('Data received:', data);
             updateChart(data);
         })
         .catch(error => {
@@ -88,6 +95,11 @@ function initChart() {
 }
 
 function updateChart(data) {
+    if (!data || !data.times || !data.levels) {
+        console.error('Invalid data format:', data);
+        return;
+    }
+
     myChart.data.labels = data.times;
     myChart.data.datasets.forEach((dataset) => {
         dataset.data = data.levels;
@@ -99,8 +111,6 @@ function updateChart(data) {
                         `Max : ${data.max} dB, Min : ${data.min} dB`;
     document.getElementById('data-display').innerText = displayText;
 }
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
     updateCalendar();
