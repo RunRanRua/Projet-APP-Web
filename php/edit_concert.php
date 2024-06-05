@@ -57,9 +57,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier le concert</title>
+    <title>Modifier concert</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/headerv2.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/FAQ.css">
+    <link rel="stylesheet" href="../css/gestion_utilisateurs.css"> <!-- Add this line -->
+
+</head>
+
 </head>
 <body>
     <h1>Modifier le concert</h1>

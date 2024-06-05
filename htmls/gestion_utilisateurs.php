@@ -102,7 +102,7 @@
         </div>
     </div>
 
-    <h1>Gestion des Utilisateurs</h1>
+    <h1>Rechercher des Utilisateurs</h1>
     <?php
     $servername = "localhost";
     $username = "root";
@@ -116,16 +116,17 @@
     if ($conn->connect_error) {
         die("Connexion échouée: " . $conn->connect_error);
     }
-    echo "Connexion réussie";
+    echo "";
     ?>
-    <form method="GET" action="gestion_utilisateurs.php">
-        <label>Nom: <input type="text" name="search_nom" placeholder="Nom"></label>
-        <label>Prénom: <input type="text" name="search_prenom" placeholder="Prénom"></label>
-        <label>Email: <input type="email" name="search_email" placeholder="Email"></label>
-        <input type="submit" value="Rechercher">
-    </form>
+  <form method="GET" action="gestion_utilisateurs.php">
+    <label>Nom: <input type="text" name="search_nom" placeholder="Nom"></label>
+    <label>Prénom: <input type="text" name="search_prenom" placeholder="Prénom"></label>
+    <label>Email: <input type="email" name="search_email" placeholder="Email"></label>
+    <input type="submit" value="Rechercher">
+</form>
 
-    <h2>Ajouter un Utilisateur</h2>
+
+    <h1>Ajouter un Utilisateur</h1>
     <form method="post" action="../php/ajouter_utilisateurs.php">
         <label>Nom: <input type="text" name="nom" placeholder="Nom" required></label><br>
         <label>Prénom: <input type="text" name="prenom" placeholder="Prénom" required></label><br>
@@ -134,7 +135,7 @@
         <input type="submit" value="Ajouter Utilisateur">
     </form>
 
-    <h2>Liste des Utilisateurs</h2>
+    <h1>Liste des Utilisateurs</h1>
 <?php
 $sql = "SELECT idUtilisateur, Nom, Prenom, Mail FROM utilisateur WHERE 1=1";
 
