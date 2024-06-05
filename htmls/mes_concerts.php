@@ -71,7 +71,7 @@
         <div class = "section">
             <div>
                 <h2>CONCERT EN COURS</h2>
-                <?php include('get_billets_achetes.php'); ?>
+                <?php include('../php/get_billets_achetes.php'); ?>
                 <?php
                 if ($resultBillets->num_rows > 0) {
                     echo "<h3>Billets achetés :</h3>";
