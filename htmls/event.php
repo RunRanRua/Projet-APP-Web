@@ -113,29 +113,44 @@ try {
         <?php if (isset($_SESSION['user_id']) && $_SESSION['is_admin']): ?>
             <div class="TEst">
                 <h2>Ajouter un nouveau concert</h2>
-                <form action="../php/add_concert.php" method="post" enctype="multipart/form-data">
-                    <label for="title">Titre du concert:</label>
-                    <input type="text" id="title" name="title" required>
-                    <label for="date">Date du concert:</label>
-                    <input type="date" id="date" name="date" required>
-                    <label for="start_time">Heure de début:</label>
-                    <input type="time" id="start_time" name="start_time" required>
-                    <label for="duration">Durée:</label>
-                    <input type="text" id="duration" name="duration" required>
-                    <label for="end_time">Heure de fin:</label>
-                    <input type="time" id="end_time" name="end_time" required>
-                    <label for="price">Prix du concert:</label>
-                    <input type="number" id="price" name="price" step="0.01" min="0" value="0.00" required>
-                    <label for="category">Catégorie:</label>
-                    <input type="text" id="category" name="category" required>
-                    <label for="status">État:</label>
-                    <input type="text" id="status" name="status" required>
-                    <label for="description">Description:</label>
-                    <textarea id="description" name="description" required></textarea>
-                    <label for="image">Image du concert:</label>
-                    <input type="file" id="image" name="image" accept="image/*">
-                    <button type="submit">Ajouter Concert</button>
-                </form>
+                <form method="POST" action="../php/add_concert.php" enctype="multipart/form-data">
+    <label for="title">Titre :</label>
+    <input type="text" id="title" name="title" required>
+    
+    <label for="date">Date :</label>
+    <input type="date" id="date" name="date" required>
+    
+    <label for="start_time">Heure de début :</label>
+    <input type="time" id="start_time" name="start_time" required>
+    
+    <label for="duration">Durée :</label>
+    <input type="text" id="duration" name="duration" required>
+    
+    <label for="end_time">Heure de fin :</label>
+    <input type="time" id="end_time" name="end_time" required>
+    
+    <label for="description">Description :</label>
+    <textarea id="description" name="description" required></textarea>
+    
+    <label for="category">Catégorie :</label>
+    <input type="text" id="category" name="category" required>
+    
+    <label for="status">Statut :</label>
+    <input type="text" id="status" name="status" required>
+    
+    <label for="price">Prix :</label>
+    <input type="text" id="price" name="price" required>
+    
+    <label for="artist_name">Nom de l'artiste :</label>
+    <input type="text" id="artist_name" name="artist_name" required>
+    
+    <label for="image">Image :</label>
+    <input type="file" id="image" name="image">
+    
+    <button type="submit">Ajouter le concert</button>
+</form>
+
+
             </div>
         <?php endif; ?>
 
