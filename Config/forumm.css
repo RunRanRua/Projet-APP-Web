@@ -1,0 +1,169 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: 'Heebo', sans-serif;
+  background-color: #252b33;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+/* Ajouts carte*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 400px;
+  aspect-ratio: 1 / 0.7;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  top: 50px;
+}
+.card .image-box {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 90%;
+  border-radius: inherit;
+  transition: 0.5s ease-in-out;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.card:hover img {
+  filter: grayscale(1) brightness(0.4);
+}
+.card:hover::after {
+  opacity: 1;
+  inset: 20px;
+}
+
+.content {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content h2,
+.content p {
+  opacity: 0;
+  transition: 0.4s 0.2s ease;
+}
+.content h2 {
+  margin-bottom: 12px;
+  scale: 0.7;
+}
+.content p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d1d1d1;
+  transform: translateY(50%);
+}
+.card:hover .content h2 {
+  scale: 1;
+  opacity: 1;
+}
+.card:hover .content P {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Crée des colonnes de 400px de largeur minimum */
+  gap: 20px; /* Espacement entre les cartes */
+  padding: 20px; /* Ajoute un peu d'espace autour de la grille */
+}
+
+/* Assurez-vous que le reste de votre CSS est bien configuré pour les cartes */
+
+
+
+
+input:focus {
+  outline-offset: -2px;
+}
+
+.container {
+  position: relative; /* Changé de 'absolute' pour permettre un positionnement plus flexible */
+  margin-top: 9px; /* Marge du haut pour pousser le conteneur vers le bas depuis son point d'origine */
+  margin-left: auto; /* Centrage horizontal */
+  margin-right: auto;
+  width: 80%; /* Vous pouvez ajuster la largeur selon le besoin */
+  max-width: 960px; /* Maximum width can help with very wide screens */
+  color: black; /* Couleur du texte à l'intérieur du conteneur */
+  bottom: 950px; /* Déplacé 10px vers le bas par rapport à sa position normale */
+  left: 270px; /* Déplacé 10px vers la gauche par rapport à sa position normale */
+}
+
+
+
+#submitsearch{
+border: 1px solid rgb(138, 134, 134);
+margin-left: -82px;
+padding: 5px;
+border-radius: 19px;
+cursor: pointer;
+padding-left: 10px;
+padding-right: 8px; 
+padding-top: 4px;
+
+display: none;
+box-shadow: 0 0 1px black;     
+margin-right:110px;
+}
+
+#searchInput {
+    width: 18%;
+
+    border: 1px solid #000;
+    border-radius: 30px;
+    font-size: 16px;
+    background-color: white;
+    background-image:url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-24.png');
+
+    background-position: 10px 7px;
+    background-repeat: no-repeat;
+    padding: 8px 20px 8px 40px;
+    -webkit-transition: width 0.8s ease-in-out;
+    transition: width 0.8s ease-in-out;
+    outline: none;
+    opacity: 0.9;
+
+  }
+
+
+

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Forum Events-IT</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forumm.css">
 </head>
 <body>
     <header>
