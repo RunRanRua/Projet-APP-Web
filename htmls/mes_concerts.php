@@ -71,6 +71,21 @@
         <div class = "section">
             <div>
                 <h2>CONCERT EN COURS</h2>
+
+                <?php
+                // Affichage des billets achetés par l'utilisateur
+                $sqlBillets = "SELECT * FROM billet_achete WHERE idUtilisateur = $userId";
+                $resultBillets = $conn->query($sqlBillets);
+
+                if ($resultBillets->num_rows > 0) {
+                    echo "<h3>Billets achetés :</h3>";
+                    while ($rowBillet = $resultBillets->fetch_assoc()) {
+                        echo "Billet ID: " . $rowBillet["idBillet"] . " - Concert ID: " . $rowBillet["idConcert"] . "<br>";
+                    }
+                } else {
+                    echo "<p>Aucun billet acheté trouvé.</p>";
+                }
+                ?>
     
                 <?php if (isset($concerts['current']) && is_array($concerts['current'])): ?>
                     <?php foreach ($concerts['current'] as $concert): ?>
