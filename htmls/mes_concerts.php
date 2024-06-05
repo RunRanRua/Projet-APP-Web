@@ -68,6 +68,7 @@
             <h1><b>MES CONCERTS</b></h1>
         </div>
 
+        <?php include('../php/get_concert.php'); ?>
         <div class = "section">
             <div>
                 <h2>CONCERT EN COURS</h2>
@@ -82,7 +83,8 @@
                     echo "<p>Aucun billet acheté trouvé.</p>";
                 }
                 ?>
-    
+
+                
                 <?php if (isset($concerts['current']) && is_array($concerts['current'])): ?>
                     <?php foreach ($concerts['current'] as $concert): ?>
                         <div class="concert" onclick="showDetails(<?php echo $concert['id']; ?>)">
