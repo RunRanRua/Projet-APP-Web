@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -41,7 +43,7 @@ function getConcerts($userId) {
     $sql = "
     SELECT c.idConcert AS id, c.Titre AS nom, c.Date_concert AS date, c.Description AS details
     FROM Concert c
-    JOIN Billet_achete b ON c.idConcert = b.idPlace
+    JOIN Billet_achete b ON c.idConcert = b.idConcert
     WHERE b.idUtilisateur = $userId";
 
     $stmt = $conn->prepare($sql);
