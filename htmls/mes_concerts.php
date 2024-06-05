@@ -71,13 +71,8 @@
         <div class = "section">
             <div>
                 <h2>CONCERT EN COURS</h2>
-
+                <?php include('get_billets_achetes.php'); ?>
                 <?php
-                $userId = $_SESSION['user_id'];
-                // Affichage des billets achetés par l'utilisateur
-                $sqlBillets = "SELECT * FROM billet_achete WHERE idUtilisateur = $userId";
-                $resultBillets = $conn->query($sqlBillets);
-
                 if ($resultBillets->num_rows > 0) {
                     echo "<h3>Billets achetés :</h3>";
                     while ($rowBillet = $resultBillets->fetch_assoc()) {

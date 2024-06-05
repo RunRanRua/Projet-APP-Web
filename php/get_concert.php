@@ -18,6 +18,21 @@ if ($conn->connect_error) {
 
 $userId = $_SESSION['user_id'];
 
+// Requête pour récupérer les billets achetés par l'utilisateur
+$sqlBillets = "SELECT * FROM billet_achete WHERE idUtilisateur = $userId";
+$resultBillets = $conn->query($sqlBillets);
+
+// Vérifier s'il y a des billets achetés
+if ($resultBillets->num_rows > 0) {
+    echo "<h3>Billets achetés :</h3>";
+    while ($rowBillet = $resultBillets->fetch_assoc()) {
+        echo "Billet ID: " . $rowBillet["idBillet"] . " - Concert ID: " . $rowBillet["idConcert"] . "<br>";
+    }
+} else {
+    echo "<p>Aucun billet acheté trouvé.</p>";
+}
+
+
 function getConcerts($userId) {
     global $conn;
     $currentDate = date('Y-m-d H:i:s');
