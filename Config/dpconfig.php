@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'forum_cinema';
+$dbname = 'mydb';
 $user = 'root';
 $pass = '';
 
