@@ -68,7 +68,7 @@
             <h1><b>MES CONCERTS</b></h1>
         </div>
 
-        <?php include_once('../php/get_concert.php'); ?>
+
         <div class = "section">
             <div>
                 <h2>CONCERT EN COURS</h2>
