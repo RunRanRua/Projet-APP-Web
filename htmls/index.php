@@ -25,7 +25,7 @@
         <!-- navigation -->
         <div class = "nav">
             <li><a href="#"><b>ACCUEIL</b></a></li>
-            <li><a href="#"><b>PLANNING</b></a></li>
+            <li><a href="mes_concerts.php"><b>PLANNING</b></a></li>
             <li class = "DropExp">
                 <a href="#"><b>EVENEMENT</b></a>
                 <ul class="DropExpContent">
