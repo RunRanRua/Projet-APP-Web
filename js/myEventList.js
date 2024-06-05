@@ -28,7 +28,7 @@ function getData(){
     });
 }
 
-
+/*
 function generateList(){
     getData()
     .then(data =>{
@@ -93,7 +93,33 @@ function generateList(){
         console.error("getting data Error: ", error)
     });
 }
+*/
 
+function generateList(){
+    getData()
+    .then(data =>{
+        if(Object.keys(data).length === 0){
+            return;
+        }
+        // Generate each ticket
+        ['current', 'upcoming', 'past'].forEach(category => {
+            data[category].forEach(info => {
+                let ticketClass;
+                if (category === 'current') {
+                    ticketClass = "ongoingTickets";
+                } else if (category === 'upcoming') {
+                    ticketClass = "upcomingTickets";
+                } else {
+                    ticketClass = "pastTickets";
+                }
+                prepareNewDD(info, ticketClass);
+            });
+        });
+    })
+    .catch(error => {
+        console.error("getting data Error: ", error)
+    });
+}
 
 function prepareNewDD(info, ticketclass){
     let date_achat_billet = info['Date_achat_billet'];
@@ -107,7 +133,7 @@ function prepareNewDD(info, ticketclass){
     let artiste = info['nom_artiste'];
 
 
-    let newOngoingDD = document.createElement('dd');
+    let newDD = document.createElement('dd');
     newOngoingDD.className = ticketclass;
     newOngoingDD.innerHTML = `
         <div class="ticketInfo">
@@ -123,6 +149,19 @@ function prepareNewDD(info, ticketclass){
         </div>
         <img src="../images/${img_path}" />
     `;
+
+    // Trouver le dt correspondant à la catégorie du concert
+    let dt;
+    if (ticketclass === 'ongoingTickets') {
+        dt = document.querySelector('.ongoingDT');
+    } else if (ticketclass === 'upcomingTickets') {
+        dt = document.querySelector('.upcomingDT');
+    } else {
+        dt = document.querySelector('.pastDT');
+    }
+
+    // Insérer le nouveau dd après le dt correspondant
+    dt.insertAdjacentElement('afterend', newDD);
 
     return(newOngoingDD)
 }

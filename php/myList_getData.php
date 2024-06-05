@@ -36,12 +36,34 @@ $stmt->bind_param("s", $userId);
 $stmt->execute();
 $result = $stmt->get_result();
 
+$currentConcerts = [];
+$upcomingConcerts = [];
+$pastConcerts = [];
+
+while ($row = $result->fetch_assoc()) {
+    if ($row['Date_concert'] > $currentDate) {
+        $upcomingConcerts[] = $row;
+    } elseif ($row['Date_concert'] < $currentDate) {
+        $pastConcerts[] = $row;
+    } else {
+        $currentConcerts[] = $row;
+    }
+}
+
+
+
+/*
 // get data from db
 while($row = $result->fetch_assoc()){
     $myList[] = $row;
 }
-echo json_encode($myList);
+*/
 
+echo json_encode([
+    'current' => $currentConcerts,
+    'upcoming' => $upcomingConcerts,
+    'past' => $pastConcerts
+]);
 $stmt->close();
 $conn->close();
 
