@@ -69,6 +69,7 @@
         </div>
 
         <?php include('../php/get_concert.php'); ?>
+        <?php include('../php/get_concert_details.php'); ?>
         <div class = "section">
             <div>
                 <h2>CONCERT EN COURS</h2>
@@ -118,10 +119,36 @@
                     <div id="popup-details"></div>
                 </div>
             </div>
-        </div>
+
+            <script>
+                function showDetails(concertId) {
+                    // Récupération des détails du concert avec AJAX
+                    fetch(`get_concert_details.php?concert_id=${concertId}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            document.getElementById('popup-details').innerHTML = `
+                                <h2>${data.nom}</h2>
+                                <p>Date : ${data.date}</p>
+                                <p>${data.details}</p>
+                    `       ;
+                            document.getElementById('popup').style.display = 'block';
+                        });
+                }
+
+                document.getElementById('popup-close').onclick = function() {
+                        document.getElementById('popup').style.display = 'none';
+                }
+
+                window.onclick = function(event) {
+                    if (event.target == document.getElementById('popup')) {
+                        document.getElementById('popup').style.display = 'none';
+                    }
+                }
+            </script>
+        </div>      
     </div>
 
-
+            
 
 
 
