@@ -53,7 +53,7 @@
 
             <?php }else{ ?>
 
-            <a href="#"><img src="..\images\signup.png" id="signBTN" onclick="inscriptionClick(event)"></a>
+            <a href="#"><img src="..\images\INSCRIPTION1.png" id="signBTN" onclick="inscriptionClick(event)"></a>
             <!-- inscription box -->
             <div class="inscription" id ="inscription">
                 <form action="../php/inscription.php" method="post">
@@ -79,11 +79,11 @@
                 </form>
             </div>
 
-            <a href="#"><img id="loginBTN" onclick="connexionClick(event)" src="..\images\login2.png"></a>
+            <a href="#"><img id="loginBTN" onclick="connexionClick(event)" src="..\images/INSCRIPTION(6).png"></a>
             <!-- connexion box -->
             <div class="connexion">
                 <form action="../php/login.php" method="post">
-                    <div class="title2">connexion</div>
+                    <div class="title2">Connexion</div>
                     <div class="content" >
                         <p class="title">Email</p>
                         <p class="input"><input type="text" name="email" value=""/></p>

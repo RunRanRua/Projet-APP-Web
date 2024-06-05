@@ -20,7 +20,8 @@
 </head>
 <body>
 <!-- === Header Part === -->
-<div class="header">
+      <!-- === Header Part === -->
+      <div class="header">
         <!-- logo -->
         <div class="logo">
             <a href="#"><img src="..\images\logo100px.png"></a>
@@ -30,8 +31,8 @@
         <div class="nav">
             <ul>
                 <li><a href="index.php" ><b>ACCUEIL</b></a></li>
-                <li><a href="event.php"><b>EVENEMENT</b></a></li>
-                <li><a href="FAQ.php" class = "active"><b>FAQ</b></a></li>
+                <li><a href="event.php"><b>NOS CONCERTS</b></a></li>
+                <li><a href="organiserEVENT.php"><b>ORGANISATION</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
                 <li><a href="a_propos.php"><b>A PROPOS</b></a></li>
             </ul>
@@ -58,7 +59,7 @@
 
             <?php }else{ ?>
 
-            <a href="#"><img src="..\images\signup.png" id="signBTN" onclick="inscriptionClick(event)"></a>
+            <a href="#"><img src="..\images\INSCRIPTION1.png" id="signBTN" onclick="inscriptionClick(event)"></a>
             <!-- inscription box -->
             <div class="inscription" id ="inscription">
                 <form action="../php/inscription.php" method="post">
@@ -84,11 +85,11 @@
                 </form>
             </div>
 
-            <a href="#"><img id="loginBTN" onclick="connexionClick(event)" src="..\images\login2.png"></a>
+            <a href="#"><img id="loginBTN" onclick="connexionClick(event)" src="..\images/INSCRIPTION(6).png"></a>
             <!-- connexion box -->
             <div class="connexion">
                 <form action="../php/login.php" method="post">
-                    <div class="title2">connexion</div>
+                    <div class="title2">Connexion</div>
                     <div class="content" >
                         <p class="title">Email</p>
                         <p class="input"><input type="text" name="email" value=""/></p>
@@ -107,6 +108,7 @@
         </div>
     </div>
 
+
 <section class="faq-section">
     <h1>DES QUESTIONS ?</h1>
     <div class="search-container">
@@ -122,12 +124,12 @@
         <h2 class="faq-title">Question recurrentes</h2>
         <div class="faq-list">
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleAnswer('answer1')">Question I <span class="arrow">&#9660;</span></button>
-                <div id="answer1" class="faq-answer">Réponse à la question I.</div>
+                <button class="faq-question" onclick="toggleAnswer('answer1')"> Comment créer un compte sur Audio Insights ? <span class="arrow">&#9660;</span></button>
+                <div id="answer1" class="faq-answer">Pour créer un compte, cliquez sur le bouton "S'inscrire" dans l'en-tête du site. Remplissez le formulaire d'inscription avec votre nom, prénom, adresse e-mail et mot de passe. Un e-mail de vérification sera envoyé à l'adresse que vous avez fournie. Cliquez sur le lien de vérification dans l'e-mail pour activer votre compte.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleAnswer('answer2')">Question II <span class="arrow">&#9660;</span></button>
-                <div id="answer2" class="faq-answer">Réponse à la question II.</div>
+                <button class="faq-question" onclick="toggleAnswer('answer2')">Comment réserver des places pour un concert  <span class="arrow">&#9660;</span></button>
+                <div id="answer2" class="faq-answer">Une fois connecté à votre compte, allez à la section "Nos concerts" pour voir la liste des concerts disponibles. Sélectionnez le concert auquel vous souhaitez assister et cliquez sur "Réserver". Choisissez votre place et suivez les instructions pour finaliser votre réservation.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleAnswer('answer3')">Question III <span class="arrow">&#9660;</span></button>

@@ -24,9 +24,9 @@
         <!-- navigation -->
         <div class="nav">
             <ul>
-                <li><a href="index.php" class = "active"><b>ACCUEIL</b></a></li>
-                <li><a href="event.php"><b>EVENEMENT</b></a></li>
-                <li><a href="FAQ.php"><b>FAQ</b></a></li>
+                <li><a href="index.php" ><b>ACCUEIL</b></a></li>
+                <li><a href="event.php"><b>NOS CONCERTS</b></a></li>
+                <li><a href="organiserEVENT.php"><b>ORGANISATION</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
                 <li><a href="a_propos.php"><b>A PROPOS</b></a></li>
             </ul>
@@ -53,42 +53,42 @@
 
             <?php }else{ ?>
 
-            <a href="#"><img src="..\images\signup.png" id="signBTN" onclick="inscriptionClick(event)"></a>
+            <a href="#"><img src="..\images\INSCRIPTION1.png" id="signBTN" onclick="inscriptionClick(event)"></a>
             <!-- inscription box -->
             <div class="inscription" id ="inscription">
                 <form action="../php/inscription.php" method="post">
                     <div class="title2">Inscription</div>
                     <div class="content" >
                         <p class="title">Nom</p>
-                        <p class="input"><input type="text" name="nom" placeholder="Nom"/></p>
+                        <p class="input"><input type="text" name="nom"/></p>
                         <p class="title">Prénom</p>
-                        <p class="input"><input type="text" name="prenom" placeholder="Prénom"/></p>
+                        <p class="input"><input type="text" name="prenom"/></p>
                         <p class="title">Numéro de téléphone</p>
-                        <p class="input"><input type="text" name="numero" placeholder="Numéro de téléphone"/></p>
+                        <p class="input"><input type="text" name="numero"/></p>
                         <p class="title">Email</p>
-                        <p class="input"><input type="text" name="email" placeholder="Email"/></p>
+                        <p class="input"><input type="text" name="email"/></p>
                         <p class = title>Vérification</p>
-                        <p class="inputVerif"><input class="verifMail" type="text" name="code" placeholder="Code de vérification"/>  <button class="btnMail" name="sendBTN">Envoyer</button></p>
+                        <p class="inputVerif"><input class="verifMail" type="text" name="code"/>  <button class="btnMail" name="sendBTN">Envoyer</button></p>
                         <p class="title">Mot de passe</p>
-                        <p class="input"><input type="password" name="mdp" placeholder="Mot de passe"/></p>
+                        <p class="input"><input type="password" name="mdp"/></p>
                         <p class="title">Confirmation de mot de passe</p>
-                        <p class="input"><input type="password" name="confirm_mdp" placeholder="Confirmation de mot de passe"/></p>
+                        <p class="input"><input type="password" name="confirm_mdp"/></p>
                         <p class="condition"><input type="checkbox" name="condition"> <u>J'ai lu et j'accepte toutes les conditions.</u></p>
                         <div><Button name="submitBTN">S'inscrire</Button></div>
                     </div>
                 </form>
             </div>
 
-            <a href="#"><img id="loginBTN" onclick="connexionClick(event)" src="..\images\login2.png"></a>
+            <a href="#"><img id="loginBTN" onclick="connexionClick(event)" src="..\images/INSCRIPTION(6).png"></a>
             <!-- connexion box -->
             <div class="connexion">
                 <form action="../php/login.php" method="post">
-                    <div class="title2">connexion</div>
+                    <div class="title2">Connexion</div>
                     <div class="content" >
                         <p class="title">Email</p>
-                        <p class="input"><input type="text" name="email" placeholder="Email" value=""/></p>
+                        <p class="input"><input type="text" name="email" value=""/></p>
                         <p class="title">Mot de passe</p>
-                        <p class="input"><input type="password" name="mdp" placeholder="Mot de passe" value=""/></p>
+                        <p class="input"><input type="password" name="mdp" value=""/></p>
                         <div><Button>Se connecter</Button></div>
                     </div>
                 </form>
@@ -101,6 +101,7 @@
             
         </div>
     </div>
+
 
     <h1>Rechercher des Utilisateurs</h1>
     <?php

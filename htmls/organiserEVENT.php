@@ -25,9 +25,9 @@
         <!-- navigation -->
         <div class="nav">
             <ul>
-                <li><a href="index.php" class = "active"><b>ACCUEIL</b></a></li>
-                <li><a href="organiserEVENT.php"><b>EVENEMENT</b></a></li>
-                <li><a href="FAQ.php"><b>FAQ</b></a></li>
+                <li><a href="index.php" ><b>ACCUEIL</b></a></li>
+                <li><a href="event.php"><b>NOS CONCERTS</b></a></li>
+                <li><a href="organiserEVENT.php" class = "active"><b>ORGANISATION</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
                 <li><a href="a_propos.php"><b>A PROPOS</b></a></li>
             </ul>
@@ -54,7 +54,7 @@
 
             <?php }else{ ?>
 
-            <a href="#"><img src="..\images\signup.png" id="signBTN" onclick="inscriptionClick(event)"></a>
+            <a href="#"><img src="..\images\INSCRIPTION1.png" id="signBTN" onclick="inscriptionClick(event)"></a>
             <!-- inscription box -->
             <div class="inscription" id ="inscription">
                 <form action="../php/inscription.php" method="post">
@@ -80,11 +80,11 @@
                 </form>
             </div>
 
-            <a href="#"><img id="loginBTN" onclick="connexionClick(event)" src="..\images\login2.png"></a>
+            <a href="#"><img id="loginBTN" onclick="connexionClick(event)" src="..\images/INSCRIPTION(6).png"></a>
             <!-- connexion box -->
             <div class="connexion">
                 <form action="../php/login.php" method="post">
-                    <div class="title2">connexion</div>
+                    <div class="title2">Connexion</div>
                     <div class="content" >
                         <p class="title">Email</p>
                         <p class="input"><input type="text" name="email" value=""/></p>
@@ -102,6 +102,7 @@
             
         </div>
     </div>
+
     
     <!-- === mid Part === -->
     <div class="mid">

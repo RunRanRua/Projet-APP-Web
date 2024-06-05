@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="../css/a_propos.css">
 </head>
 <body>
-
-
     <!-- === Header Part === -->
     <div class="header">
         <!-- logo -->
@@ -26,14 +24,14 @@
         <!-- navigation -->
         <div class="nav">
             <ul>
-                <li><a href="index.php" class = "active"><b>ACCUEIL</b></a></li>
-                <li><a href="event.php"><b>EVENEMENT</b></a></li>
-                <li><a href="FAQ.php"><b>FAQ</b></a></li>
+                <li><a href="index.php" ><b>ACCUEIL</b></a></li>
+                <li><a href="event.php"><b>NOS CONCERTS</b></a></li>
+                <li><a href="organiserEVENT.php"><b>ORGANISATION</b></a></li>
                 <li><a href="#"><b>FORUM</b></a></li>
-                <li><a href="#"><b>A PROPOS</b></a></li>
+                <li><a href="a_propos.php" class = "active"><b>A PROPOS</b></a></li>
             </ul>
         </div>
-
+    
         <!-- search barre -->
         <div class="search">
             <a href="#"><img src="..\images\loop.png"></a>
@@ -45,17 +43,17 @@
         <div class="user">
 
             <?php if (isset($_SESSION['user_id'])){ ?>
-            <?php if ( $_SESSION["is_admin"] ) { ?>
-            <a href="gestion_utilisateurs.php" > <img src="..\images\admin_icon.png" alt="Profil"> </a>
-            <?php } else{ ?>
-            <a href="profil.php" > <img src="..\images\user.png" alt="Profil"> </a>
-            <?php } ?>
-
-            <a href="..\php\logout.php"> <img src="..\images\Logout.png" alt="Déconnexion"> </a>
+                <?php if ( $_SESSION["is_admin"] ) { ?>
+                   <a href="gestion_utilisateurs.php" > <img src="..\images\admin_icon.png" alt="Profil"> </a>
+                <?php } else{ ?>
+                    <a href="profil.php" > <img src="..\images\user.png" alt="Profil"> </a>
+                <?php } ?>
+        
+                <a href="..\php\logout.php"> <img src="..\images\Logout.png" alt="Déconnexion"> </a>
 
             <?php }else{ ?>
 
-            <a href="#"><img src="..\images\signup.png" id="signBTN" onclick="inscriptionClick(event)"></a>
+            <a href="#"><img src="..\images\INSCRIPTION1.png" id="signBTN" onclick="inscriptionClick(event)"></a>
             <!-- inscription box -->
             <div class="inscription" id ="inscription">
                 <form action="../php/inscription.php" method="post">
@@ -81,11 +79,11 @@
                 </form>
             </div>
 
-            <a href="#"><img id="loginBTN" onclick="connexionClick(event)" src="..\images\login2.png"></a>
+            <a href="#"><img id="loginBTN" onclick="connexionClick(event)" src="..\images/INSCRIPTION(6).png"></a>
             <!-- connexion box -->
             <div class="connexion">
                 <form action="../php/login.php" method="post">
-                    <div class="title2">connexion</div>
+                    <div class="title2">Connexion</div>
                     <div class="content" >
                         <p class="title">Email</p>
                         <p class="input"><input type="text" name="email" value=""/></p>
@@ -94,16 +92,15 @@
                         <div><Button>Se connecter</Button></div>
                     </div>
                 </form>
-
+                
             </div>
-
+            
             <script src="../js/inscription-connexion.js"></script>
 
             <?php }; ?>
-
+            
         </div>
     </div>
-
 
     <!-- Company -->
     <div id="company-intro">
