@@ -47,7 +47,6 @@ function getConcerts($userId) {
     WHERE b.idUtilisateur = $userId";
 
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $userId);
     $stmt->execute();
     $result = $stmt->get_result();
 
