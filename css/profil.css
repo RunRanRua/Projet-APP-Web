@@ -16,7 +16,8 @@
     font-weight: bold;
 }
 .profil .user{
-    height: 100%;
+    height: 80%;
+    margin : 10% 0;
     
     display: flex;
 }
