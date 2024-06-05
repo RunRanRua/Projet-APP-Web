@@ -73,6 +73,7 @@
                 <h2>CONCERT EN COURS</h2>
 
                 <?php
+                $userId = $_SESSION['user_id'];
                 // Affichage des billets achetés par l'utilisateur
                 $sqlBillets = "SELECT * FROM billet_achete WHERE idUtilisateur = $userId";
                 $resultBillets = $conn->query($sqlBillets);
