@@ -164,7 +164,7 @@ try {
         <?php endif; ?>
 
         <!-- Search Bar -->
-        <button id="sortButton">Trier par date</button>
+    
         <div class="cards-grid">
             <?php foreach ($concerts as $concert): ?>
                 <div class="card" id="<?= $concert['idConcert']?>">
