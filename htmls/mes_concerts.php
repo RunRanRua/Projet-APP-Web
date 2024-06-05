@@ -117,15 +117,7 @@
                     <div id="popup-details"></div>
                 </div>
             </div>
-
-            <h2><b>CONCERT EN COURS</b></h2>
-            <a href="#"><img src="..\images\loop.png"></a>
-            <h2><b>CONCERTS À VENIR</b></h2>
-            <a href="#"><img src="..\images\loop.png"></a>
-            <h2><b>CONCERTS PASSÉ</b></h2>
-            <a href="#"><img src="..\images\loop.png"></a>
         </div>
-        
     </div>
 
 
