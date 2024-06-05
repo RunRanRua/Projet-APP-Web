@@ -7,6 +7,8 @@ error_reporting(E_ALL);
 // Include the database connection script
 include('connect.php');
 
+$userId = $_SESSION['user_id'];
+
 function getConcerts($userId) {
     global $conn;
     $currentDate = date('Y-m-d H:i:s');
@@ -16,7 +18,7 @@ function getConcerts($userId) {
     SELECT c.idConcert AS id, c.Titre AS nom, c.Date_concert AS date, c.Description AS details
     FROM Concert c
     JOIN Billet_achete b ON c.idConcert = b.idPlace
-    WHERE b.idUtilisateur = ?";
+    WHERE b.idUtilisateur = $userId";
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $userId);
@@ -50,6 +52,6 @@ if (!isset($_SESSION['user_id'])) {
     die("User not logged in");
 }
 
-$userId = $_SESSION['user_id'];
+
 $concerts = getConcerts($userId);
 ?>
