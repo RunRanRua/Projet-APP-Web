@@ -69,7 +69,7 @@
         </div>
 
         <?php include('../php/get_concert.php'); ?>
-        <?php include('../php/get_concert_details.php'); ?>
+        
         <div class = "section">
             <div>
                 <h2>CONCERT EN COURS</h2>
@@ -121,6 +121,7 @@
             </div>
 
             <script>
+                <?php include('../php/get_concert_details.php'); ?>
                 function showDetails(concertId) {
                     // Récupération des détails du concert avec AJAX
                     fetch(`get_concert_details.php?concert_id=${concertId}`)
