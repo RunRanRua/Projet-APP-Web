@@ -16,9 +16,14 @@
             <a href="#">Connexion</a>
         </nav>
     </header>
+    <header>
+    <nav>
+        <!-- Vos liens de navigation ici -->
+    </nav>
+</header>
+<h1>Forum</h1>
+<!-- Le reste de votre code ici -->
     </main>
-
-
     <form action="nouveauSujet.php" method="post">
         Mail : <input type="text" name="mail">
         <button type="submit"></button>

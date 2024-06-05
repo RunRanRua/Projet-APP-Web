@@ -5,6 +5,11 @@ body {
     padding: 0;
 }
 
+h1 {
+    font-size: 2.5em; /* Ajustez la taille comme vous le souhaitez */
+    text-align: center; /* Centrer le titre */
+    margin-top: 20px; /* Ajouter un peu d'espace au-dessus du titre */
+}
 .header {
     background-color: #353535; /* Couleur de fond ajustée pour correspondre à l'image */
     color: #FFFFFF;
