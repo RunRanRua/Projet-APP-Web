@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/headerv2.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/organiserevent.css">
+    <link rel="stylesheet" href="../css/organiserEVENT.css">
     <link rel="stylesheet" href="../css/inscription.css">
     <link rel="stylesheet" href="../css/connexion.css">
 </head>
