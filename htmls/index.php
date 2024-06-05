@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/inscription.css">
     <link rel="stylesheet" href="../css/connexion.css">
+    <link rel="stylesheet" href="../css/profil.css">
 </head>
 <body>
     <!-- === Header Part === -->
