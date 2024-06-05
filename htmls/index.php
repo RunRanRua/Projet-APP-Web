@@ -63,7 +63,7 @@
                 <?php if ( $_SESSION["is_admin"] ) { ?>
                    <a href="gestion_utilisateurs.php" > <img src="..\images\admin_icon.png" alt="Profil"> </a>
                 <?php } else{ ?>
-                    <a href="profil.php" > <img src="..\images\user.png" id="logologout" alt="Profil"> </a>
+                    <a href="profil.php" > <img src="..\images\user.png" id="logoprofil" alt="Profil"> </a>
                 <?php } ?>
         
                 <a href="..\php\logout.php"> <img src="..\images\Logout.png" id="logologout" alt="Déconnexion"> </a>
