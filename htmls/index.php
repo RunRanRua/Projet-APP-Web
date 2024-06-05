@@ -107,7 +107,7 @@
         <div class="bgEffet">
             <div class="box1">
                 <img src="../images/fleche.PNG" alt="picture">
-                <div class="txt">Nouvel évènement 7 - 13 mars</div>
+                <div class="txt">Nouvel évènement 7 - 13 juillet</div>
             </div>
 
             <div class="box2">
@@ -121,19 +121,19 @@
     <div class="concert">
         <div class="upBox">
             <div class="innerbox">
-                <div class="txt">Battle beast<br>vendredi 09 février 2024</div>
-                <div class="location">Alhambra - Théâtre Music-hall, Paris, France</div>
+                <div class="txt">Battle beast<br>vendredi 09 juillet 2024</div>
+                <div class="location">Alhambra - AudioInsights, Paris, France</div>
                 <a href="#"><img src="../images/voir plus.png"></a>
             </div>
-            <img src="../uploads/concert_1.png" alt="concert1">
+            <img src="../images/concert4.jpg" alt="concert1">
 
         </div>
 
         <div class="downBox">
             <img src="../uploads/concert_1.png" alt="concert1">
             <div class="innerbox">
-                <div class="txt">Battle beast<br>vendredi 09 février 2024</div>
-                <div class="location">Alhambra - Théâtre Music-hall, Paris, France</div>
+                <div class="txt">Battle beast<br>Samedi 10 août 2024</div>
+                <div class="location">Rihanna - AudioInsights, Paris, France</div>
                 <a href="#"><img src="../images/voir plus.png"></a>
             </div>
         </div>
@@ -144,19 +144,19 @@
         <img src="../images/avis.png">
         <div class="contents">
             <div class="content">
-                <img src="../uploads/avis-icon.png" class="icon">
+                <img src="../images/avis-2.png" class="icon">
                 <img src="../uploads/stars.png" class="stars">
-                <div class="topic">Concert incroyable</div>
-                <div class="txt">Le concert était vraiment incroyable, l’ambiance était parfaite : les lumières, le son, les artistes !</div>
-                <div class="author">Jenna Johnson</div>
+                <div class="topic">Concert génial</div>
+                <div class="txt">L'événement a été tout simplement exceptionnel. L'atmosphère était magique avec des jeux de lumières impressionnants !</div>
+                <div class="author">Marcel Sanchez</div>
 
             </div>
             <div class="content">
-                <img src="../uploads/avis-icon.png" class="icon">
+                <img src="../images/avis-2(1).png" class="icon">
                 <img src="../uploads/stars.png" class="stars">
-                <div class="topic">Concert incroyable</div>
-                <div class="txt">Le concert était vraiment incroyable, l’ambiance était parfaite : les lumières, le son, les artistes !</div>
-                <div class="author">Jenna Johnson</div>
+                <div class="topic">Soirée mémorable</div>
+                <div class="txt">La soirée était mémorable, l'ambiance était folle : les effets de lumière,et la performance des artistes étaient au-delà de mes attentes !</div>
+                <div class="author">Lucas Dupont</div>
 
             </div>
             <div class="content">

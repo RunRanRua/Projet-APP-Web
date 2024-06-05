@@ -112,7 +112,7 @@
 <section class="faq-section">
     <h1>DES QUESTIONS ?</h1>
     <div class="search-container">
-        <input type="search" id="search-input" placeholder="Rechercher un concert">
+        <input type="search" id="search-input" placeholder="Rechercher une question">
         <a href="#" id="search-icon-link">
             <img src="..\images\loop_gray.png" alt="Rechercher" id="search-icon">
         </a>
@@ -128,20 +128,16 @@
                 <div id="answer1" class="faq-answer">Pour créer un compte, cliquez sur le bouton "S'inscrire" dans l'en-tête du site. Remplissez le formulaire d'inscription avec votre nom, prénom, adresse e-mail et mot de passe. Un e-mail de vérification sera envoyé à l'adresse que vous avez fournie. Cliquez sur le lien de vérification dans l'e-mail pour activer votre compte.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleAnswer('answer2')">Comment réserver des places pour un concert  <span class="arrow">&#9660;</span></button>
+                <button class="faq-question" onclick="toggleAnswer('answer2')">Comment réserver des places pour un concert ? <span class="arrow">&#9660;</span></button>
                 <div id="answer2" class="faq-answer">Une fois connecté à votre compte, allez à la section "Nos concerts" pour voir la liste des concerts disponibles. Sélectionnez le concert auquel vous souhaitez assister et cliquez sur "Réserver". Choisissez votre place et suivez les instructions pour finaliser votre réservation.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleAnswer('answer3')">Question III <span class="arrow">&#9660;</span></button>
-                <div id="answer3" class="faq-answer">Réponse à la question III.</div>
+                <button class="faq-question" onclick="toggleAnswer('answer3')">Puis-je modifier mes informations personnelles ? <span class="arrow">&#9660;</span></button>
+                <div id="answer3" class="faq-answer">Oui, vous pouvez modifier vos informations personnelles en vous connectant à votre compte et en allant dans la section "Mon Profil". Cliquez sur "Modifier" à côté des informations que vous souhaitez mettre à jour, faites les modifications nécessaires, puis enregistrez les changements.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleAnswer('answer4')">Question IV <span class="arrow">&#9660;</span></button>
-                <div id="answer4" class="faq-answer">Réponse à la question IV.</div>
-            </div>
-            <div class="faq-item">
-                 <button class="faq-question" onclick="toggleAnswer('answer5')">Question V <span class="arrow">&#9660;</span></button>
-                 <div id="answer5" class="faq-answer">Réponse à la question V.</div>
+                <button class="faq-question" onclick="toggleAnswer('answer4')">Puis-je organiser un concert via le site ?<span class="arrow">&#9660;</span></button>
+                <div id="answer4" class="faq-answer">Oui, si vous souhaitez organiser un concert, connectez-vous à votre compte et allez dans la section "Organiser un Événement". Remplissez le formulaire avec les détails de votre concert et soumettez-le. Notre équipe examinera votre demande et vous contactera pour finaliser les détails.</div>
             </div>
         </div>
     </div>
