@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Concerts</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/headerv2.css">
-    <link rel="stylesheet" href="../css/mes_concerts.css">
+    <link rel="stylesheet" href="../css/test.css">
+    <link rel="stylesheet" href="../css/ms_concerts.css">
     <link rel="stylesheet" href="../css/footer.css">
 </head>
 
@@ -21,29 +23,40 @@
         </div>
 
         <!-- navigation -->
-        <div class="nav">
-            <ul>
-                <li><a href="#" class = "active"><b>ACCUEIL</b></a></li>
-                <li><a href="#"><b>EVENEMENT</b></a></li>
-                <li><a href="#"><b>FAQ</b></a></li>
-                <li><a href="#"><b>FORUM</b></a></li>
-                <li><a href="#"><b>A PROPOS</b></a></li>
-            </ul>
+        <div class = "nav">
+            <li><a href="#"><b>ACCUEIL</b></a></li>
+            <li><a href="#"><b>PLANNING</b></a></li>
+            <li class = "DropExp">
+                <a href="#"><b>EVENEMENT</b></a>
+                <ul class="DropExpContent">
+                    <li><a href="#">ANNONCE</a></li>
+                    <li><a href="#">ORGANISER UN EVENEMENT</a></li>
+                </ul>
+            </li>
+            <li class = "DropExp">
+                <a href="#"><b>ASSISTANCE</b></a>
+                <ul class="DropExpContent">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">FORUM</a></li>
+                    <li><a href="#">AVIS</a></li>
+                </ul>
+            </li>
+            <li class = "DropExp">
+                <a href="#"><b>A PROPOS</b></a>
+                <ul class="DropExpContent">
+                    <li><a href="#">NOTRE SALLE</a></li>
+                    <li><a href="#">NOUS CONTACTER</a></li>
+            </li>
         </div>
     
-        <!-- search barre -->
-        <div class="search">
-            <a href="#"><img src="..\images\loop.png"></a>
-            <input type="text" placeholder="RECHERCHE">
+        
+        <!-- langue -->
+        <div class = "langue">
+            <a href="#"><img src="..\images\royaume-uni.png"></a>
         </div>
-
-        <!-- user -->
-        <div class="user">
-            <a href="#"><img src="..\images\signup.png"></a>
-            <a href="#"><img src="..\images\login2.png"></a>
-        </div>
+    
+       
     </div>
-
 
 
 
@@ -56,6 +69,38 @@
         </div>
 
         <div class = "section">
+            <div>
+                <h2>CONCERT EN COURS</h2>
+                <?php foreach ($concerts['current'] as $concert): ?>
+                    <div class="concert" onclick="showDetails(<?php echo $concert['id']; ?>)">
+                        <?php echo htmlspecialchars($concert['nom']); ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div>
+                <h2>CONCERTS À VENIR</h2>
+                <?php foreach ($concerts['upcoming'] as $concert): ?>
+                    <div class="concert" onclick="showDetails(<?php echo $concert['id']; ?>)">
+                        <?php echo htmlspecialchars($concert['nom']); ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div>
+                <h2>CONCERTS PASSÉS</h2>
+                <?php foreach ($concerts['past'] as $concert): ?>
+                    <div class="concert" onclick="showDetails(<?php echo $concert['id']; ?>)">
+                        <?php echo htmlspecialchars($concert['nom']); ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+            <div id="popup" class="popup">
+                <div id="popup-content" class="popup-content">
+                    <span id="popup-close" class="popup-close">&times;</span>
+                    <div id="popup-details"></div>
+                </div>
+            </div>
+
             <h2><b>CONCERT EN COURS</b></h2>
             <a href="#"><img src="..\images\loop.png"></a>
             <h2><b>CONCERTS À VENIR</b></h2>
