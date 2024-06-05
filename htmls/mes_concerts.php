@@ -71,27 +71,44 @@
         <div class = "section">
             <div>
                 <h2>CONCERT EN COURS</h2>
-                <?php foreach ($concerts['current'] as $concert): ?>
-                    <div class="concert" onclick="showDetails(<?php echo $concert['id']; ?>)">
-                        <?php echo htmlspecialchars($concert['nom']); ?>
-                    </div>
-                <?php endforeach; ?>
+    
+                <?php if (isset($concerts['current']) && is_array($concerts['current'])): ?>
+                    <?php foreach ($concerts['current'] as $concert): ?>
+                        <div class="concert" onclick="showDetails(<?php echo $concert['id']; ?>)">
+                            <?php echo htmlspecialchars($concert['nom']); ?>
+                        </div>
+                     <?php endforeach; ?>
+                <?php else: ?>
+                    <p>Aucun concert en cours.</p>
+                 <?php endif; ?>
             </div>
+
             <div>
                 <h2>CONCERTS À VENIR</h2>
-                <?php foreach ($concerts['upcoming'] as $concert): ?>
-                    <div class="concert" onclick="showDetails(<?php echo $concert['id']; ?>)">
-                        <?php echo htmlspecialchars($concert['nom']); ?>
-                    </div>
-                <?php endforeach; ?>
+
+                <?php if (isset($concerts['upcoming']) && is_array($concerts['upcoming'])): ?>
+                    <?php foreach ($concerts['upcoming'] as $concert): ?>
+                        <div class="concert" onclick="showDetails(<?php echo $concert['id']; ?>)">
+                            <?php echo htmlspecialchars($concert['nom']); ?>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>Aucun concert à venir.</p>
+                <?php endif; ?>
             </div>
+
             <div>
                 <h2>CONCERTS PASSÉS</h2>
-                <?php foreach ($concerts['past'] as $concert): ?>
-                    <div class="concert" onclick="showDetails(<?php echo $concert['id']; ?>)">
-                        <?php echo htmlspecialchars($concert['nom']); ?>
-                    </div>
-                <?php endforeach; ?>
+
+                <?php if (isset($concerts['past']) && is_array($concerts['past'])): ?>
+                    <?php foreach ($concerts['past'] as $concert): ?>
+                        <div class="concert" onclick="showDetails(<?php echo $concert['id']; ?>)">
+                            <?php echo htmlspecialchars($concert['nom']); ?>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>Aucun concert passé.</p>
+                <?php endif; ?>
             </div>
 
             <div id="popup" class="popup">
