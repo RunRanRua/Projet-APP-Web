@@ -125,7 +125,6 @@
 
 
 
-
     <!-- === Footer Part === -->
     <div class="footer">
 

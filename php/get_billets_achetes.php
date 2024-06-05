@@ -1,5 +1,5 @@
 <?php
-
+/*
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -34,4 +34,5 @@ if ($resultBillets->num_rows > 0) {
 } else {
     echo "<p>Aucun billet acheté trouvé.</p>";
 }
+*/
 ?>
