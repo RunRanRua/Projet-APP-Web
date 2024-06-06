@@ -123,7 +123,7 @@
             <div class="innerbox">
                 <div class="txt">Battle beast<br>vendredi 09 juillet 2024</div>
                 <div class="location">Alhambra - AudioInsights, Paris, France</div>
-                <a href="#"><img src="../images/voir plus.png"></a>
+                <a href="event.php"><img src="../images/voir plus.png"></a>
             </div>
             <img src="../images/concert4.jpg" alt="concert1">
 
@@ -134,7 +134,7 @@
             <div class="innerbox">
                 <div class="txt">Battle beast<br>Samedi 10 août 2024</div>
                 <div class="location">Rihanna - AudioInsights, Paris, France</div>
-                <a href="#"><img src="../images/voir plus.png"></a>
+                <a href="event.php"><img src="../images/voir plus.png"></a>
             </div>
         </div>
     </div>
