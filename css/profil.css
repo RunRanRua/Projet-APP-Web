@@ -6,6 +6,7 @@
 
     display: flex;
     flex-direction: column;
+    gap: 0px; /* Ajuste l'espacement entre les éléments */
   }
 
 .profil .title{
@@ -28,15 +29,15 @@
 }
 .profil .user .left img{
     margin: 5% auto 5%;
-    width: 30%;
-    height: 30%;
+    width: 20%;
+    height: 20%;
 }
 .profil .user .left p{
     margin: 1% auto;
     font-size: 1.2vw;
 }
 .profil .user .left button{
-    margin: 10% auto 0;
+    margin: 5% auto 0;
     width: 35%;
     height: 10%;
 
@@ -51,12 +52,17 @@
 }
 
 
+
+
+
 .profil .user .right{
     width: 100%;
     padding-top: 2%;
 
     display:flex;
     flex-direction: column;
+    gap: 1px; /* Ajuste l'espacement entre les éléments */
+    
 }
 .profil .user .right li{
     margin: 3.2% 2%;
