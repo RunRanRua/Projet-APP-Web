@@ -42,7 +42,7 @@ function isGoodFormat(){
     return true;
 }
 function sendMail($titre, $artiste, $categorie, $date, $start_h, $start_m, $end_h, $end_m, $description){
-    $mail = "pawa61880@eleve.isep.fr";
+    $mail = "mati62025@eleve.isep.fr";
     $subject = "[Formulaire]- Demande de l'Organisation d'un événement";
     $message = "Titre : " . $titre . "\n".
                 "Artiste : " . $artiste . "\n".
