@@ -27,7 +27,7 @@
                 <li><a href="index.php" ><b>ACCUEIL</b></a></li>
                 <li><a href="event.php"><b>NOS CONCERTS</b></a></li>
                 <li><a href="organiserEVENT.php"><b>ORGANISATION</b></a></li>
-                <li><a href="#"><b>FORUM</b></a></li>
+                <li><a href="FAQ.php"><b>FAQ</b></a></li>
                 <li><a href="a_propos.php" class = "active"><b>A PROPOS</b></a></li>
             </ul>
         </div>
