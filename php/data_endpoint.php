@@ -11,7 +11,7 @@ if ($mysqli->connect_error) {
 $date = $_GET['date'] ?? date('Y-m-d');
 
 // Préparation de la requête SQL
-$stmt = $mysqli->prepare("SELECT Heure, niveauSonore FROM donnees WHERE date = ?");
+$stmt = $mysqli->prepare("SELECT Heure, temperature FROM temperature WHERE date = ?");
 $stmt->bind_param("s", $date);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -22,7 +22,7 @@ $levels = [];
 // Collecte des données
 while ($row = $result->fetch_assoc()) {
     $times[] = $row['Heure'];
-    $levels[] = intval($row['niveauSonore']);
+    $levels[] = intval($row['temperature']);
 }
 
 if (count($levels) > 0) {
