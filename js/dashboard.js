@@ -76,7 +76,7 @@ function initChart() {
         data: {
             labels: [],
             datasets: [{
-                label: 'Niveau sonore (dB)',
+                label: 'Température °C',
                 data: [],
                 borderWidth: 1,
                 fill: false,
@@ -107,8 +107,8 @@ function updateChart(data) {
     myChart.update();
 
     // Afficher la moyenne, le maximum et le minimum du niveau sonore
-    const displayText = `Moyenne : ${data.average.toFixed(2)} dB, ` +
-                        `Max : ${data.max} dB, Min : ${data.min} dB`;
+    const displayText = `Moyenne : ${data.average.toFixed(2)} °C, ` +
+                        `Max : ${data.max} °C, Min : ${data.min} °C`;
     document.getElementById('data-display').innerText = displayText;
 }
 

@@ -3,11 +3,11 @@ session_start();
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G10d");
-curl_setopt($ch, CURLOPT_HEADER, TRUE); // Inclure les en-têtes dans la sortie
+curl_setopt($ch, CURLOPT_HEADER, TRUE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE); // Suivre les redirections
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); // Ignorer la vérification SSL si nécessaire
-curl_setopt($ch, CURLOPT_VERBOSE, TRUE); // Activer le mode verbeux pour le débogage
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE); 
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+curl_setopt($ch, CURLOPT_VERBOSE, TRUE); 
 
 $data = curl_exec($ch);
 
@@ -17,15 +17,10 @@ if (curl_errno($ch)) {
     if (empty($data)) {
         echo "Aucune donnée reçue.";
     } else {
-        // Séparer les en-têtes du corps de la réponse
+
         $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
         $headers = substr($data, 0, $header_size);
         $body = substr($data, $header_size);
-
-        echo "En-têtes :<br />";
-        echo nl2br(htmlspecialchars($headers));
-        echo "<br /><br />Données brutes :<br />";
-        echo nl2br(htmlspecialchars($body));
 
         // Enregistrer le fichier localement
         $filePath = 'log_data.txt';
@@ -34,16 +29,8 @@ if (curl_errno($ch)) {
         // Lire le contenu du fichier
         $fileContent = file_get_contents($filePath);
 
-        echo "<br /><br />Contenu du fichier :<br />";
-        echo nl2br(htmlspecialchars($fileContent));
-
         // Connexion à la base de données
         $mysqli = new mysqli("localhost", "root", "", "mydb");
-
-        // Vérifier la connexion
-        if ($mysqli->connect_error) {
-            die("Erreur de connexion : " . $mysqli->connect_error);
-        }
 
         // Séparer les trames tous les 33 caractères
         $trames = str_split($fileContent, 33);
@@ -66,7 +53,7 @@ if (curl_errno($ch)) {
                 $ss = substr($trame, 31, 2);
 
                 // Afficher les trames entre 10h23 et 29s et 10h23 et 41s
-                if ($HH == '10' && $mm == '23' && $ss >= '29' && $ss <= '41') {
+                if ($HH == '10' && $mm == '23' && $ss >= '29' && $ss <= '51') {
                     echo "<br /><br />Trame : $trame<br />";
                     echo "T: $T<br />";
                     echo "OOOO: $OOOO<br />";
@@ -94,27 +81,37 @@ if (curl_errno($ch)) {
                         // Insérer dans la table temperature
                         $date = "$YYYY-$MM-$DD";
                         $heure = "$YYYY-$MM-$DD $HH:$mm:$ss";
-                        $idCapteurTemperature = 1; // Remplacer par l'ID réel du capteur de température
+                        $idCapteurTemperature = 1; 
 
-                        $stmt = $mysqli->prepare("INSERT INTO temperature (date, temperature, idCapteurTemperature, Heure) VALUES (?, ?, ?, ?)");
-                        $stmt->bind_param("ssis", $date, $temperature, $idCapteurTemperature, $heure);
+                        // Vérifier l'existence d'un doublon
+                        $checkStmt = $mysqli->prepare("SELECT COUNT(*) FROM temperature WHERE Heure = ?");
+                        $checkStmt->bind_param("s", $heure);
+                        $checkStmt->execute();
+                        $checkStmt->bind_result($count);
+                        $checkStmt->fetch();
+                        $checkStmt->close();
 
-                        if ($stmt->execute()) {
-                            echo "Donnée de température insérée avec succès.<br />";
+                        if ($count == 0) {
+                            // Insérer les données si aucun doublon trouvé
+                            $stmt = $mysqli->prepare("INSERT INTO temperature (date, temperature, idCapteurTemperature, Heure) VALUES (?, ?, ?, ?)");
+                            $stmt->bind_param("ssis", $date, $temperature, $idCapteurTemperature, $heure);
+
+                            if ($stmt->execute()) {
+                                echo "Donnée de température insérée avec succès.<br />";
+                            } else {
+                                echo "Erreur lors de l'insertion de la donnée de température : " . $stmt->error . "<br />";
+                            }
+
+                            $stmt->close();
                         } else {
-                            echo "Erreur lors de l'insertion de la donnée de température : " . $stmt->error . "<br />";
+                            echo "Doublon détecté pour l'heure : $heure. Aucune donnée insérée.<br />";
                         }
-
-                        $stmt->close();
                     }
                 }
             }
         }
-
-        // Fermer la connexion
         $mysqli->close();
     }
 }
-
 curl_close($ch);
 ?>
