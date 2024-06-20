@@ -101,7 +101,7 @@
             
         </div>
     </div>
-
+    <h1><a href=test.php>Gérer les données des capteurs</a></h1>
 
     <h1>Rechercher des Utilisateurs</h1>
     <?php

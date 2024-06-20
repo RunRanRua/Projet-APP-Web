@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau de Bord Calendrier</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <button class="prev">&laquo; Précédent</button>
+        <button class="next">Suivant &raquo;</button>
+        <div class="date"></div>
+        <div class="days"></div>
+        <input type="text" class="date-input" placeholder="MM/AAAA">
+        <button class="goto-btn">Aller à la date</button>
+        <button class="today-btn">Aujourd'hui</button>
+    </div>
+    <div class="chart-container">
+        <div id="data-display">Sélectionnez un jour pour voir les données.</div>
+        <canvas id="chart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/dashboard2.js"></script>
+</body>
+</html>

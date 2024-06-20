@@ -118,9 +118,9 @@
                 <p>
                     <b>Date d'inscription: <?php echo $_SESSION["date"] ?></b>
                 </p>
-                <button id="deleteUser" onclick="deleteOnClick(event)">Supprimer le compte</button>
                 <button><a href='./myEventList.php'>Voir ma liste de concerts</a></button>
-                <button><a href='./dashboard.html'>Tableau de bord</a></button>
+                <button><a href='./dashboard2.html'>Graphique niveau sonore</a></button>
+                <button><a href='./dashboard.html'>Graphique températures</a></button>
 
             </div>
 

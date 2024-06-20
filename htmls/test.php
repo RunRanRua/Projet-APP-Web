@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Affichage des températures</title>
+    <title>Affichage des données des capteurs</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,7 +60,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Affichage des températures</h1>
+        <h1>Affichage des données des capteurs</h1>
         <form method="POST" action="">
             <label for="start_date">Date de début :</label>
             <input type="date" id="start_date" name="start_date" required>
@@ -174,6 +174,43 @@
                                         echo "Doublon détecté pour l'heure : $heure. Aucune donnée insérée.<br />";
                                     }
                                 }
+
+                                if ($C == '7' && $VVVV[0] == '0') {
+                                    $D = $VVVV[1];
+                                    $U = $VVVV[2];
+                                    $d = $VVVV[3];
+                                    $sonore = "$D$U.$d";
+                                    echo "Niveau Sonore: $sonore dBm<br />";
+
+                                    // Vérifier l'existence d'un doublon
+                                    $heure = "$YYYY-$MM-$DD $HH:$mm:$ss";
+                                    $idCapteurSonore = 1;
+                                    $date = "$YYYY-$MM-$DD";
+
+                                    $checkStmt = $mysqli->prepare("SELECT COUNT(*) FROM donnees WHERE Heure = ?");
+                                    $checkStmt->bind_param("s", $heure);
+                                    $checkStmt->execute();
+                                    $checkStmt->bind_result($count);
+                                    $checkStmt->fetch();
+                                    $checkStmt->close();
+
+                                    if ($count == 0) {
+                                        // Insérer les données si aucun doublon trouvé
+                                        $stmt = $mysqli->prepare("INSERT INTO donnees (date, niveauSonore, idCapteurSonore, Heure) VALUES (?, ?, ?, ?)");
+                                        $stmt->bind_param("ssis", $date, $sonore, $idCapteurTemperature, $heure);
+
+                                        if ($stmt->execute()) {
+                                            echo "Donnée de niveau sonore insérée avec succès.<br />";
+                                        } else {
+                                            echo "Erreur lors de l'insertion de la donnée de niveau sonore : " . $stmt->error . "<br />";
+                                        }
+
+                                        $stmt->close();
+                                    } else {
+                                        echo "Doublon détecté pour l'heure : $heure. Aucune donnée insérée.<br />";
+                                    }
+                                }
+
                                 echo "</div>";
                             }
                         }
