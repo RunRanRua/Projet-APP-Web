@@ -118,8 +118,15 @@
                 <p>
                     <b>Date d'inscription: <?php echo $_SESSION["date"] ?></b>
                 </p>
-                <button><a href='./myEventList.php'>Voir ma liste de concerts</a></button>
-                <button><a href='./dashboard2.html'>Graphique niveau sonore</a></button>
+                <form id="form-tester-trame" onsubmit="return false;">
+
+<input type="hidden" name="send_trame" value="1">
+
+<input type="hidden" name="idCapteurSonore" value="<?php echo $capteur['idCapteurSonore']; ?>">
+
+<input type="button" id="tester-trame-btn" class="sanjai" value="Tester la trame">
+
+</form>                <button><a href='./dashboard2.html'>Graphique niveau sonore</a></button>
                 <button><a href='./dashboard.html'>Graphique températures</a></button>
 
             </div>
@@ -241,6 +248,5 @@
  
         </div>
     </div>
-
 </body>
 </html>
